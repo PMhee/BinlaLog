@@ -1,0 +1,6 @@
+framework module Pods_BinlaLog {
+  umbrella header "Pods-BinlaLog-umbrella.h"
+
+  export *
+  module * { export * }
+}

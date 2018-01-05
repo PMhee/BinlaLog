@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MhQ-fv-7Xc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="EHa-1x-ukP">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MhQ-fv-7Xc" customClass="LoadingViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmN-vb-5Uw"/>
+                        <viewControllerLayoutGuide type="bottom" id="KKa-gm-2jY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dot-vn-Uwx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-1h-UbV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lxU-fa-e7e">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lxU-fa-e7e" firstAttribute="centerY" secondItem="bYG-1h-UbV" secondAttribute="centerY" id="AAj-Wf-Sph"/>
+                            <constraint firstItem="bYG-1h-UbV" firstAttribute="centerY" secondItem="Dot-vn-Uwx" secondAttribute="centerY" id="DkK-7v-ubu"/>
+                            <constraint firstItem="lxU-fa-e7e" firstAttribute="centerX" secondItem="bYG-1h-UbV" secondAttribute="centerX" id="J6j-si-zIK"/>
+                            <constraint firstItem="bYG-1h-UbV" firstAttribute="centerX" secondItem="Dot-vn-Uwx" secondAttribute="centerX" id="Qw0-m4-Nrz"/>
+                            <constraint firstItem="bYG-1h-UbV" firstAttribute="width" secondItem="Dot-vn-Uwx" secondAttribute="width" id="fBC-QI-hvl"/>
+                            <constraint firstItem="bYG-1h-UbV" firstAttribute="height" secondItem="Dot-vn-Uwx" secondAttribute="height" id="rqp-8E-BqR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="act" destination="lxU-fa-e7e" id="dLc-zO-DLn"/>
+                        <outlet property="vw_loading" destination="bYG-1h-UbV" id="8WL-tx-oqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brs-vI-YG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="330"/>
+        </scene>
+    </scenes>
+</document>
