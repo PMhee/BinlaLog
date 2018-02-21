@@ -5,6 +5,9 @@
       location = "group:BinlaLog.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:mdcu-info.plist">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

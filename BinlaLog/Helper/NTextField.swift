@@ -45,8 +45,8 @@ class NTextField: UITextField {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     //Make rect textfield with border and color grey
-    func makeRectTextfield(){
-        self.layer.borderColor = UIColor(netHex:0xeeeeee).cgColor
+    func makeRectTextfield(color:UIColor){
+        self.layer.borderColor = color.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 2
     }
@@ -55,7 +55,7 @@ class NTextField: UITextField {
         let bottomLine = CALayer()
         self.tintColor = UIColor.black
         bottomLine.frame = CGRect(x: 0.0, y: self.frame.height-1, width: self.frame.width, height: 0.5)
-        bottomLine.backgroundColor = UIColor.lightGray.cgColor
+        bottomLine.backgroundColor = UIColor(netHex:0xaaaaaa).cgColor
         self.borderStyle = UITextBorderStyle.none
         self.layer.addSublayer(bottomLine)
         self.layer.masksToBounds = true

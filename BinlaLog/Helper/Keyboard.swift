@@ -80,6 +80,6 @@ open class Keyboard:NSLayoutConstraint{
         }
     }
     func updateConstant() {
-        self.constant = offset + keyboardVisibleHeight
+        self.constant = offset + keyboardVisibleHeight - 49
     }
 }

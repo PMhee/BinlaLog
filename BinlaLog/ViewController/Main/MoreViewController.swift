@@ -13,21 +13,44 @@ class MoreViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     let more = ["Achievement","Contact","Logout"]
     let pic = ["ic-star.png","ic-facebook.png","ic-logout.png"]
     @IBOutlet weak var tableView: UITableView!
+    var viewModel = ViewModel(){
+        didSet{
+            self.tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.initUser()
+        self.initRank()
+        self.setUI()
+    }
+    func setUI(){
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath)
+            let lb_name = cell.viewWithTag(1) as! UILabel
+            let img_profile = cell.viewWithTag(2) as! UIImageView
+            if let user = self.viewModel.user{
+                lb_name.text = user.firstname
+                Helper.loadLocalImage(id: user.id, success: {(image) in
+                    img_profile.image = image
+                })
+                img_profile.layer.cornerRadius = 30
+                img_profile.layer.masksToBounds = true
+            }
             return cell
         }else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "rank", for: indexPath)
+            let vw_progress = cell.viewWithTag(1) as! UIProgressView
+            let lb_rank = cell.viewWithTag(2) as! UILabel
+            vw_progress.progressTintColor = Constant().getColorMain()
+            vw_progress.progress = self.viewModel.rank ?? 0
+            lb_rank.text = "Rank \(self.viewModel.yourRank ?? 0)/\(self.viewModel.noStudent ?? 0)"
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -42,7 +65,16 @@ class MoreViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return self.more.count+2
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 4 {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            self.performSegue(withIdentifier: "profile", sender: self)
+        }else if indexPath.row == 1{
+            self.performSegue(withIdentifier: "rank", sender: self)
+        }else if indexPath.row == 2{
+            self.performSegue(withIdentifier: "achievement", sender: self)
+        }else if indexPath.row == 3{
+            UIApplication.shared.openURL(URL(string: Constant().getFacebookURL())!)
+        }else if indexPath.row == 4 {
             self.doLogout()
         }
     }
@@ -52,15 +84,35 @@ class MoreViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension MoreViewController{
+    struct ViewModel {
+        var user : User?
+        var rank : Float?
+        var yourRank : Int?
+        var noStudent : Int?
     }
-    */
-
+    func initUser(){
+        BackUser.getInstance().getUserInfo {
+            self.viewModel.user = BackUser.getInstance().get()
+        }
+        self.viewModel.user = BackUser.getInstance().get()
+    }
+    func initRank(){
+        BackUser.getInstance().getMyRank(finish: {(dict) in
+            var rank = 0
+            var student = 0
+            if let yourRank = dict.value(forKey: "yourRank") as? Int{
+                rank = yourRank
+                self.viewModel.yourRank = yourRank
+            }
+            if let noStudent = dict.value(forKey: "noStudent") as? Int{
+                student = noStudent
+                self.viewModel.noStudent = noStudent
+            }
+            rank -= 1
+            rank = student - rank
+            self.viewModel.rank = Float(rank) / Float(student)
+        })
+    }
 }

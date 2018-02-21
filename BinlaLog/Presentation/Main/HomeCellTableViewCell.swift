@@ -13,12 +13,17 @@ class HomeCellTableViewCell: UITableViewCell {
     @IBOutlet weak var img_rotation: UIImageView!
     @IBOutlet weak var lb_rotation_name: UILabel!
     @IBOutlet weak var lb_rotation_date: UILabel!
+    @IBOutlet weak var act: UIActivityIndicatorView!
     @IBAction func btn_add_procedure_action(_ sender: UIButton) {
-        self.sender.addProcedure()
+        self.act.isHidden = false
+        self.act.startAnimating()
+        self.sender.addProcedure(tag:sender.tag / 2)
     }
     @IBAction func btn_add_patient_action(_ sender: UIButton) {
-        self.sender.addPatient()
+        self.sender.addPatient(tag:sender.tag / 2)
     }
+    @IBOutlet weak var btn_add_procedure: UIButton!
+    @IBOutlet weak var btn_add_patient: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

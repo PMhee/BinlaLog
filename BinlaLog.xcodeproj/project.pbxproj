@@ -10,48 +10,261 @@
 		4822D4892713A7FB550D470F /* Pods_BinlaLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE868201C6BB1F1E52F61D71 /* Pods_BinlaLog.framework */; };
 		4D1348D3C7BC6A6E1E41B272 /* Pods_BinlaLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD91D67B765BDF42832BEF2 /* Pods_BinlaLogUITests.framework */; };
 		648617830048B7FF6756E8EA /* Pods_BinlaLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CC892160410A7678BAA6F6 /* Pods_BinlaLogTests.framework */; };
+		B709B247202C65F1004CF168 /* APIVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B246202C65F1004CF168 /* APIVerification.swift */; };
+		B709B249202C66C3004CF168 /* BackVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B248202C66C3004CF168 /* BackVerification.swift */; };
+		B709B24B202C66EE004CF168 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B24A202C66EE004CF168 /* Verification.swift */; };
+		B709B24C202C66EE004CF168 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B24A202C66EE004CF168 /* Verification.swift */; };
+		B709B24D202C66F6004CF168 /* APIVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B246202C65F1004CF168 /* APIVerification.swift */; };
+		B709B24E202C66F8004CF168 /* BackVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B248202C66C3004CF168 /* BackVerification.swift */; };
+		B70E3CF92017339D00608C9D /* SummaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E3CF82017339D00608C9D /* SummaryDetailViewController.swift */; };
+		B70E3CFA2017339D00608C9D /* SummaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E3CF82017339D00608C9D /* SummaryDetailViewController.swift */; };
+		B711F43D2036F26D001169B4 /* KeyboardwoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711F43C2036F26D001169B4 /* KeyboardwoTab.swift */; };
+		B711F43E2036F26D001169B4 /* KeyboardwoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711F43C2036F26D001169B4 /* KeyboardwoTab.swift */; };
 		B71414D21FFE125B00BB5B00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D11FFE125B00BB5B00 /* HomeViewController.swift */; };
 		B71414D51FFE16C600BB5B00 /* NButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D41FFE16C600BB5B00 /* NButtonBorder.swift */; };
 		B71414D81FFE29B500BB5B00 /* rotation-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414D71FFE29B300BB5B00 /* rotation-ped.png */; };
-		B71414E41FFE30D500BB5B00 /* emotion-smile-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DA1FFE30C200BB5B00 /* emotion-smile-grey.png */; };
-		B71414E51FFE30D500BB5B00 /* emotion-love.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DB1FFE30C400BB5B00 /* emotion-love.png */; };
-		B71414E61FFE30D500BB5B00 /* emotion-straight.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DC1FFE30C500BB5B00 /* emotion-straight.png */; };
-		B71414E71FFE30D500BB5B00 /* emotion-crying-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DD1FFE30C700BB5B00 /* emotion-crying-grey.png */; };
-		B71414E81FFE30D500BB5B00 /* emotion-love-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DE1FFE30C800BB5B00 /* emotion-love-grey.png */; };
-		B71414E91FFE30D500BB5B00 /* emotion-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414DF1FFE30CA00BB5B00 /* emotion-angry.png */; };
-		B71414EA1FFE30D500BB5B00 /* emotion-angry-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414E01FFE30CC00BB5B00 /* emotion-angry-grey.png */; };
-		B71414EB1FFE30D500BB5B00 /* emotion-crying.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414E11FFE30CC00BB5B00 /* emotion-crying.png */; };
-		B71414EC1FFE30D500BB5B00 /* emotion-smile.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414E21FFE30CE00BB5B00 /* emotion-smile.png */; };
-		B71414ED1FFE30D500BB5B00 /* emotion-straight-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414E31FFE30D300BB5B00 /* emotion-straight-grey.png */; };
 		B71414F11FFE332400BB5B00 /* HistoryRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414F01FFE332400BB5B00 /* HistoryRotationViewController.swift */; };
+		B714175B2006215D0067090B /* NViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175A2006215D0067090B /* NViewController.swift */; };
+		B714175D20062F170067090B /* Foreign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175C20062F170067090B /* Foreign.swift */; };
+		B714175F20062F580067090B /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175E20062F580067090B /* Rotation.swift */; };
+		B71417612006302B0067090B /* BackRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417602006302B0067090B /* BackRotation.swift */; };
+		B71417632006314C0067090B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417622006314C0067090B /* Course.swift */; };
+		B71A19942032EB460058DEB7 /* TProcedureNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */; };
+		B71A19952032EB460058DEB7 /* TProcedureNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */; };
+		B71A19972032EB9F0058DEB7 /* APINotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19962032EB9F0058DEB7 /* APINotification.swift */; };
+		B71A19982032EB9F0058DEB7 /* APINotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19962032EB9F0058DEB7 /* APINotification.swift */; };
+		B71A199A2032F0D70058DEB7 /* BackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19992032F0D70058DEB7 /* BackNotification.swift */; };
+		B71A199B2032F0D70058DEB7 /* BackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19992032F0D70058DEB7 /* BackNotification.swift */; };
+		B72E2EB0200F28D9008D9B5C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EAF200F28D9008D9B5C /* FilterTableViewCell.swift */; };
+		B72E2EB1200F3F1D008D9B5C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EAF200F28D9008D9B5C /* FilterTableViewCell.swift */; };
+		B72E2EB3200F58DD008D9B5C /* pic-rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB2200F58D7008D9B5C /* pic-rocket.png */; };
+		B72E2EB4200F58DD008D9B5C /* pic-rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB2200F58D7008D9B5C /* pic-rocket.png */; };
+		B72E2EB6200F62EA008D9B5C /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EB5200F62EA008D9B5C /* Logbook.swift */; };
+		B72E2EB7200F62EA008D9B5C /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EB5200F62EA008D9B5C /* Logbook.swift */; };
+		B72E2EBA20109D11008D9B5C /* TMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB920109D11008D9B5C /* TMain.storyboard */; };
+		B72E2EBB20109D11008D9B5C /* TMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB920109D11008D9B5C /* TMain.storyboard */; };
 		B72ED81A1FF0B7C10088F78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED8191FF0B7C10088F78C /* AppDelegate.swift */; };
 		B72ED81F1FF0B7C10088F78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED81D1FF0B7C10088F78C /* Main.storyboard */; };
-		B72ED8211FF0B7C10088F78C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8201FF0B7C10088F78C /* Assets.xcassets */; };
 		B72ED8241FF0B7C10088F78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8221FF0B7C10088F78C /* LaunchScreen.storyboard */; };
 		B72ED82F1FF0B7C20088F78C /* BinlaLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED82E1FF0B7C20088F78C /* BinlaLogTests.swift */; };
 		B72ED83A1FF0B7C20088F78C /* BinlaLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED8391FF0B7C20088F78C /* BinlaLogUITests.swift */; };
+		B748782A20280FBE005763F9 /* ic-syringe-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782920280FBE005763F9 /* ic-syringe-white.png */; };
+		B748782B20280FBE005763F9 /* ic-syringe-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782920280FBE005763F9 /* ic-syringe-white.png */; };
+		B748782D20281066005763F9 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748782C20281066005763F9 /* AchievementViewController.swift */; };
+		B748782E20281066005763F9 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748782C20281066005763F9 /* AchievementViewController.swift */; };
+		B748783920286507005763F9 /* ic-ortho.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782F202864EC005763F9 /* ic-ortho.png */; };
+		B748783A20286508005763F9 /* ic-ortho.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782F202864EC005763F9 /* ic-ortho.png */; };
+		B748783B20286508005763F9 /* ic-general.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487830202864EE005763F9 /* ic-general.png */; };
+		B748783C20286508005763F9 /* ic-general.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487830202864EE005763F9 /* ic-general.png */; };
+		B748783D20286508005763F9 /* ic-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487831202864F6005763F9 /* ic-ped.png */; };
+		B748783E20286508005763F9 /* ic-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487831202864F6005763F9 /* ic-ped.png */; };
+		B748783F20286508005763F9 /* ic-anes.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487832202864FB005763F9 /* ic-anes.png */; };
+		B748784020286508005763F9 /* ic-anes.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487832202864FB005763F9 /* ic-anes.png */; };
+		B748784120286508005763F9 /* ic-rehab.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487833202864FC005763F9 /* ic-rehab.png */; };
+		B748784220286508005763F9 /* ic-rehab.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487833202864FC005763F9 /* ic-rehab.png */; };
+		B748784320286508005763F9 /* ic-surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487834202864FF005763F9 /* ic-surgery.png */; };
+		B748784420286508005763F9 /* ic-surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487834202864FF005763F9 /* ic-surgery.png */; };
+		B748784520286508005763F9 /* ic-lab.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783520286500005763F9 /* ic-lab.png */; };
+		B748784620286508005763F9 /* ic-lab.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783520286500005763F9 /* ic-lab.png */; };
+		B748784720286508005763F9 /* ic-obgyn.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783620286503005763F9 /* ic-obgyn.png */; };
+		B748784820286508005763F9 /* ic-obgyn.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783620286503005763F9 /* ic-obgyn.png */; };
+		B748784920286508005763F9 /* ic-ent.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783720286504005763F9 /* ic-ent.png */; };
+		B748784A20286508005763F9 /* ic-ent.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783720286504005763F9 /* ic-ent.png */; };
+		B748784B20286508005763F9 /* ic-oph.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783820286504005763F9 /* ic-oph.png */; };
+		B748784C20286508005763F9 /* ic-oph.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783820286504005763F9 /* ic-oph.png */; };
+		B74C41D82033EEDC00438C8A /* ic-noti.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41D72033EEDB00438C8A /* ic-noti.png */; };
+		B74C41D92033EEDC00438C8A /* ic-noti.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41D72033EEDB00438C8A /* ic-noti.png */; };
+		B74C41DB2033F8AA00438C8A /* TPatientNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */; };
+		B74C41DC2033F8AA00438C8A /* TPatientNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */; };
+		B74C41E12034419E00438C8A /* ic-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41E02034419C00438C8A /* ic-chat.png */; };
+		B74C41E22034419E00438C8A /* ic-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41E02034419C00438C8A /* ic-chat.png */; };
+		B74C41E42034490B00438C8A /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41E32034490B00438C8A /* CommentViewController.swift */; };
+		B74C41E52034490B00438C8A /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41E32034490B00438C8A /* CommentViewController.swift */; };
+		B74D3DC02003784E00F99930 /* ic-virus.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBD2003784800F99930 /* ic-virus.png */; };
+		B74D3DC12003784E00F99930 /* ic-stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBE2003784A00F99930 /* ic-stethoscope.png */; };
+		B74D3DC22003784E00F99930 /* ic-syringe.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBF2003784B00F99930 /* ic-syringe.png */; };
 		B74FF13C1FFE3E07008DFD00 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13B1FFE3E07008DFD00 /* HistoryViewController.swift */; };
 		B74FF13E1FFE3EFE008DFD00 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */; };
+		B75AA305200C5A54001922DF /* PatientCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75AA304200C5A54001922DF /* PatientCare.swift */; };
+		B75AA306200C5A5B001922DF /* PatientCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75AA304200C5A54001922DF /* PatientCare.swift */; };
 		B75EA68D1FFCA0CF00B9A5DC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */; };
 		B75EA68F1FFCAA1900B9A5DC /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */; };
 		B75EA6911FFCC44000B9A5DC /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA6901FFCC44000B9A5DC /* NTextField.swift */; };
 		B75EA6991FFCCBF600B9A5DC /* ic-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6971FFCCBF500B9A5DC /* ic-user.png */; };
 		B75EA69A1FFCCBF600B9A5DC /* ic-key.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6981FFCCBF500B9A5DC /* ic-key.png */; };
+		B760B02A20159297005C941F /* ic-perform.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02820159295005C941F /* ic-perform.png */; };
+		B760B02B20159297005C941F /* ic-perform.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02820159295005C941F /* ic-perform.png */; };
+		B760B02C20159297005C941F /* ic-assist.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02920159296005C941F /* ic-assist.png */; };
+		B760B02D20159297005C941F /* ic-assist.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02920159296005C941F /* ic-assist.png */; };
+		B760B02F2015935C005C941F /* ic-observe.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02E2015935A005C941F /* ic-observe.png */; };
+		B760B0302015935C005C941F /* ic-observe.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02E2015935A005C941F /* ic-observe.png */; };
+		B760B033201593E7005C941F /* ProcedureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B032201593E7005C941F /* ProcedureTableViewCell.swift */; };
+		B760B034201593E7005C941F /* ProcedureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B032201593E7005C941F /* ProcedureTableViewCell.swift */; };
+		B760B03620159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03520159E9D005C941F /* ProcedureInfoTableViewCell.swift */; };
+		B760B03720159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03520159E9D005C941F /* ProcedureInfoTableViewCell.swift */; };
+		B760B0392015B828005C941F /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B760B0382015B828005C941F /* Summary.storyboard */; };
+		B760B03A2015B828005C941F /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B760B0382015B828005C941F /* Summary.storyboard */; };
+		B760B03D2015C03F005C941F /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03C2015C03F005C941F /* SummaryViewController.swift */; };
+		B760B03E2015C03F005C941F /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03C2015C03F005C941F /* SummaryViewController.swift */; };
+		B76907082024171D00C84126 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76907072024171D00C84126 /* RankViewController.swift */; };
+		B76907092024171D00C84126 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76907072024171D00C84126 /* RankViewController.swift */; };
+		B769070C20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769070B20241C2600C84126 /* DayAxisValueFormatter.swift */; };
+		B769070D20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769070B20241C2600C84126 /* DayAxisValueFormatter.swift */; };
+		B76D24A62005D4A600756A36 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D24A52005D4A600756A36 /* Observer.swift */; };
+		B76E72F4202D485900BABAE0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F3202D485900BABAE0 /* Person.swift */; };
+		B76E72F5202D485C00BABAE0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F3202D485900BABAE0 /* Person.swift */; };
+		B76E72F7202D488700BABAE0 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F6202D488700BABAE0 /* Department.swift */; };
+		B76E72F8202D488700BABAE0 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F6202D488700BABAE0 /* Department.swift */; };
+		B76E72FA202D878B00BABAE0 /* ic-verify.png in Resources */ = {isa = PBXBuildFile; fileRef = B76E72F9202D878B00BABAE0 /* ic-verify.png */; };
+		B76E72FB202D878B00BABAE0 /* ic-verify.png in Resources */ = {isa = PBXBuildFile; fileRef = B76E72F9202D878B00BABAE0 /* ic-verify.png */; };
+		B76E72FD202D9A6500BABAE0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72FC202D9A6500BABAE0 /* NotificationViewController.swift */; };
+		B76E72FE202D9A6500BABAE0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72FC202D9A6500BABAE0 /* NotificationViewController.swift */; };
 		B7781E6A1FFF69C80078E56A /* APIPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E691FFF69C80078E56A /* APIPatient.swift */; };
 		B7781E6C1FFF6BB40078E56A /* APIProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E6B1FFF6BB40078E56A /* APIProcedure.swift */; };
 		B7781E6E1FFF71820078E56A /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7781E6D1FFF71820078E56A /* Patient.storyboard */; };
 		B7781E711FFF751A0078E56A /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E701FFF751A0078E56A /* PatientViewController.swift */; };
 		B7781E741FFF761D0078E56A /* PatientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E731FFF761D0078E56A /* PatientController.swift */; };
+		B7898D97200711A30030A943 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58C1FF0BFD600F5A5AD /* LoginViewController.swift */; };
+		B7898D98200711A30030A943 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D24A52005D4A600756A36 /* Observer.swift */; };
+		B7898D99200711A30030A943 /* APIProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E6B1FFF6BB40078E56A /* APIProcedure.swift */; };
+		B7898D9A200711A30030A943 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5951FF0DA6E00F5A5AD /* LoginController.swift */; };
+		B7898D9C200711A30030A943 /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175E20062F580067090B /* Rotation.swift */; };
+		B7898D9D200711A30030A943 /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0C1FF109FA005BBAB4 /* Back.swift */; };
+		B7898D9E200711A30030A943 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */; };
+		B7898D9F200711A30030A943 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417622006314C0067090B /* Course.swift */; };
+		B7898DA0200711A30030A943 /* HomeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F41FFF4A190004F4F2 /* HomeCellTableViewCell.swift */; };
+		B7898DA1200711A30030A943 /* APIRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C87B602006354D00512808 /* APIRotation.swift */; };
+		B7898DA2200711A30030A943 /* Diagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EE2004AB2800C1233A /* Diagnosis.swift */; };
+		B7898DA3200711A30030A943 /* DiseaseSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F42004C22E00C1233A /* DiseaseSearchKey.swift */; };
+		B7898DA4200711A30030A943 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D11FFE125B00BB5B00 /* HomeViewController.swift */; };
+		B7898DA5200711A30030A943 /* BackPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E1200478FB00C1233A /* BackPatient.swift */; };
+		B7898DA6200711A30030A943 /* ProcedureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F81FFF4C300004F4F2 /* ProcedureController.swift */; };
+		B7898DA7200711A30030A943 /* HistoryRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414F01FFE332400BB5B00 /* HistoryRotationViewController.swift */; };
+		B7898DA8200711A30030A943 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */; };
+		B7898DA9200711A30030A943 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EC2004873D00C1233A /* TagView.swift */; };
+		B7898DAA200711A30030A943 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58E1FF0C67D00F5A5AD /* Constant.swift */; };
+		B7898DAB200711A30030A943 /* PatientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E731FFF761D0078E56A /* PatientController.swift */; };
+		B7898DAC200711A30030A943 /* DiagnosisSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F02004ABD900C1233A /* DiagnosisSearchKey.swift */; };
+		B7898DAD200711A30030A943 /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */; };
+		B7898DAE200711A30030A943 /* NLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEE2005F04D00625E8C /* NLabel.swift */; };
+		B7898DAF200711A30030A943 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */; };
+		B7898DB0200711A30030A943 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB60FE1FFCD63500560472 /* MoreViewController.swift */; };
+		B7898DB1200711A30030A943 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E320047ACE00C1233A /* Symptom.swift */; };
+		B7898DB2200711A30030A943 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E701FFF751A0078E56A /* PatientViewController.swift */; };
+		B7898DB3200711A30030A943 /* NViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175A2006215D0067090B /* NViewController.swift */; };
+		B7898DB4200711A30030A943 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F22004C1D500C1233A /* Disease.swift */; };
+		B7898DB5200711A30030A943 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAE92005DF7C00625E8C /* Notification.swift */; };
+		B7898DB6200711A30030A943 /* NButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D41FFE16C600BB5B00 /* NButtonBorder.swift */; };
+		B7898DB7200711A30030A943 /* NAutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675DF2004724700C1233A /* NAutoComplete.swift */; };
+		B7898DB8200711A30030A943 /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F21FFF49940004F4F2 /* ProcedureViewController.swift */; };
+		B7898DB9200711A30030A943 /* Foreign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175C20062F170067090B /* Foreign.swift */; };
+		B7898DBA200711A30030A943 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */; };
+		B7898DBB200711A30030A943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8641FF0F26A00FA7789 /* User.swift */; };
+		B7898DBC200711A30030A943 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E82004870D00C1233A /* CloseButton.swift */; };
+		B7898DBD200711A30030A943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED8191FF0B7C10088F78C /* AppDelegate.swift */; };
+		B7898DBE200711A30030A943 /* BackRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417602006302B0067090B /* BackRotation.swift */; };
+		B7898DBF200711A30030A943 /* BackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA081FF0F44E005BBAB4 /* BackUser.swift */; };
+		B7898DC0200711A30030A943 /* HistoryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1DA1FFF32170004F4F2 /* HistoryPatientViewController.swift */; };
+		B7898DC1200711A30030A943 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13B1FFE3E07008DFD00 /* HistoryViewController.swift */; };
+		B7898DC2200711A30030A943 /* NViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1EC1FFF44F00004F4F2 /* NViewCard.swift */; };
+		B7898DC3200711A30030A943 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB61131FFCDB9200560472 /* MoreController.swift */; };
+		B7898DC4200711A30030A943 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EA2004872500C1233A /* TagListView.swift */; };
+		B7898DC5200711A30030A943 /* LoadingPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F85B1FF0E02F00FA7789 /* LoadingPresentation.swift */; };
+		B7898DC6200711A30030A943 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611D1FFCED4300560472 /* FirstViewController.swift */; };
+		B7898DC7200711A30030A943 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */; };
+		B7898DC8200711A30030A943 /* SymptomSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E520047B6000C1233A /* SymptomSearchKey.swift */; };
+		B7898DC9200711A30030A943 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */; };
+		B7898DCA200711A30030A943 /* APIPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E691FFF69C80078E56A /* APIPatient.swift */; };
+		B7898DCB200711A30030A943 /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA6901FFCC44000B9A5DC /* NTextField.swift */; };
+		B7898DCC200711A30030A943 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5891FF0BF9100F5A5AD /* Helper.swift */; };
+		B7898DCD200711A30030A943 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611F1FFCED9200560472 /* FirstController.swift */; };
+		B7898DCE200711A30030A943 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0A1FF0FAD4005BBAB4 /* API.swift */; };
+		B7898DCF200711A30030A943 /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA061FF0F443005BBAB4 /* APIUser.swift */; };
+		B7898DD1200711A30030A943 /* Pods_BinlaLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE868201C6BB1F1E52F61D71 /* Pods_BinlaLog.framework */; };
+		B7898DD3200711A30030A943 /* pic-patient.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E71FFF42130004F4F2 /* pic-patient.png */; };
+		B7898DD4200711A30030A943 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E5F8581FF0DFAF00FA7789 /* Helper.storyboard */; };
+		B7898DD5200711A30030A943 /* ic-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */; };
+		B7898DD6200711A30030A943 /* ic-tag.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */; };
+		B7898DD7200711A30030A943 /* ic-draft.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61091FFCDA4800560472 /* ic-draft.png */; };
+		B7898DDA200711A30030A943 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A6C5921FF0D89A00F5A5AD /* Logo.png */; };
+		B7898DDB200711A30030A943 /* Procedure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1EE1FFF46E80004F4F2 /* Procedure.storyboard */; };
+		B7898DDF200711A30030A943 /* ic-star.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E51FFF410F0004F4F2 /* ic-star.png */; };
+		B7898DE1200711A30030A943 /* tab-more.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61031FFCD81700560472 /* tab-more.png */; };
+		B7898DE2200711A30030A943 /* ic-location.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E31FFF3E390004F4F2 /* ic-location.png */; };
+		B7898DE3200711A30030A943 /* ic-key.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6981FFCCBF500B9A5DC /* ic-key.png */; };
+		B7898DE5200711A30030A943 /* pic-procedure.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E81FFF42180004F4F2 /* pic-procedure.png */; };
+		B7898DE6200711A30030A943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8221FF0B7C10088F78C /* LaunchScreen.storyboard */; };
+		B7898DE7200711A30030A943 /* ic-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D675F62004CE0300C1233A /* ic-calendar.png */; };
+		B7898DE9200711A30030A943 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7781E6D1FFF71820078E56A /* Patient.storyboard */; };
+		B7898DEA200711A30030A943 /* pic-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E11FFF3A770004F4F2 /* pic-profile.png */; };
+		B7898DEB200711A30030A943 /* tab-home.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61011FFCD81400560472 /* tab-home.png */; };
+		B7898DEC200711A30030A943 /* ic-logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610B1FFCDA4A00560472 /* ic-logout.png */; };
+		B7898DED200711A30030A943 /* ic-stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBE2003784A00F99930 /* ic-stethoscope.png */; };
+		B7898DEF200711A30030A943 /* rotation-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414D71FFE29B300BB5B00 /* rotation-ped.png */; };
+		B7898DF1200711A30030A943 /* ic-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6971FFCCBF500B9A5DC /* ic-user.png */; };
+		B7898DF2200711A30030A943 /* tab-patient.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61041FFCD81700560472 /* tab-patient.png */; };
+		B7898DF3200711A30030A943 /* ic-syringe.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBF2003784B00F99930 /* ic-syringe.png */; };
+		B7898DF4200711A30030A943 /* ic-form.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610C1FFCDA4B00560472 /* ic-form.png */; };
+		B7898DF5200711A30030A943 /* ic-passcode.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610D1FFCDA4B00560472 /* ic-passcode.png */; };
+		B7898DF7200711A30030A943 /* ic-virus.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBD2003784800F99930 /* ic-virus.png */; };
+		B7898DF8200711A30030A943 /* ic-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610A1FFCDA4A00560472 /* ic-facebook.png */; };
+		B7898DF9200711A30030A943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED81D1FF0B7C10088F78C /* Main.storyboard */; };
+		B7898E01200713AA0030A943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8201FF0B7C10088F78C /* Assets.xcassets */; };
+		B7898E02200713B10030A943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8201FF0B7C10088F78C /* Assets.xcassets */; };
+		B7898E06200723110030A943 /* mdculog-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7898E05200723100030A943 /* mdculog-logo.jpg */; };
+		B7898E0B200728770030A943 /* mdcu-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7898E0A200728760030A943 /* mdcu-info.plist */; };
+		B7898E0C200728770030A943 /* mdcu-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7898E0A200728760030A943 /* mdcu-info.plist */; };
+		B7898E0E200731500030A943 /* BackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7898E0D2007314F0030A943 /* BackCourse.swift */; };
+		B7898E0F200731500030A943 /* BackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7898E0D2007314F0030A943 /* BackCourse.swift */; };
 		B79ACA071FF0F443005BBAB4 /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA061FF0F443005BBAB4 /* APIUser.swift */; };
 		B79ACA091FF0F44E005BBAB4 /* BackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA081FF0F44E005BBAB4 /* BackUser.swift */; };
 		B79ACA0B1FF0FAD4005BBAB4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0A1FF0FAD4005BBAB4 /* API.swift */; };
 		B79ACA0D1FF109FA005BBAB4 /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0C1FF109FA005BBAB4 /* Back.swift */; };
-		B7A6C5821FF0BB6D00F5A5AD /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5811FF0BB6D00F5A5AD /* LoginPresentation.swift */; };
 		B7A6C58A1FF0BF9100F5A5AD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5891FF0BF9100F5A5AD /* Helper.swift */; };
 		B7A6C58D1FF0BFD600F5A5AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58C1FF0BFD600F5A5AD /* LoginViewController.swift */; };
 		B7A6C58F1FF0C67D00F5A5AD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58E1FF0C67D00F5A5AD /* Constant.swift */; };
 		B7A6C5931FF0D8A100F5A5AD /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A6C5921FF0D89A00F5A5AD /* Logo.png */; };
 		B7A6C5961FF0DA6F00F5A5AD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5951FF0DA6E00F5A5AD /* LoginController.swift */; };
+		B7A8B12E200867A50022F547 /* ProcedureAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B12D200867A50022F547 /* ProcedureAddViewController.swift */; };
+		B7A8B12F200867A50022F547 /* ProcedureAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B12D200867A50022F547 /* ProcedureAddViewController.swift */; };
+		B7A8B131200874510022F547 /* ic-book.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B130200874500022F547 /* ic-book.png */; };
+		B7A8B132200874510022F547 /* ic-book.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B130200874500022F547 /* ic-book.png */; };
+		B7A8B13D200883730022F547 /* emotion-smile.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1332008836A0022F547 /* emotion-smile.png */; };
+		B7A8B13E200883730022F547 /* emotion-smile.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1332008836A0022F547 /* emotion-smile.png */; };
+		B7A8B13F200883730022F547 /* emotion-smile-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1342008836B0022F547 /* emotion-smile-grey.png */; };
+		B7A8B140200883730022F547 /* emotion-smile-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1342008836B0022F547 /* emotion-smile-grey.png */; };
+		B7A8B141200883730022F547 /* emotion-straight-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1352008836C0022F547 /* emotion-straight-grey.png */; };
+		B7A8B142200883730022F547 /* emotion-straight-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1352008836C0022F547 /* emotion-straight-grey.png */; };
+		B7A8B143200883730022F547 /* emotion-love-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1362008836C0022F547 /* emotion-love-grey.png */; };
+		B7A8B144200883730022F547 /* emotion-love-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1362008836C0022F547 /* emotion-love-grey.png */; };
+		B7A8B145200883730022F547 /* emotion-crying-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1372008836D0022F547 /* emotion-crying-grey.png */; };
+		B7A8B146200883730022F547 /* emotion-crying-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1372008836D0022F547 /* emotion-crying-grey.png */; };
+		B7A8B147200883730022F547 /* emotion-angry-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1382008836E0022F547 /* emotion-angry-grey.png */; };
+		B7A8B148200883730022F547 /* emotion-angry-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1382008836E0022F547 /* emotion-angry-grey.png */; };
+		B7A8B149200883730022F547 /* emotion-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1392008836E0022F547 /* emotion-angry.png */; };
+		B7A8B14A200883730022F547 /* emotion-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1392008836E0022F547 /* emotion-angry.png */; };
+		B7A8B14B200883730022F547 /* emotion-crying.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13A2008836F0022F547 /* emotion-crying.png */; };
+		B7A8B14C200883730022F547 /* emotion-crying.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13A2008836F0022F547 /* emotion-crying.png */; };
+		B7A8B14D200883730022F547 /* emotion-straight.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13B200883700022F547 /* emotion-straight.png */; };
+		B7A8B14E200883730022F547 /* emotion-straight.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13B200883700022F547 /* emotion-straight.png */; };
+		B7A8B14F200883730022F547 /* emotion-love.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13C200883710022F547 /* emotion-love.png */; };
+		B7A8B150200883730022F547 /* emotion-love.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13C200883710022F547 /* emotion-love.png */; };
+		B7A8B152200887360022F547 /* ProcedureAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B151200887360022F547 /* ProcedureAddController.swift */; };
+		B7A8B153200887360022F547 /* ProcedureAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B151200887360022F547 /* ProcedureAddController.swift */; };
+		B7B7FAEA2005DF7C00625E8C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAE92005DF7C00625E8C /* Notification.swift */; };
+		B7B7FAEC2005EF6D00625E8C /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */; };
+		B7B7FAEF2005F04D00625E8C /* NLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEE2005F04D00625E8C /* NLabel.swift */; };
+		B7BACC55200762AA00FBC3A0 /* BackProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC54200762AA00FBC3A0 /* BackProcedure.swift */; };
+		B7BACC572007636000FBC3A0 /* Procedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC562007636000FBC3A0 /* Procedure.swift */; };
+		B7BACC592007636B00FBC3A0 /* ProcedureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC582007636B00FBC3A0 /* ProcedureGroup.swift */; };
+		B7BACC5A20076AE900FBC3A0 /* Procedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC562007636000FBC3A0 /* Procedure.swift */; };
+		B7BACC5B20076AEC00FBC3A0 /* ProcedureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC582007636B00FBC3A0 /* ProcedureGroup.swift */; };
+		B7BACC5C20076AF700FBC3A0 /* BackProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC54200762AA00FBC3A0 /* BackProcedure.swift */; };
+		B7C04062201EE03D001A9B18 /* ic-entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C04061201EE03C001A9B18 /* ic-entrance.png */; };
+		B7C04063201EE03D001A9B18 /* ic-entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C04061201EE03C001A9B18 /* ic-entrance.png */; };
+		B7C04065201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C04064201EE743001A9B18 /* SummaryPatientViewController.swift */; };
+		B7C04066201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C04064201EE743001A9B18 /* SummaryPatientViewController.swift */; };
+		B7C87B612006354D00512808 /* APIRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C87B602006354D00512808 /* APIRotation.swift */; };
 		B7CFD1DB1FFF32170004F4F2 /* HistoryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1DA1FFF32170004F4F2 /* HistoryPatientViewController.swift */; };
 		B7CFD1DD1FFF334D0004F4F2 /* ic-tag.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */; };
 		B7CFD1DF1FFF39DF0004F4F2 /* ic-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */; };
@@ -66,10 +279,49 @@
 		B7CFD1F51FFF4A190004F4F2 /* HomeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F41FFF4A190004F4F2 /* HomeCellTableViewCell.swift */; };
 		B7CFD1F71FFF4AA70004F4F2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */; };
 		B7CFD1F91FFF4C300004F4F2 /* ProcedureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F81FFF4C300004F4F2 /* ProcedureController.swift */; };
+		B7D675E02004724700C1233A /* NAutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675DF2004724700C1233A /* NAutoComplete.swift */; };
+		B7D675E2200478FB00C1233A /* BackPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E1200478FB00C1233A /* BackPatient.swift */; };
+		B7D675E420047ACE00C1233A /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E320047ACE00C1233A /* Symptom.swift */; };
+		B7D675E620047B6000C1233A /* SymptomSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E520047B6000C1233A /* SymptomSearchKey.swift */; };
+		B7D675E92004870D00C1233A /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E82004870D00C1233A /* CloseButton.swift */; };
+		B7D675EB2004872500C1233A /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EA2004872500C1233A /* TagListView.swift */; };
+		B7D675ED2004873D00C1233A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EC2004873D00C1233A /* TagView.swift */; };
+		B7D675EF2004AB2800C1233A /* Diagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EE2004AB2800C1233A /* Diagnosis.swift */; };
+		B7D675F12004ABD900C1233A /* DiagnosisSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F02004ABD900C1233A /* DiagnosisSearchKey.swift */; };
+		B7D675F32004C1D500C1233A /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F22004C1D500C1233A /* Disease.swift */; };
+		B7D675F52004C22E00C1233A /* DiseaseSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F42004C22E00C1233A /* DiseaseSearchKey.swift */; };
+		B7D675F72004CE0400C1233A /* ic-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D675F62004CE0300C1233A /* ic-calendar.png */; };
+		B7D675FB2004DAA500C1233A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */; };
 		B7E5F8591FF0DFAF00FA7789 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E5F8581FF0DFAF00FA7789 /* Helper.storyboard */; };
 		B7E5F85C1FF0E02F00FA7789 /* LoadingPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F85B1FF0E02F00FA7789 /* LoadingPresentation.swift */; };
 		B7E5F8611FF0E10D00FA7789 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */; };
 		B7E5F8651FF0F26B00FA7789 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8641FF0F26A00FA7789 /* User.swift */; };
+		B7E607D2203A97C9005EEA06 /* NTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E607D1203A97C9005EEA06 /* NTableView.swift */; };
+		B7E607D3203A97C9005EEA06 /* NTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E607D1203A97C9005EEA06 /* NTableView.swift */; };
+		B7EF179820219DE700B0AE0E /* TMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF179720219DE700B0AE0E /* TMainViewController.swift */; };
+		B7EF179920219DE700B0AE0E /* TMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF179720219DE700B0AE0E /* TMainViewController.swift */; };
+		B7EF179B2021A4FC00B0AE0E /* ic-code.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF179A2021A4FB00B0AE0E /* ic-code.png */; };
+		B7EF179C2021A4FC00B0AE0E /* ic-code.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF179A2021A4FB00B0AE0E /* ic-code.png */; };
+		B7EF17A12021A8BA00B0AE0E /* pic-0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */; };
+		B7EF17A22021A8BA00B0AE0E /* pic-0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */; };
+		B7EF17A42021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */; };
+		B7EF17A52021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */; };
+		B7EF17A72021B3DE00B0AE0E /* ic-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A62021B3D900B0AE0E /* ic-clock.png */; };
+		B7EF17A82021B3DE00B0AE0E /* ic-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A62021B3D900B0AE0E /* ic-clock.png */; };
+		B7EF17AB2021B4BD00B0AE0E /* pic-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A92021B4B700B0AE0E /* pic-2.jpeg */; };
+		B7EF17AC2021B4BD00B0AE0E /* pic-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A92021B4B700B0AE0E /* pic-2.jpeg */; };
+		B7EF17AD2021B4BD00B0AE0E /* pic-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17AA2021B4BB00B0AE0E /* pic-1.jpeg */; };
+		B7EF17AE2021B4BD00B0AE0E /* pic-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17AA2021B4BB00B0AE0E /* pic-1.jpeg */; };
+		B7EF17B02021BFB100B0AE0E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17AF2021BFB100B0AE0E /* ProfileViewController.swift */; };
+		B7EF17B12021BFB100B0AE0E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17AF2021BFB100B0AE0E /* ProfileViewController.swift */; };
+		B7F0971E2017983A00A7D327 /* ic-level-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971B2017983600A7D327 /* ic-level-easy.png */; };
+		B7F0971F2017983A00A7D327 /* ic-level-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971B2017983600A7D327 /* ic-level-easy.png */; };
+		B7F097202017983A00A7D327 /* ic-level-hard.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971C2017983800A7D327 /* ic-level-hard.png */; };
+		B7F097212017983A00A7D327 /* ic-level-hard.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971C2017983800A7D327 /* ic-level-hard.png */; };
+		B7F097222017983A00A7D327 /* ic-level-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971D2017983900A7D327 /* ic-level-medium.png */; };
+		B7F097232017983A00A7D327 /* ic-level-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971D2017983900A7D327 /* ic-level-medium.png */; };
+		B7F0972520179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0972420179A7200A7D327 /* SummaryProcedureViewController.swift */; };
+		B7F0972620179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0972420179A7200A7D327 /* SummaryProcedureViewController.swift */; };
 		B7FB60FF1FFCD63500560472 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB60FE1FFCD63500560472 /* MoreViewController.swift */; };
 		B7FB61051FFCD81800560472 /* tab-home.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61011FFCD81400560472 /* tab-home.png */; };
 		B7FB61071FFCD81800560472 /* tab-more.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61031FFCD81700560472 /* tab-more.png */; };
@@ -82,6 +334,10 @@
 		B7FB61141FFCDB9200560472 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB61131FFCDB9200560472 /* MoreController.swift */; };
 		B7FB611E1FFCED4300560472 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611D1FFCED4300560472 /* FirstViewController.swift */; };
 		B7FB61201FFCED9200560472 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611F1FFCED9200560472 /* FirstController.swift */; };
+		B7FCBE54200F067900CCC7B8 /* ic-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FCBE53200F067600CCC7B8 /* ic-filter.png */; };
+		B7FCBE55200F067900CCC7B8 /* ic-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FCBE53200F067600CCC7B8 /* ic-filter.png */; };
+		B7FCBE57200F0CB300CCC7B8 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */; };
+		B7FCBE58200F0CB300CCC7B8 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,20 +362,27 @@
 		5D0ACF6E985F94210B27E73C /* Pods-BinlaLogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLogUITests/Pods-BinlaLogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70C803951049C6A98150AC17 /* Pods-BinlaLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLogTests/Pods-BinlaLogTests.release.xcconfig"; sourceTree = "<group>"; };
 		770D6A4F0DCADE0FEB06F6A9 /* Pods-BinlaLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog.debug.xcconfig"; sourceTree = "<group>"; };
+		B709B246202C65F1004CF168 /* APIVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIVerification.swift; sourceTree = "<group>"; };
+		B709B248202C66C3004CF168 /* BackVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackVerification.swift; sourceTree = "<group>"; };
+		B709B24A202C66EE004CF168 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		B70E3CF82017339D00608C9D /* SummaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDetailViewController.swift; sourceTree = "<group>"; };
+		B711F43C2036F26D001169B4 /* KeyboardwoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardwoTab.swift; sourceTree = "<group>"; };
 		B71414D11FFE125B00BB5B00 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B71414D41FFE16C600BB5B00 /* NButtonBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NButtonBorder.swift; sourceTree = "<group>"; };
 		B71414D71FFE29B300BB5B00 /* rotation-ped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotation-ped.png"; sourceTree = "<group>"; };
-		B71414DA1FFE30C200BB5B00 /* emotion-smile-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-smile-grey.png"; sourceTree = "<group>"; };
-		B71414DB1FFE30C400BB5B00 /* emotion-love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-love.png"; sourceTree = "<group>"; };
-		B71414DC1FFE30C500BB5B00 /* emotion-straight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-straight.png"; sourceTree = "<group>"; };
-		B71414DD1FFE30C700BB5B00 /* emotion-crying-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-crying-grey.png"; sourceTree = "<group>"; };
-		B71414DE1FFE30C800BB5B00 /* emotion-love-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-love-grey.png"; sourceTree = "<group>"; };
-		B71414DF1FFE30CA00BB5B00 /* emotion-angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-angry.png"; sourceTree = "<group>"; };
-		B71414E01FFE30CC00BB5B00 /* emotion-angry-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-angry-grey.png"; sourceTree = "<group>"; };
-		B71414E11FFE30CC00BB5B00 /* emotion-crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-crying.png"; sourceTree = "<group>"; };
-		B71414E21FFE30CE00BB5B00 /* emotion-smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-smile.png"; sourceTree = "<group>"; };
-		B71414E31FFE30D300BB5B00 /* emotion-straight-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-straight-grey.png"; sourceTree = "<group>"; };
 		B71414F01FFE332400BB5B00 /* HistoryRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRotationViewController.swift; sourceTree = "<group>"; };
+		B714175A2006215D0067090B /* NViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NViewController.swift; sourceTree = "<group>"; };
+		B714175C20062F170067090B /* Foreign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreign.swift; sourceTree = "<group>"; };
+		B714175E20062F580067090B /* Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
+		B71417602006302B0067090B /* BackRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackRotation.swift; sourceTree = "<group>"; };
+		B71417622006314C0067090B /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TProcedureNotificationViewController.swift; sourceTree = "<group>"; };
+		B71A19962032EB9F0058DEB7 /* APINotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINotification.swift; sourceTree = "<group>"; };
+		B71A19992032F0D70058DEB7 /* BackNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackNotification.swift; sourceTree = "<group>"; };
+		B72E2EAF200F28D9008D9B5C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		B72E2EB2200F58D7008D9B5C /* pic-rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic-rocket.png"; sourceTree = "<group>"; };
+		B72E2EB5200F62EA008D9B5C /* Logbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logbook.swift; sourceTree = "<group>"; };
+		B72E2EB920109D11008D9B5C /* TMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TMain.storyboard; sourceTree = "<group>"; };
 		B72ED8161FF0B7C10088F78C /* BinlaLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinlaLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72ED8191FF0B7C10088F78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72ED81E1FF0B7C10088F78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,28 +395,87 @@
 		B72ED8351FF0B7C20088F78C /* BinlaLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinlaLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72ED8391FF0B7C20088F78C /* BinlaLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinlaLogUITests.swift; sourceTree = "<group>"; };
 		B72ED83B1FF0B7C20088F78C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B748782920280FBE005763F9 /* ic-syringe-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-syringe-white.png"; sourceTree = "<group>"; };
+		B748782C20281066005763F9 /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		B748782F202864EC005763F9 /* ic-ortho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-ortho.png"; path = "ProcGroup/ic-ortho.png"; sourceTree = "<group>"; };
+		B7487830202864EE005763F9 /* ic-general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-general.png"; path = "ProcGroup/ic-general.png"; sourceTree = "<group>"; };
+		B7487831202864F6005763F9 /* ic-ped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-ped.png"; path = "ProcGroup/ic-ped.png"; sourceTree = "<group>"; };
+		B7487832202864FB005763F9 /* ic-anes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-anes.png"; path = "ProcGroup/ic-anes.png"; sourceTree = "<group>"; };
+		B7487833202864FC005763F9 /* ic-rehab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-rehab.png"; path = "ProcGroup/ic-rehab.png"; sourceTree = "<group>"; };
+		B7487834202864FF005763F9 /* ic-surgery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-surgery.png"; path = "ProcGroup/ic-surgery.png"; sourceTree = "<group>"; };
+		B748783520286500005763F9 /* ic-lab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-lab.png"; path = "ProcGroup/ic-lab.png"; sourceTree = "<group>"; };
+		B748783620286503005763F9 /* ic-obgyn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-obgyn.png"; path = "ProcGroup/ic-obgyn.png"; sourceTree = "<group>"; };
+		B748783720286504005763F9 /* ic-ent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-ent.png"; path = "ProcGroup/ic-ent.png"; sourceTree = "<group>"; };
+		B748783820286504005763F9 /* ic-oph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic-oph.png"; path = "ProcGroup/ic-oph.png"; sourceTree = "<group>"; };
+		B74C41D72033EEDB00438C8A /* ic-noti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-noti.png"; sourceTree = "<group>"; };
+		B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPatientNotificationViewController.swift; sourceTree = "<group>"; };
+		B74C41E02034419C00438C8A /* ic-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-chat.png"; sourceTree = "<group>"; };
+		B74C41E32034490B00438C8A /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		B74D3DBD2003784800F99930 /* ic-virus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-virus.png"; sourceTree = "<group>"; };
+		B74D3DBE2003784A00F99930 /* ic-stethoscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-stethoscope.png"; sourceTree = "<group>"; };
+		B74D3DBF2003784B00F99930 /* ic-syringe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-syringe.png"; sourceTree = "<group>"; };
 		B74FF13B1FFE3E07008DFD00 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryController.swift; path = BinlaLog/Controller/HistoryController.swift; sourceTree = SOURCE_ROOT; };
+		B75AA304200C5A54001922DF /* PatientCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCare.swift; sourceTree = "<group>"; };
 		B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
-		B75EA6901FFCC44000B9A5DC /* NTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextField.swift; sourceTree = "<group>"; };
+		B75EA6901FFCC44000B9A5DC /* NTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NTextField.swift; path = ../NTextField.swift; sourceTree = "<group>"; };
 		B75EA6971FFCCBF500B9A5DC /* ic-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-user.png"; sourceTree = "<group>"; };
 		B75EA6981FFCCBF500B9A5DC /* ic-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-key.png"; sourceTree = "<group>"; };
+		B760B02820159295005C941F /* ic-perform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-perform.png"; sourceTree = "<group>"; };
+		B760B02920159296005C941F /* ic-assist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-assist.png"; sourceTree = "<group>"; };
+		B760B02E2015935A005C941F /* ic-observe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-observe.png"; sourceTree = "<group>"; };
+		B760B032201593E7005C941F /* ProcedureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureTableViewCell.swift; sourceTree = "<group>"; };
+		B760B03520159E9D005C941F /* ProcedureInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureInfoTableViewCell.swift; sourceTree = "<group>"; };
+		B760B0382015B828005C941F /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
+		B760B03C2015C03F005C941F /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		B76907072024171D00C84126 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		B769070B20241C2600C84126 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		B76D24A52005D4A600756A36 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		B76E72F3202D485900BABAE0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B76E72F6202D488700BABAE0 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		B76E72F9202D878B00BABAE0 /* ic-verify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-verify.png"; sourceTree = "<group>"; };
+		B76E72FC202D9A6500BABAE0 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		B7781E691FFF69C80078E56A /* APIPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPatient.swift; sourceTree = "<group>"; };
 		B7781E6B1FFF6BB40078E56A /* APIProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProcedure.swift; sourceTree = "<group>"; };
 		B7781E6D1FFF71820078E56A /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
 		B7781E701FFF751A0078E56A /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		B7781E731FFF761D0078E56A /* PatientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientController.swift; sourceTree = "<group>"; };
+		B7898DFF200711A30030A943 /* MDCULog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDCULog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7898E05200723100030A943 /* mdculog-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mdculog-logo.jpg"; sourceTree = "<group>"; };
+		B7898E0A200728760030A943 /* mdcu-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "mdcu-info.plist"; sourceTree = "<group>"; };
+		B7898E0D2007314F0030A943 /* BackCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCourse.swift; sourceTree = "<group>"; };
 		B79ACA061FF0F443005BBAB4 /* APIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUser.swift; sourceTree = "<group>"; };
 		B79ACA081FF0F44E005BBAB4 /* BackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUser.swift; sourceTree = "<group>"; };
 		B79ACA0A1FF0FAD4005BBAB4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B79ACA0C1FF109FA005BBAB4 /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
-		B7A6C5811FF0BB6D00F5A5AD /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
 		B7A6C5891FF0BF9100F5A5AD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B7A6C58C1FF0BFD600F5A5AD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7A6C58E1FF0C67D00F5A5AD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B7A6C5921FF0D89A00F5A5AD /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B7A6C5951FF0DA6E00F5A5AD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B7A8B12D200867A50022F547 /* ProcedureAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureAddViewController.swift; sourceTree = "<group>"; };
+		B7A8B130200874500022F547 /* ic-book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-book.png"; sourceTree = "<group>"; };
+		B7A8B1332008836A0022F547 /* emotion-smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-smile.png"; sourceTree = "<group>"; };
+		B7A8B1342008836B0022F547 /* emotion-smile-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-smile-grey.png"; sourceTree = "<group>"; };
+		B7A8B1352008836C0022F547 /* emotion-straight-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-straight-grey.png"; sourceTree = "<group>"; };
+		B7A8B1362008836C0022F547 /* emotion-love-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-love-grey.png"; sourceTree = "<group>"; };
+		B7A8B1372008836D0022F547 /* emotion-crying-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-crying-grey.png"; sourceTree = "<group>"; };
+		B7A8B1382008836E0022F547 /* emotion-angry-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-angry-grey.png"; sourceTree = "<group>"; };
+		B7A8B1392008836E0022F547 /* emotion-angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-angry.png"; sourceTree = "<group>"; };
+		B7A8B13A2008836F0022F547 /* emotion-crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-crying.png"; sourceTree = "<group>"; };
+		B7A8B13B200883700022F547 /* emotion-straight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-straight.png"; sourceTree = "<group>"; };
+		B7A8B13C200883710022F547 /* emotion-love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-love.png"; sourceTree = "<group>"; };
+		B7A8B151200887360022F547 /* ProcedureAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureAddController.swift; sourceTree = "<group>"; };
+		B7B7FAE92005DF7C00625E8C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
+		B7B7FAEE2005F04D00625E8C /* NLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLabel.swift; sourceTree = "<group>"; };
+		B7BACC54200762AA00FBC3A0 /* BackProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackProcedure.swift; sourceTree = "<group>"; };
+		B7BACC562007636000FBC3A0 /* Procedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procedure.swift; sourceTree = "<group>"; };
+		B7BACC582007636B00FBC3A0 /* ProcedureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureGroup.swift; sourceTree = "<group>"; };
+		B7C04061201EE03C001A9B18 /* ic-entrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-entrance.png"; sourceTree = "<group>"; };
+		B7C04064201EE743001A9B18 /* SummaryPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPatientViewController.swift; sourceTree = "<group>"; };
+		B7C87B602006354D00512808 /* APIRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRotation.swift; sourceTree = "<group>"; };
 		B7CFD1DA1FFF32170004F4F2 /* HistoryPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPatientViewController.swift; sourceTree = "<group>"; };
 		B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-tag.png"; sourceTree = "<group>"; };
 		B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-edit.png"; sourceTree = "<group>"; };
@@ -168,10 +490,36 @@
 		B7CFD1F41FFF4A190004F4F2 /* HomeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellTableViewCell.swift; sourceTree = "<group>"; };
 		B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		B7CFD1F81FFF4C300004F4F2 /* ProcedureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureController.swift; sourceTree = "<group>"; };
+		B7D675DF2004724700C1233A /* NAutoComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAutoComplete.swift; sourceTree = "<group>"; };
+		B7D675E1200478FB00C1233A /* BackPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackPatient.swift; sourceTree = "<group>"; };
+		B7D675E320047ACE00C1233A /* Symptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
+		B7D675E520047B6000C1233A /* SymptomSearchKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomSearchKey.swift; sourceTree = "<group>"; };
+		B7D675E82004870D00C1233A /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		B7D675EA2004872500C1233A /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		B7D675EC2004873D00C1233A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		B7D675EE2004AB2800C1233A /* Diagnosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnosis.swift; sourceTree = "<group>"; };
+		B7D675F02004ABD900C1233A /* DiagnosisSearchKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisSearchKey.swift; sourceTree = "<group>"; };
+		B7D675F22004C1D500C1233A /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
+		B7D675F42004C22E00C1233A /* DiseaseSearchKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseSearchKey.swift; sourceTree = "<group>"; };
+		B7D675F62004CE0300C1233A /* ic-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-calendar.png"; sourceTree = "<group>"; };
+		B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		B7E5F8581FF0DFAF00FA7789 /* Helper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Helper.storyboard; sourceTree = "<group>"; };
 		B7E5F85B1FF0E02F00FA7789 /* LoadingPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresentation.swift; sourceTree = "<group>"; };
 		B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		B7E5F8641FF0F26A00FA7789 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7E607D1203A97C9005EEA06 /* NTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTableView.swift; sourceTree = "<group>"; };
+		B7EF179720219DE700B0AE0E /* TMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMainViewController.swift; sourceTree = "<group>"; };
+		B7EF179A2021A4FB00B0AE0E /* ic-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-code.png"; sourceTree = "<group>"; };
+		B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pic-0.jpeg"; sourceTree = "<group>"; };
+		B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVerificationViewController.swift; sourceTree = "<group>"; };
+		B7EF17A62021B3D900B0AE0E /* ic-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-clock.png"; sourceTree = "<group>"; };
+		B7EF17A92021B4B700B0AE0E /* pic-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pic-2.jpeg"; sourceTree = "<group>"; };
+		B7EF17AA2021B4BB00B0AE0E /* pic-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pic-1.jpeg"; sourceTree = "<group>"; };
+		B7EF17AF2021BFB100B0AE0E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B7F0971B2017983600A7D327 /* ic-level-easy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-level-easy.png"; sourceTree = "<group>"; };
+		B7F0971C2017983800A7D327 /* ic-level-hard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-level-hard.png"; sourceTree = "<group>"; };
+		B7F0971D2017983900A7D327 /* ic-level-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-level-medium.png"; sourceTree = "<group>"; };
+		B7F0972420179A7200A7D327 /* SummaryProcedureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryProcedureViewController.swift; sourceTree = "<group>"; };
 		B7FB60FE1FFCD63500560472 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		B7FB61011FFCD81400560472 /* tab-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-home.png"; sourceTree = "<group>"; };
 		B7FB61031FFCD81700560472 /* tab-more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-more.png"; sourceTree = "<group>"; };
@@ -184,6 +532,8 @@
 		B7FB61131FFCDB9200560472 /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		B7FB611D1FFCED4300560472 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B7FB611F1FFCED9200560472 /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		B7FCBE53200F067600CCC7B8 /* ic-filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-filter.png"; sourceTree = "<group>"; };
+		B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C3FA76ED9B9AD080CD7A34DE /* Pods-BinlaLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog.release.xcconfig"; sourceTree = "<group>"; };
 		E3E6DF1F49F76AC8291A1C5C /* Pods-BinlaLogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLogUITests/Pods-BinlaLogUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD91D67B765BDF42832BEF2 /* Pods_BinlaLogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinlaLogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +563,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1348D3C7BC6A6E1E41B272 /* Pods_BinlaLogUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7898DD0200711A30030A943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7898DD1200711A30030A943 /* Pods_BinlaLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,18 +606,26 @@
 		B71414D91FFE30AA00BB5B00 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
-				B71414E01FFE30CC00BB5B00 /* emotion-angry-grey.png */,
-				B71414DF1FFE30CA00BB5B00 /* emotion-angry.png */,
-				B71414DD1FFE30C700BB5B00 /* emotion-crying-grey.png */,
-				B71414E11FFE30CC00BB5B00 /* emotion-crying.png */,
-				B71414DE1FFE30C800BB5B00 /* emotion-love-grey.png */,
-				B71414DB1FFE30C400BB5B00 /* emotion-love.png */,
-				B71414DA1FFE30C200BB5B00 /* emotion-smile-grey.png */,
-				B71414E21FFE30CE00BB5B00 /* emotion-smile.png */,
-				B71414E31FFE30D300BB5B00 /* emotion-straight-grey.png */,
-				B71414DC1FFE30C500BB5B00 /* emotion-straight.png */,
+				B7A8B1382008836E0022F547 /* emotion-angry-grey.png */,
+				B7A8B1392008836E0022F547 /* emotion-angry.png */,
+				B7A8B1372008836D0022F547 /* emotion-crying-grey.png */,
+				B7A8B13A2008836F0022F547 /* emotion-crying.png */,
+				B7A8B1362008836C0022F547 /* emotion-love-grey.png */,
+				B7A8B13C200883710022F547 /* emotion-love.png */,
+				B7A8B1342008836B0022F547 /* emotion-smile-grey.png */,
+				B7A8B1332008836A0022F547 /* emotion-smile.png */,
+				B7A8B1352008836C0022F547 /* emotion-straight-grey.png */,
+				B7A8B13B200883700022F547 /* emotion-straight.png */,
 			);
 			path = Emotions;
+			sourceTree = "<group>";
+		};
+		B72E2EB820109CFE008D9B5C /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				B72E2EB920109D11008D9B5C /* TMain.storyboard */,
+			);
+			path = Teacher;
 			sourceTree = "<group>";
 		};
 		B72ED80D1FF0B7C10088F78C = {
@@ -270,6 +636,7 @@
 				B72ED8381FF0B7C20088F78C /* BinlaLogUITests */,
 				B72ED8171FF0B7C10088F78C /* Products */,
 				D6313FC269A73CDFF02E7DAD /* Pods */,
+				B7898E0A200728760030A943 /* mdcu-info.plist */,
 				72A53F86193209A5B7420D0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -280,6 +647,7 @@
 				B72ED8161FF0B7C10088F78C /* BinlaLog.app */,
 				B72ED82A1FF0B7C20088F78C /* BinlaLogTests.xctest */,
 				B72ED8351FF0B7C20088F78C /* BinlaLogUITests.xctest */,
+				B7898DFF200711A30030A943 /* MDCULog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,6 +694,22 @@
 			isa = PBXGroup;
 			children = (
 				B7E5F8641FF0F26A00FA7789 /* User.swift */,
+				B7D675E320047ACE00C1233A /* Symptom.swift */,
+				B7D675E520047B6000C1233A /* SymptomSearchKey.swift */,
+				B7D675EE2004AB2800C1233A /* Diagnosis.swift */,
+				B7D675F02004ABD900C1233A /* DiagnosisSearchKey.swift */,
+				B7D675F22004C1D500C1233A /* Disease.swift */,
+				B7D675F42004C22E00C1233A /* DiseaseSearchKey.swift */,
+				B714175C20062F170067090B /* Foreign.swift */,
+				B714175E20062F580067090B /* Rotation.swift */,
+				B71417622006314C0067090B /* Course.swift */,
+				B7BACC582007636B00FBC3A0 /* ProcedureGroup.swift */,
+				B7BACC562007636000FBC3A0 /* Procedure.swift */,
+				B75AA304200C5A54001922DF /* PatientCare.swift */,
+				B72E2EB5200F62EA008D9B5C /* Logbook.swift */,
+				B709B24A202C66EE004CF168 /* Verification.swift */,
+				B76E72F3202D485900BABAE0 /* Person.swift */,
+				B76E72F6202D488700BABAE0 /* Department.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,10 +717,12 @@
 		B72ED8481FF0B85E0088F78C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B72E2EB820109CFE008D9B5C /* Teacher */,
 				B72ED81D1FF0B7C10088F78C /* Main.storyboard */,
 				B7E5F8581FF0DFAF00FA7789 /* Helper.storyboard */,
 				B7CFD1EE1FFF46E80004F4F2 /* Procedure.storyboard */,
 				B7781E6D1FFF71820078E56A /* Patient.storyboard */,
+				B760B0382015B828005C941F /* Summary.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +742,7 @@
 			children = (
 				B7E5F85A1FF0E01600FA7789 /* Helper */,
 				B7A6C5801FF0BB3E00F5A5AD /* Main */,
+				B760B031201593BF005C941F /* Procedure */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -363,17 +750,56 @@
 		B72ED84B1FF0B9BB0088F78C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF179620219DCC00B0AE0E /* TMain */,
 				B7E5F85D1FF0E09400FA7789 /* Helper */,
 				B7A6C58B1FF0BFB100F5A5AD /* Main */,
 				B7CFD1F01FFF47D60004F4F2 /* Procedure */,
 				B7781E6F1FFF75020078E56A /* Patient */,
+				B760B03B2015C01A005C941F /* Summary */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B74D3DBA20032A3E00F99930 /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				B75EA6901FFCC44000B9A5DC /* NTextField.swift */,
+				B7D675DF2004724700C1233A /* NAutoComplete.swift */,
+			);
+			path = Textfield;
 			sourceTree = "<group>";
 		};
 		B75EA6961FFCCBD400B9A5DC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				B74C41E02034419C00438C8A /* ic-chat.png */,
+				B74C41D72033EEDB00438C8A /* ic-noti.png */,
+				B76E72F9202D878B00BABAE0 /* ic-verify.png */,
+				B7487832202864FB005763F9 /* ic-anes.png */,
+				B748783720286504005763F9 /* ic-ent.png */,
+				B7487830202864EE005763F9 /* ic-general.png */,
+				B748783520286500005763F9 /* ic-lab.png */,
+				B748783620286503005763F9 /* ic-obgyn.png */,
+				B748783820286504005763F9 /* ic-oph.png */,
+				B748782F202864EC005763F9 /* ic-ortho.png */,
+				B7487831202864F6005763F9 /* ic-ped.png */,
+				B7487833202864FC005763F9 /* ic-rehab.png */,
+				B7487834202864FF005763F9 /* ic-surgery.png */,
+				B748782920280FBE005763F9 /* ic-syringe-white.png */,
+				B7EF17A62021B3D900B0AE0E /* ic-clock.png */,
+				B7EF179A2021A4FB00B0AE0E /* ic-code.png */,
+				B7C04061201EE03C001A9B18 /* ic-entrance.png */,
+				B7F0971B2017983600A7D327 /* ic-level-easy.png */,
+				B7F0971C2017983800A7D327 /* ic-level-hard.png */,
+				B7F0971D2017983900A7D327 /* ic-level-medium.png */,
+				B760B02E2015935A005C941F /* ic-observe.png */,
+				B760B02920159296005C941F /* ic-assist.png */,
+				B760B02820159295005C941F /* ic-perform.png */,
+				B7A8B130200874500022F547 /* ic-book.png */,
+				B7D675F62004CE0300C1233A /* ic-calendar.png */,
+				B74D3DBE2003784A00F99930 /* ic-stethoscope.png */,
+				B74D3DBF2003784B00F99930 /* ic-syringe.png */,
+				B74D3DBD2003784800F99930 /* ic-virus.png */,
 				B7CFD1E51FFF410F0004F4F2 /* ic-star.png */,
 				B7CFD1E31FFF3E390004F4F2 /* ic-location.png */,
 				B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */,
@@ -385,8 +811,30 @@
 				B7FB610C1FFCDA4B00560472 /* ic-form.png */,
 				B7FB610B1FFCDA4A00560472 /* ic-logout.png */,
 				B7FB610D1FFCDA4B00560472 /* ic-passcode.png */,
+				B7FCBE53200F067600CCC7B8 /* ic-filter.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		B760B031201593BF005C941F /* Procedure */ = {
+			isa = PBXGroup;
+			children = (
+				B760B032201593E7005C941F /* ProcedureTableViewCell.swift */,
+				B760B03520159E9D005C941F /* ProcedureInfoTableViewCell.swift */,
+			);
+			path = Procedure;
+			sourceTree = "<group>";
+		};
+		B760B03B2015C01A005C941F /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				B760B03C2015C03F005C941F /* SummaryViewController.swift */,
+				B70E3CF82017339D00608C9D /* SummaryDetailViewController.swift */,
+				B7F0972420179A7200A7D327 /* SummaryProcedureViewController.swift */,
+				B7C04064201EE743001A9B18 /* SummaryPatientViewController.swift */,
+				B748782C20281066005763F9 /* AchievementViewController.swift */,
+			);
+			path = Summary;
 			sourceTree = "<group>";
 		};
 		B7781E6F1FFF75020078E56A /* Patient */ = {
@@ -408,7 +856,6 @@
 		B7A6C5801FF0BB3E00F5A5AD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B7A6C5811FF0BB6D00F5A5AD /* LoginPresentation.swift */,
 				B7CFD1F41FFF4A190004F4F2 /* HomeCellTableViewCell.swift */,
 			);
 			path = Main;
@@ -431,6 +878,7 @@
 				B7FB61001FFCD7FC00560472 /* tabs */,
 				B75EA6961FFCCBD400B9A5DC /* icons */,
 				B7A6C5921FF0D89A00F5A5AD /* Logo.png */,
+				B7898E05200723100030A943 /* mdculog-logo.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -438,13 +886,20 @@
 		B7A6C5881FF0BF7E00F5A5AD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B7E607CD203A9283005EEA06 /* TableView */,
+				B7B7FAED2005F04200625E8C /* Label */,
+				B74D3DBA20032A3E00F99930 /* Textfield */,
 				B7CFD1EB1FFF44DD0004F4F2 /* View */,
 				B71414D31FFE16B500BB5B00 /* Button */,
 				B7A6C5891FF0BF9100F5A5AD /* Helper.swift */,
 				B7A6C58E1FF0C67D00F5A5AD /* Constant.swift */,
 				B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */,
 				B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */,
-				B75EA6901FFCC44000B9A5DC /* NTextField.swift */,
+				B76D24A52005D4A600756A36 /* Observer.swift */,
+				B7B7FAE92005DF7C00625E8C /* Notification.swift */,
+				B714175A2006215D0067090B /* NViewController.swift */,
+				B769070B20241C2600C84126 /* DayAxisValueFormatter.swift */,
+				B711F43C2036F26D001169B4 /* KeyboardwoTab.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -459,6 +914,9 @@
 				B71414F01FFE332400BB5B00 /* HistoryRotationViewController.swift */,
 				B7CFD1DA1FFF32170004F4F2 /* HistoryPatientViewController.swift */,
 				B7FB60FE1FFCD63500560472 /* MoreViewController.swift */,
+				B7EF17AF2021BFB100B0AE0E /* ProfileViewController.swift */,
+				B76907072024171D00C84126 /* RankViewController.swift */,
+				B76E72FC202D9A6500BABAE0 /* NotificationViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -468,16 +926,28 @@
 			children = (
 				B7FB611F1FFCED9200560472 /* FirstController.swift */,
 				B7A6C5951FF0DA6E00F5A5AD /* LoginController.swift */,
+				B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */,
 				B7FB61131FFCDB9200560472 /* MoreController.swift */,
 				B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */,
-				B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B7B7FAED2005F04200625E8C /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				B7B7FAEE2005F04D00625E8C /* NLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		B7CFD1E01FFF3A690004F4F2 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF17A92021B4B700B0AE0E /* pic-2.jpeg */,
+				B7EF17AA2021B4BB00B0AE0E /* pic-1.jpeg */,
+				B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */,
+				B72E2EB2200F58D7008D9B5C /* pic-rocket.png */,
 				B7CFD1E71FFF42130004F4F2 /* pic-patient.png */,
 				B7CFD1E81FFF42180004F4F2 /* pic-procedure.png */,
 				B7CFD1E11FFF3A770004F4F2 /* pic-profile.png */,
@@ -488,6 +958,7 @@
 		B7CFD1EB1FFF44DD0004F4F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B7D675E72004869C00C1233A /* NTagView */,
 				B7CFD1EC1FFF44F00004F4F2 /* NViewCard.swift */,
 			);
 			path = View;
@@ -497,6 +968,8 @@
 			isa = PBXGroup;
 			children = (
 				B7CFD1F21FFF49940004F4F2 /* ProcedureViewController.swift */,
+				B7A8B12D200867A50022F547 /* ProcedureAddViewController.swift */,
+				B74C41E32034490B00438C8A /* CommentViewController.swift */,
 			);
 			path = Procedure;
 			sourceTree = "<group>";
@@ -505,14 +978,26 @@
 			isa = PBXGroup;
 			children = (
 				B7CFD1F81FFF4C300004F4F2 /* ProcedureController.swift */,
+				B7A8B151200887360022F547 /* ProcedureAddController.swift */,
 			);
 			path = Procedure;
+			sourceTree = "<group>";
+		};
+		B7D675E72004869C00C1233A /* NTagView */ = {
+			isa = PBXGroup;
+			children = (
+				B7D675E82004870D00C1233A /* CloseButton.swift */,
+				B7D675EA2004872500C1233A /* TagListView.swift */,
+				B7D675EC2004873D00C1233A /* TagView.swift */,
+			);
+			path = NTagView;
 			sourceTree = "<group>";
 		};
 		B7E5F85A1FF0E01600FA7789 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				B7E5F85B1FF0E02F00FA7789 /* LoadingPresentation.swift */,
+				B72E2EAF200F28D9008D9B5C /* FilterTableViewCell.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -521,6 +1006,9 @@
 			isa = PBXGroup;
 			children = (
 				B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */,
+				B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */,
+				B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */,
+				B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -531,7 +1019,10 @@
 				B79ACA0A1FF0FAD4005BBAB4 /* API.swift */,
 				B79ACA061FF0F443005BBAB4 /* APIUser.swift */,
 				B7781E691FFF69C80078E56A /* APIPatient.swift */,
+				B7C87B602006354D00512808 /* APIRotation.swift */,
 				B7781E6B1FFF6BB40078E56A /* APIProcedure.swift */,
+				B709B246202C65F1004CF168 /* APIVerification.swift */,
+				B71A19962032EB9F0058DEB7 /* APINotification.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -541,8 +1032,33 @@
 			children = (
 				B79ACA0C1FF109FA005BBAB4 /* Back.swift */,
 				B79ACA081FF0F44E005BBAB4 /* BackUser.swift */,
+				B7D675E1200478FB00C1233A /* BackPatient.swift */,
+				B71417602006302B0067090B /* BackRotation.swift */,
+				B7898E0D2007314F0030A943 /* BackCourse.swift */,
+				B7BACC54200762AA00FBC3A0 /* BackProcedure.swift */,
+				B709B248202C66C3004CF168 /* BackVerification.swift */,
+				B71A19992032F0D70058DEB7 /* BackNotification.swift */,
 			);
 			path = Back;
+			sourceTree = "<group>";
+		};
+		B7E607CD203A9283005EEA06 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B7E607D1203A97C9005EEA06 /* NTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		B7EF179620219DCC00B0AE0E /* TMain */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF179720219DE700B0AE0E /* TMainViewController.swift */,
+				B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */,
+				B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */,
+				B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */,
+			);
+			path = TMain;
 			sourceTree = "<group>";
 		};
 		B7FB61001FFCD7FC00560472 /* tabs */ = {
@@ -633,6 +1149,26 @@
 			productReference = B72ED8351FF0B7C20088F78C /* BinlaLogUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B7898D94200711A30030A943 /* MDCULog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7898DFC200711A30030A943 /* Build configuration list for PBXNativeTarget "MDCULog" */;
+			buildPhases = (
+				B7898D95200711A30030A943 /* [CP] Check Pods Manifest.lock */,
+				B7898D96200711A30030A943 /* Sources */,
+				B7898DD0200711A30030A943 /* Frameworks */,
+				B7898DD2200711A30030A943 /* Resources */,
+				B7898DFA200711A30030A943 /* [CP] Embed Pods Frameworks */,
+				B7898DFB200711A30030A943 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDCULog;
+			productName = BinlaLog;
+			productReference = B7898DFF200711A30030A943 /* MDCULog.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -657,6 +1193,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = B72ED8151FF0B7C10088F78C;
 					};
+					B7898D94200711A30030A943 = {
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B72ED8111FF0B7C10088F78C /* Build configuration list for PBXProject "BinlaLog" */;
@@ -673,6 +1212,7 @@
 			projectRoot = "";
 			targets = (
 				B72ED8151FF0B7C10088F78C /* BinlaLog */,
+				B7898D94200711A30030A943 /* MDCULog */,
 				B72ED8291FF0B7C20088F78C /* BinlaLogTests */,
 				B72ED8341FF0B7C20088F78C /* BinlaLogUITests */,
 			);
@@ -687,36 +1227,72 @@
 				B7CFD1E91FFF421B0004F4F2 /* pic-patient.png in Resources */,
 				B7E5F8591FF0DFAF00FA7789 /* Helper.storyboard in Resources */,
 				B7CFD1DF1FFF39DF0004F4F2 /* ic-edit.png in Resources */,
+				B748784B20286508005763F9 /* ic-oph.png in Resources */,
+				B7EF17A12021A8BA00B0AE0E /* pic-0.jpeg in Resources */,
+				B7EF17AD2021B4BD00B0AE0E /* pic-1.jpeg in Resources */,
+				B748784920286508005763F9 /* ic-ent.png in Resources */,
 				B7CFD1DD1FFF334D0004F4F2 /* ic-tag.png in Resources */,
 				B7FB610E1FFCDA4C00560472 /* ic-draft.png in Resources */,
-				B71414ED1FFE30D500BB5B00 /* emotion-straight-grey.png in Resources */,
-				B71414E61FFE30D500BB5B00 /* emotion-straight.png in Resources */,
 				B7A6C5931FF0D8A100F5A5AD /* Logo.png in Resources */,
+				B7EF179B2021A4FC00B0AE0E /* ic-code.png in Resources */,
+				B7A8B13F200883730022F547 /* emotion-smile-grey.png in Resources */,
+				B760B0392015B828005C941F /* Summary.storyboard in Resources */,
+				B7A8B13D200883730022F547 /* emotion-smile.png in Resources */,
+				B760B02C20159297005C941F /* ic-assist.png in Resources */,
+				B748783F20286508005763F9 /* ic-anes.png in Resources */,
+				B7A8B147200883730022F547 /* emotion-angry-grey.png in Resources */,
+				B748784520286508005763F9 /* ic-lab.png in Resources */,
 				B7CFD1EF1FFF46E80004F4F2 /* Procedure.storyboard in Resources */,
-				B71414EA1FFE30D500BB5B00 /* emotion-angry-grey.png in Resources */,
-				B71414E71FFE30D500BB5B00 /* emotion-crying-grey.png in Resources */,
-				B71414E41FFE30D500BB5B00 /* emotion-smile-grey.png in Resources */,
 				B7CFD1E61FFF41120004F4F2 /* ic-star.png in Resources */,
-				B71414EC1FFE30D500BB5B00 /* emotion-smile.png in Resources */,
+				B748783920286507005763F9 /* ic-ortho.png in Resources */,
 				B7FB61071FFCD81800560472 /* tab-more.png in Resources */,
+				B7A8B143200883730022F547 /* emotion-love-grey.png in Resources */,
 				B7CFD1E41FFF3E3D0004F4F2 /* ic-location.png in Resources */,
 				B75EA69A1FFCCBF600B9A5DC /* ic-key.png in Resources */,
-				B71414EB1FFE30D500BB5B00 /* emotion-crying.png in Resources */,
+				B7F097202017983A00A7D327 /* ic-level-hard.png in Resources */,
+				B7A8B145200883730022F547 /* emotion-crying-grey.png in Resources */,
+				B748783B20286508005763F9 /* ic-general.png in Resources */,
+				B7C04062201EE03D001A9B18 /* ic-entrance.png in Resources */,
 				B7CFD1EA1FFF421B0004F4F2 /* pic-procedure.png in Resources */,
+				B748782A20280FBE005763F9 /* ic-syringe-white.png in Resources */,
+				B74C41D82033EEDC00438C8A /* ic-noti.png in Resources */,
+				B7898E0B200728770030A943 /* mdcu-info.plist in Resources */,
+				B7898E01200713AA0030A943 /* Assets.xcassets in Resources */,
+				B748783D20286508005763F9 /* ic-ped.png in Resources */,
+				B7A8B149200883730022F547 /* emotion-angry.png in Resources */,
+				B72E2EBA20109D11008D9B5C /* TMain.storyboard in Resources */,
 				B72ED8241FF0B7C10088F78C /* LaunchScreen.storyboard in Resources */,
-				B71414E81FFE30D500BB5B00 /* emotion-love-grey.png in Resources */,
+				B7A8B131200874510022F547 /* ic-book.png in Resources */,
+				B748784720286508005763F9 /* ic-obgyn.png in Resources */,
+				B7A8B14F200883730022F547 /* emotion-love.png in Resources */,
+				B7D675F72004CE0400C1233A /* ic-calendar.png in Resources */,
 				B7781E6E1FFF71820078E56A /* Patient.storyboard in Resources */,
+				B748784320286508005763F9 /* ic-surgery.png in Resources */,
 				B7CFD1E21FFF3A770004F4F2 /* pic-profile.png in Resources */,
 				B7FB61051FFCD81800560472 /* tab-home.png in Resources */,
 				B7FB61101FFCDA4C00560472 /* ic-logout.png in Resources */,
-				B72ED8211FF0B7C10088F78C /* Assets.xcassets in Resources */,
+				B7A8B14B200883730022F547 /* emotion-crying.png in Resources */,
+				B7EF17A72021B3DE00B0AE0E /* ic-clock.png in Resources */,
+				B72E2EB3200F58DD008D9B5C /* pic-rocket.png in Resources */,
+				B7F097222017983A00A7D327 /* ic-level-medium.png in Resources */,
+				B74D3DC12003784E00F99930 /* ic-stethoscope.png in Resources */,
 				B71414D81FFE29B500BB5B00 /* rotation-ped.png in Resources */,
-				B71414E51FFE30D500BB5B00 /* emotion-love.png in Resources */,
+				B76E72FA202D878B00BABAE0 /* ic-verify.png in Resources */,
+				B7F0971E2017983A00A7D327 /* ic-level-easy.png in Resources */,
 				B75EA6991FFCCBF600B9A5DC /* ic-user.png in Resources */,
+				B760B02A20159297005C941F /* ic-perform.png in Resources */,
+				B760B02F2015935C005C941F /* ic-observe.png in Resources */,
 				B7FB61081FFCD81800560472 /* tab-patient.png in Resources */,
+				B74D3DC22003784E00F99930 /* ic-syringe.png in Resources */,
+				B7A8B141200883730022F547 /* emotion-straight-grey.png in Resources */,
+				B7FCBE54200F067900CCC7B8 /* ic-filter.png in Resources */,
 				B7FB61111FFCDA4C00560472 /* ic-form.png in Resources */,
 				B7FB61121FFCDA4C00560472 /* ic-passcode.png in Resources */,
-				B71414E91FFE30D500BB5B00 /* emotion-angry.png in Resources */,
+				B74D3DC02003784E00F99930 /* ic-virus.png in Resources */,
+				B748784120286508005763F9 /* ic-rehab.png in Resources */,
+				B7EF17AB2021B4BD00B0AE0E /* pic-2.jpeg in Resources */,
+				B74C41E12034419E00438C8A /* ic-chat.png in Resources */,
+				B7A8B14D200883730022F547 /* emotion-straight.png in Resources */,
 				B7FB610F1FFCDA4C00560472 /* ic-facebook.png in Resources */,
 				B72ED81F1FF0B7C10088F78C /* Main.storyboard in Resources */,
 			);
@@ -733,6 +1309,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7898DD2200711A30030A943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7898E06200723110030A943 /* mdculog-logo.jpg in Resources */,
+				B7898DD3200711A30030A943 /* pic-patient.png in Resources */,
+				B7898DD4200711A30030A943 /* Helper.storyboard in Resources */,
+				B7898DD5200711A30030A943 /* ic-edit.png in Resources */,
+				B7F0971F2017983A00A7D327 /* ic-level-easy.png in Resources */,
+				B7898E0C200728770030A943 /* mdcu-info.plist in Resources */,
+				B748783C20286508005763F9 /* ic-general.png in Resources */,
+				B7EF17AE2021B4BD00B0AE0E /* pic-1.jpeg in Resources */,
+				B7EF179C2021A4FC00B0AE0E /* ic-code.png in Resources */,
+				B7898DD6200711A30030A943 /* ic-tag.png in Resources */,
+				B7A8B148200883730022F547 /* emotion-angry-grey.png in Resources */,
+				B7898DD7200711A30030A943 /* ic-draft.png in Resources */,
+				B7EF17A22021A8BA00B0AE0E /* pic-0.jpeg in Resources */,
+				B7FCBE55200F067900CCC7B8 /* ic-filter.png in Resources */,
+				B760B02B20159297005C941F /* ic-perform.png in Resources */,
+				B7898DDA200711A30030A943 /* Logo.png in Resources */,
+				B748783A20286508005763F9 /* ic-ortho.png in Resources */,
+				B72E2EB4200F58DD008D9B5C /* pic-rocket.png in Resources */,
+				B760B03A2015B828005C941F /* Summary.storyboard in Resources */,
+				B748784A20286508005763F9 /* ic-ent.png in Resources */,
+				B7A8B14C200883730022F547 /* emotion-crying.png in Resources */,
+				B7F097212017983A00A7D327 /* ic-level-hard.png in Resources */,
+				B7898DDB200711A30030A943 /* Procedure.storyboard in Resources */,
+				B76E72FB202D878B00BABAE0 /* ic-verify.png in Resources */,
+				B7A8B132200874510022F547 /* ic-book.png in Resources */,
+				B7A8B144200883730022F547 /* emotion-love-grey.png in Resources */,
+				B7898DDF200711A30030A943 /* ic-star.png in Resources */,
+				B72E2EBB20109D11008D9B5C /* TMain.storyboard in Resources */,
+				B7898DE1200711A30030A943 /* tab-more.png in Resources */,
+				B7898DE2200711A30030A943 /* ic-location.png in Resources */,
+				B7A8B14A200883730022F547 /* emotion-angry.png in Resources */,
+				B7898DE3200711A30030A943 /* ic-key.png in Resources */,
+				B748784020286508005763F9 /* ic-anes.png in Resources */,
+				B7898DE5200711A30030A943 /* pic-procedure.png in Resources */,
+				B7898E02200713B10030A943 /* Assets.xcassets in Resources */,
+				B7898DE6200711A30030A943 /* LaunchScreen.storyboard in Resources */,
+				B7A8B150200883730022F547 /* emotion-love.png in Resources */,
+				B7F097232017983A00A7D327 /* ic-level-medium.png in Resources */,
+				B748784420286508005763F9 /* ic-surgery.png in Resources */,
+				B7A8B142200883730022F547 /* emotion-straight-grey.png in Resources */,
+				B7898DE7200711A30030A943 /* ic-calendar.png in Resources */,
+				B7C04063201EE03D001A9B18 /* ic-entrance.png in Resources */,
+				B7898DE9200711A30030A943 /* Patient.storyboard in Resources */,
+				B748784C20286508005763F9 /* ic-oph.png in Resources */,
+				B7898DEA200711A30030A943 /* pic-profile.png in Resources */,
+				B748782B20280FBE005763F9 /* ic-syringe-white.png in Resources */,
+				B7898DEB200711A30030A943 /* tab-home.png in Resources */,
+				B7EF17A82021B3DE00B0AE0E /* ic-clock.png in Resources */,
+				B7898DEC200711A30030A943 /* ic-logout.png in Resources */,
+				B760B0302015935C005C941F /* ic-observe.png in Resources */,
+				B7898DED200711A30030A943 /* ic-stethoscope.png in Resources */,
+				B7898DEF200711A30030A943 /* rotation-ped.png in Resources */,
+				B7A8B14E200883730022F547 /* emotion-straight.png in Resources */,
+				B7A8B13E200883730022F547 /* emotion-smile.png in Resources */,
+				B748783E20286508005763F9 /* ic-ped.png in Resources */,
+				B7A8B140200883730022F547 /* emotion-smile-grey.png in Resources */,
+				B7EF17AC2021B4BD00B0AE0E /* pic-2.jpeg in Resources */,
+				B7A8B146200883730022F547 /* emotion-crying-grey.png in Resources */,
+				B7898DF1200711A30030A943 /* ic-user.png in Resources */,
+				B7898DF2200711A30030A943 /* tab-patient.png in Resources */,
+				B748784220286508005763F9 /* ic-rehab.png in Resources */,
+				B74C41D92033EEDC00438C8A /* ic-noti.png in Resources */,
+				B7898DF3200711A30030A943 /* ic-syringe.png in Resources */,
+				B74C41E22034419E00438C8A /* ic-chat.png in Resources */,
+				B7898DF4200711A30030A943 /* ic-form.png in Resources */,
+				B7898DF5200711A30030A943 /* ic-passcode.png in Resources */,
+				B748784620286508005763F9 /* ic-lab.png in Resources */,
+				B760B02D20159297005C941F /* ic-assist.png in Resources */,
+				B7898DF7200711A30030A943 /* ic-virus.png in Resources */,
+				B7898DF8200711A30030A943 /* ic-facebook.png in Resources */,
+				B7898DF9200711A30030A943 /* Main.storyboard in Resources */,
+				B748784820286508005763F9 /* ic-obgyn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +1529,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B7898D95200711A30030A943 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7898DFA200711A30030A943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7898DFB200711A30030A943 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -882,39 +1582,95 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7A6C58D1FF0BFD600F5A5AD /* LoginViewController.swift in Sources */,
+				B71A19942032EB460058DEB7 /* TProcedureNotificationViewController.swift in Sources */,
+				B76D24A62005D4A600756A36 /* Observer.swift in Sources */,
 				B7781E6C1FFF6BB40078E56A /* APIProcedure.swift in Sources */,
 				B7A6C5961FF0DA6F00F5A5AD /* LoginController.swift in Sources */,
-				B7A6C5821FF0BB6D00F5A5AD /* LoginPresentation.swift in Sources */,
+				B7C04065201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
+				B7F0972520179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
+				B714175F20062F580067090B /* Rotation.swift in Sources */,
 				B79ACA0D1FF109FA005BBAB4 /* Back.swift in Sources */,
 				B7E5F8611FF0E10D00FA7789 /* LoadingViewController.swift in Sources */,
+				B71417632006314C0067090B /* Course.swift in Sources */,
 				B7CFD1F51FFF4A190004F4F2 /* HomeCellTableViewCell.swift in Sources */,
+				B7C87B612006354D00512808 /* APIRotation.swift in Sources */,
+				B7D675EF2004AB2800C1233A /* Diagnosis.swift in Sources */,
+				B7EF179820219DE700B0AE0E /* TMainViewController.swift in Sources */,
+				B71A19972032EB9F0058DEB7 /* APINotification.swift in Sources */,
+				B7D675F52004C22E00C1233A /* DiseaseSearchKey.swift in Sources */,
 				B71414D21FFE125B00BB5B00 /* HomeViewController.swift in Sources */,
+				B7D675E2200478FB00C1233A /* BackPatient.swift in Sources */,
 				B7CFD1F91FFF4C300004F4F2 /* ProcedureController.swift in Sources */,
 				B71414F11FFE332400BB5B00 /* HistoryRotationViewController.swift in Sources */,
+				B7898E0E200731500030A943 /* BackCourse.swift in Sources */,
 				B75EA68F1FFCAA1900B9A5DC /* ScrollView.swift in Sources */,
+				B76E72F4202D485900BABAE0 /* Person.swift in Sources */,
+				B760B03D2015C03F005C941F /* SummaryViewController.swift in Sources */,
+				B76907082024171D00C84126 /* RankViewController.swift in Sources */,
+				B7D675ED2004873D00C1233A /* TagView.swift in Sources */,
 				B7A6C58F1FF0C67D00F5A5AD /* Constant.swift in Sources */,
 				B7781E741FFF761D0078E56A /* PatientController.swift in Sources */,
+				B7D675F12004ABD900C1233A /* DiagnosisSearchKey.swift in Sources */,
+				B7B7FAEC2005EF6D00625E8C /* WarningViewController.swift in Sources */,
+				B709B247202C65F1004CF168 /* APIVerification.swift in Sources */,
+				B7B7FAEF2005F04D00625E8C /* NLabel.swift in Sources */,
 				B75EA68D1FFCA0CF00B9A5DC /* Keyboard.swift in Sources */,
 				B7FB60FF1FFCD63500560472 /* MoreViewController.swift in Sources */,
+				B7D675E420047ACE00C1233A /* Symptom.swift in Sources */,
 				B7781E711FFF751A0078E56A /* PatientViewController.swift in Sources */,
+				B714175B2006215D0067090B /* NViewController.swift in Sources */,
+				B7D675F32004C1D500C1233A /* Disease.swift in Sources */,
+				B7B7FAEA2005DF7C00625E8C /* Notification.swift in Sources */,
 				B71414D51FFE16C600BB5B00 /* NButtonBorder.swift in Sources */,
+				B7D675E02004724700C1233A /* NAutoComplete.swift in Sources */,
 				B7CFD1F31FFF49940004F4F2 /* ProcedureViewController.swift in Sources */,
+				B760B033201593E7005C941F /* ProcedureTableViewCell.swift in Sources */,
+				B709B24B202C66EE004CF168 /* Verification.swift in Sources */,
+				B714175D20062F170067090B /* Foreign.swift in Sources */,
 				B7CFD1F71FFF4AA70004F4F2 /* HomeController.swift in Sources */,
 				B7E5F8651FF0F26B00FA7789 /* User.swift in Sources */,
+				B76E72F7202D488700BABAE0 /* Department.swift in Sources */,
+				B7D675E92004870D00C1233A /* CloseButton.swift in Sources */,
 				B72ED81A1FF0B7C10088F78C /* AppDelegate.swift in Sources */,
+				B71417612006302B0067090B /* BackRotation.swift in Sources */,
 				B79ACA091FF0F44E005BBAB4 /* BackUser.swift in Sources */,
+				B7BACC55200762AA00FBC3A0 /* BackProcedure.swift in Sources */,
+				B711F43D2036F26D001169B4 /* KeyboardwoTab.swift in Sources */,
+				B7BACC572007636000FBC3A0 /* Procedure.swift in Sources */,
 				B7CFD1DB1FFF32170004F4F2 /* HistoryPatientViewController.swift in Sources */,
 				B74FF13C1FFE3E07008DFD00 /* HistoryViewController.swift in Sources */,
 				B7CFD1ED1FFF44F00004F4F2 /* NViewCard.swift in Sources */,
+				B74C41DB2033F8AA00438C8A /* TPatientNotificationViewController.swift in Sources */,
+				B7E607D2203A97C9005EEA06 /* NTableView.swift in Sources */,
+				B72E2EB6200F62EA008D9B5C /* Logbook.swift in Sources */,
+				B7A8B152200887360022F547 /* ProcedureAddController.swift in Sources */,
+				B7EF17A42021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */,
+				B7BACC592007636B00FBC3A0 /* ProcedureGroup.swift in Sources */,
 				B7FB61141FFCDB9200560472 /* MoreController.swift in Sources */,
+				B7D675EB2004872500C1233A /* TagListView.swift in Sources */,
 				B7E5F85C1FF0E02F00FA7789 /* LoadingPresentation.swift in Sources */,
 				B7FB611E1FFCED4300560472 /* FirstViewController.swift in Sources */,
 				B74FF13E1FFE3EFE008DFD00 /* HistoryController.swift in Sources */,
+				B70E3CF92017339D00608C9D /* SummaryDetailViewController.swift in Sources */,
+				B7D675E620047B6000C1233A /* SymptomSearchKey.swift in Sources */,
+				B7D675FB2004DAA500C1233A /* DatePickerViewController.swift in Sources */,
 				B7781E6A1FFF69C80078E56A /* APIPatient.swift in Sources */,
+				B7A8B12E200867A50022F547 /* ProcedureAddViewController.swift in Sources */,
+				B71A199A2032F0D70058DEB7 /* BackNotification.swift in Sources */,
+				B7EF17B02021BFB100B0AE0E /* ProfileViewController.swift in Sources */,
 				B75EA6911FFCC44000B9A5DC /* NTextField.swift in Sources */,
+				B7FCBE57200F0CB300CCC7B8 /* FilterViewController.swift in Sources */,
 				B7A6C58A1FF0BF9100F5A5AD /* Helper.swift in Sources */,
+				B75AA305200C5A54001922DF /* PatientCare.swift in Sources */,
 				B7FB61201FFCED9200560472 /* FirstController.swift in Sources */,
+				B72E2EB0200F28D9008D9B5C /* FilterTableViewCell.swift in Sources */,
+				B760B03620159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */,
+				B74C41E42034490B00438C8A /* CommentViewController.swift in Sources */,
 				B79ACA0B1FF0FAD4005BBAB4 /* API.swift in Sources */,
+				B76E72FD202D9A6500BABAE0 /* NotificationViewController.swift in Sources */,
+				B769070C20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */,
+				B709B249202C66C3004CF168 /* BackVerification.swift in Sources */,
+				B748782D20281066005763F9 /* AchievementViewController.swift in Sources */,
 				B79ACA071FF0F443005BBAB4 /* APIUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,6 +1688,104 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72ED83A1FF0B7C20088F78C /* BinlaLogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7898D96200711A30030A943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B709B24C202C66EE004CF168 /* Verification.swift in Sources */,
+				B71A19952032EB460058DEB7 /* TProcedureNotificationViewController.swift in Sources */,
+				B7898D97200711A30030A943 /* LoginViewController.swift in Sources */,
+				B7898D98200711A30030A943 /* Observer.swift in Sources */,
+				B7898D99200711A30030A943 /* APIProcedure.swift in Sources */,
+				B7898D9A200711A30030A943 /* LoginController.swift in Sources */,
+				B7C04066201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
+				B7F0972620179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
+				B7898D9C200711A30030A943 /* Rotation.swift in Sources */,
+				B7898D9D200711A30030A943 /* Back.swift in Sources */,
+				B7898D9E200711A30030A943 /* LoadingViewController.swift in Sources */,
+				B7898D9F200711A30030A943 /* Course.swift in Sources */,
+				B7898DA0200711A30030A943 /* HomeCellTableViewCell.swift in Sources */,
+				B7898DA1200711A30030A943 /* APIRotation.swift in Sources */,
+				B7898DA2200711A30030A943 /* Diagnosis.swift in Sources */,
+				B71A19982032EB9F0058DEB7 /* APINotification.swift in Sources */,
+				B7EF179920219DE700B0AE0E /* TMainViewController.swift in Sources */,
+				B7898DA3200711A30030A943 /* DiseaseSearchKey.swift in Sources */,
+				B7898DA4200711A30030A943 /* HomeViewController.swift in Sources */,
+				B7898DA5200711A30030A943 /* BackPatient.swift in Sources */,
+				B7898DA6200711A30030A943 /* ProcedureController.swift in Sources */,
+				B7898DA7200711A30030A943 /* HistoryRotationViewController.swift in Sources */,
+				B7898E0F200731500030A943 /* BackCourse.swift in Sources */,
+				B76E72F5202D485C00BABAE0 /* Person.swift in Sources */,
+				B7898DA8200711A30030A943 /* ScrollView.swift in Sources */,
+				B760B03E2015C03F005C941F /* SummaryViewController.swift in Sources */,
+				B76907092024171D00C84126 /* RankViewController.swift in Sources */,
+				B7898DA9200711A30030A943 /* TagView.swift in Sources */,
+				B7898DAA200711A30030A943 /* Constant.swift in Sources */,
+				B7898DAB200711A30030A943 /* PatientController.swift in Sources */,
+				B7898DAC200711A30030A943 /* DiagnosisSearchKey.swift in Sources */,
+				B7898DAD200711A30030A943 /* WarningViewController.swift in Sources */,
+				B7898DAE200711A30030A943 /* NLabel.swift in Sources */,
+				B7898DAF200711A30030A943 /* Keyboard.swift in Sources */,
+				B7898DB0200711A30030A943 /* MoreViewController.swift in Sources */,
+				B7898DB1200711A30030A943 /* Symptom.swift in Sources */,
+				B7898DB2200711A30030A943 /* PatientViewController.swift in Sources */,
+				B7898DB3200711A30030A943 /* NViewController.swift in Sources */,
+				B7898DB4200711A30030A943 /* Disease.swift in Sources */,
+				B7898DB5200711A30030A943 /* Notification.swift in Sources */,
+				B7898DB6200711A30030A943 /* NButtonBorder.swift in Sources */,
+				B7898DB7200711A30030A943 /* NAutoComplete.swift in Sources */,
+				B7898DB8200711A30030A943 /* ProcedureViewController.swift in Sources */,
+				B760B034201593E7005C941F /* ProcedureTableViewCell.swift in Sources */,
+				B7BACC5C20076AF700FBC3A0 /* BackProcedure.swift in Sources */,
+				B7898DB9200711A30030A943 /* Foreign.swift in Sources */,
+				B7898DBA200711A30030A943 /* HomeController.swift in Sources */,
+				B7BACC5A20076AE900FBC3A0 /* Procedure.swift in Sources */,
+				B76E72F8202D488700BABAE0 /* Department.swift in Sources */,
+				B7898DBB200711A30030A943 /* User.swift in Sources */,
+				B7898DBC200711A30030A943 /* CloseButton.swift in Sources */,
+				B7898DBD200711A30030A943 /* AppDelegate.swift in Sources */,
+				B709B24E202C66F8004CF168 /* BackVerification.swift in Sources */,
+				B7898DBE200711A30030A943 /* BackRotation.swift in Sources */,
+				B711F43E2036F26D001169B4 /* KeyboardwoTab.swift in Sources */,
+				B7898DBF200711A30030A943 /* BackUser.swift in Sources */,
+				B7898DC0200711A30030A943 /* HistoryPatientViewController.swift in Sources */,
+				B7898DC1200711A30030A943 /* HistoryViewController.swift in Sources */,
+				B7BACC5B20076AEC00FBC3A0 /* ProcedureGroup.swift in Sources */,
+				B74C41DC2033F8AA00438C8A /* TPatientNotificationViewController.swift in Sources */,
+				B7E607D3203A97C9005EEA06 /* NTableView.swift in Sources */,
+				B72E2EB7200F62EA008D9B5C /* Logbook.swift in Sources */,
+				B7A8B153200887360022F547 /* ProcedureAddController.swift in Sources */,
+				B7EF17A52021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */,
+				B7898DC2200711A30030A943 /* NViewCard.swift in Sources */,
+				B7898DC3200711A30030A943 /* MoreController.swift in Sources */,
+				B7898DC4200711A30030A943 /* TagListView.swift in Sources */,
+				B7898DC5200711A30030A943 /* LoadingPresentation.swift in Sources */,
+				B7898DC6200711A30030A943 /* FirstViewController.swift in Sources */,
+				B7898DC7200711A30030A943 /* HistoryController.swift in Sources */,
+				B70E3CFA2017339D00608C9D /* SummaryDetailViewController.swift in Sources */,
+				B7898DC8200711A30030A943 /* SymptomSearchKey.swift in Sources */,
+				B7898DC9200711A30030A943 /* DatePickerViewController.swift in Sources */,
+				B7898DCA200711A30030A943 /* APIPatient.swift in Sources */,
+				B7A8B12F200867A50022F547 /* ProcedureAddViewController.swift in Sources */,
+				B71A199B2032F0D70058DEB7 /* BackNotification.swift in Sources */,
+				B7EF17B12021BFB100B0AE0E /* ProfileViewController.swift in Sources */,
+				B7898DCB200711A30030A943 /* NTextField.swift in Sources */,
+				B7FCBE58200F0CB300CCC7B8 /* FilterViewController.swift in Sources */,
+				B7898DCC200711A30030A943 /* Helper.swift in Sources */,
+				B75AA306200C5A5B001922DF /* PatientCare.swift in Sources */,
+				B7898DCD200711A30030A943 /* FirstController.swift in Sources */,
+				B72E2EB1200F3F1D008D9B5C /* FilterTableViewCell.swift in Sources */,
+				B709B24D202C66F6004CF168 /* APIVerification.swift in Sources */,
+				B74C41E52034490B00438C8A /* CommentViewController.swift in Sources */,
+				B760B03720159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */,
+				B76E72FE202D9A6500BABAE0 /* NotificationViewController.swift in Sources */,
+				B7898DCE200711A30030A943 /* API.swift in Sources */,
+				B769070D20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */,
+				B748782E20281066005763F9 /* AchievementViewController.swift in Sources */,
+				B7898DCF200711A30030A943 /* APIUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,6 +2035,42 @@
 			};
 			name = Release;
 		};
+		B7898DFD200711A30030A943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770D6A4F0DCADE0FEB06F6A9 /* Pods-BinlaLog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2KJV4DXXN;
+				INFOPLIST_FILE = "mdcu-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DMDCULOG";
+				PRODUCT_BUNDLE_IDENTIFIER = Nont.MDCULog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7898DFE200711A30030A943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FA76ED9B9AD080CD7A34DE /* Pods-BinlaLog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2KJV4DXXN;
+				INFOPLIST_FILE = "mdcu-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DMDCULOG";
+				PRODUCT_BUNDLE_IDENTIFIER = Nont.MDCULog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1216,6 +2106,15 @@
 			buildConfigurations = (
 				B72ED8451FF0B7C20088F78C /* Debug */,
 				B72ED8461FF0B7C20088F78C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7898DFC200711A30030A943 /* Build configuration list for PBXNativeTarget "MDCULog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7898DFD200711A30030A943 /* Debug */,
+				B7898DFE200711A30030A943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

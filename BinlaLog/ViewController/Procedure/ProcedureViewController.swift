@@ -8,42 +8,122 @@
 
 import UIKit
 
-class ProcedureViewController: UIViewController {
-
+class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableViewDelegate {
+    var index = 0
+    //Routing
+    var rotationid : String = ""
+    var procedureid : String = ""
+    var courseid : String = ""
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var cons_bottom_tableView: NSLayoutConstraint!
+    var searchController = UISearchController(searchResultsController: nil)
+    var viewModel = ViewModel(){
+        didSet{
+            self.tableView.reloadData()
+        }
+    }
+    func initViewModel() {
+        self.viewModel = ViewModel(searchKey: "")
+        self.doSearchProcedure(key: self.viewModel.searchKey ?? "")
+    }
     @IBAction func btn_close_action(_ sender: UIBarButtonItem) {
         self.doClose()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadDataFromServer()
         self.setUI()
+        self.loadDataFromServer()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.searchController.isActive == true {
+            self.searchController.isActive = false
+        }
+    }
     func setUI(){
-        UIApplication.shared.statusBarStyle = .default
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            let searchController = UISearchController(searchResultsController: nil)
+            searchController.searchResultsUpdater = self
+            searchController.dimsBackgroundDuringPresentation = false
+            searchController.searchBar.barTintColor = UIColor.white
+            searchController.searchBar.backgroundColor = UIColor.clear
+            searchController.searchBar.tintColor = UIColor.white
+            if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+                if let backgroundview = textfield.subviews.first {
+                    backgroundview.backgroundColor = UIColor.white
+                    backgroundview.layer.cornerRadius = 10;
+                    backgroundview.clipsToBounds = true;
+                }
+            }
+            //self.definesPresentationContext = false
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
         } else {
             // Fallback on earlier versions
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        self.doSearchProcedure(key: text)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.index = indexPath.row
+        if self.viewModel.procedures != nil{
+            if self.viewModel.procedures!.count > 0 {
+                self.performSegue(withIdentifier: "add", sender: self)
+            }
+        }
     }
-    */
-
+}
+extension ProcedureViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if self.viewModel.procedures != nil{
+            if self.viewModel.procedures!.count != 0{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProcedureTableViewCell
+                if let gr = BackProcedure.getInstance().getGroup(id: Array(self.viewModel.procedures!.keys)[indexPath.row]){
+                    cell.lb_procedure_group.text = gr.procgroupname
+                }
+                cell.procedures = Array(self.viewModel.procedures!.values)[indexPath.row]
+                cell.setDelegate()
+                cell.sender = self
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "notfound", for: indexPath)
+                return cell
+            }
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "notfound", for: indexPath)
+            return cell
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.viewModel.procedures != nil {
+            if self.viewModel.procedures!.count == 0{
+                return 1
+            }else{
+            return self.viewModel.procedures!.count
+            }
+        }else{
+            return 0
+        }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
 }

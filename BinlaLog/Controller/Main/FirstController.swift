@@ -11,7 +11,16 @@ extension FirstViewController{
     //check session is existing everytime you run the app
     func doCheckSession(){
         if BackUser.getInstance().get() != nil{
-            self.performSegue(withIdentifier: "doApp", sender: self)
+            if let user = BackUser.getInstance().get(){
+                if user.role == "teacher".uppercased(){
+                    self.performSegue(withIdentifier: "doAppTeacher", sender: self)
+                }else{
+                    BackRotation.getInstance().SelectCurrentRotation {
+                        self.performSegue(withIdentifier: "doAppStudent", sender: self)
+                    }
+                }
+            }
+            
         }else{
             self.performSegue(withIdentifier: "doLogin", sender: self)
         }

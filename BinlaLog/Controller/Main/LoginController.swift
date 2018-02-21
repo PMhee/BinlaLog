@@ -13,15 +13,15 @@ extension LoginViewController{
     func doSignin(){
         Helper.showLoading(sender: self)
         self.view.endEditing(true)
-        guard let username = self.viewLogin.tf_username.text else{
-            return
-        }
-        guard let password = self.viewLogin.tf_password.text else{
-            return
-        }
-        APIUser.login(username: username, password: password, finish: {(success) in
+        APIUser.login(username: self.viewModel.username, password: self.viewModel.password, finish: {(success) in
             self.dismiss(animated: false, completion: nil)
-            self.performSegue(withIdentifier: "doApp", sender: self)
+            BackRotation.getInstance().getCurrentRotation {
+                if BackUser.getInstance().get()?.role == "teacher".uppercased(){
+                    self.performSegue(withIdentifier: "doAppTeacher", sender: self)
+                }else{
+                    self.performSegue(withIdentifier: "doAppStudent", sender: self)
+                }
+            }
         }, fail: {(error) in
             self.dismiss(animated: false, completion: nil)
             Helper.addAlert(sender: self,title:"Error",message:"Username or password is not correct")

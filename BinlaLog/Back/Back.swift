@@ -7,17 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 class Back{
-    func get(){
-        
-    }
-    func post(){
-        
-    }
-    func put(){
-        
-    }
-    func delete(){
-        
+    func post(object:Object){
+        try! Realm().add(object)
     }
 }
