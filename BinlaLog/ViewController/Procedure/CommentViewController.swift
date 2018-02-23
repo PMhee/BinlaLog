@@ -9,7 +9,12 @@
 import UIKit
 
 class CommentViewController: UIViewController,UITextViewDelegate {
-    @IBAction func btn_done_action(_ sender: UIBarButtonItem) {
+    @IBAction func btn_accept_action(_ sender: UIButton) {
+        if !(self.viewModel?.message.isEmpty)!{
+            self.viewModel?.verifystatus = 2
+        }else{
+            self.viewModel?.verifystatus = 1
+        }
         if self.isPatient{
             BackNotification.getInstance().updatePatientComment(viewModel: self.viewModelPatient!, finish: {
                 self.dismiss(animated: true, completion: nil)
@@ -20,6 +25,19 @@ class CommentViewController: UIViewController,UITextViewDelegate {
             })
         }
     }
+    @IBAction func btn_reject_action(_ sender: UIButton) {
+        self.viewModel?.verifystatus = -1
+        if self.isPatient{
+            BackNotification.getInstance().updatePatientComment(viewModel: self.viewModelPatient!, finish: {
+                self.dismiss(animated: true, completion: nil)
+            })
+        }else{
+            BackNotification.getInstance().updateProcedureComment(viewModel: self.viewModel!, finish: {
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
+    }
+    
     @IBOutlet weak var lb_placeholder: UILabel!
     @IBOutlet weak var tv_comment: UITextView!
     var viewModel : ProcedureAddViewController.ViewModel?

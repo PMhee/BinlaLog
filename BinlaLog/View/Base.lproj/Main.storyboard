@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -729,13 +730,21 @@
                                 <action selector="btn_summary_action:" destination="UNH-8c-8tO" id="ThO-tS-cJX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vNJ-H7-swL">
-                            <connections>
-                                <action selector="btn_add_action:" destination="UNH-8c-8tO" id="6GS-p2-MAy"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="vNJ-H7-swL">
+                                <connections>
+                                    <action selector="btn_add_action:" destination="UNH-8c-8tO" id="6GS-p2-MAy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="F0v-Yv-Vfl">
+                                <connections>
+                                    <action selector="btn_trash_action:" destination="UNH-8c-8tO" id="9xH-JB-g3B"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="btn_item_trash" destination="F0v-Yv-Vfl" id="PN9-KS-gei"/>
                         <outlet property="container_patient" destination="D1n-k9-pZ6" id="iS9-qZ-XtC"/>
                         <outlet property="container_procedure" destination="YO9-wM-IWd" id="sT2-vY-2Cb"/>
                         <outlet property="lb_rotation" destination="Yg2-ze-0jp" id="hma-PC-xlx"/>
@@ -1139,11 +1148,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mjf-vW-iBC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7cM-EQ-eCH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZM-9V-cTH" customClass="ScrollView" customModule="BinlaLog" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMx-rj-D9p" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="359" height="340"/>
@@ -1599,9 +1608,19 @@
                                                                 <constraint firstAttribute="width" constant="5" id="dEm-5y-cr4"/>
                                                             </constraints>
                                                         </view>
+                                                        <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-9R-qVz">
+                                                            <rect key="frame" x="299.5" y="110" width="6" height="6"/>
+                                                            <color key="backgroundColor" red="0.25882352939999997" green="0.68627450980000004" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="6" id="FKc-Mn-xYU"/>
+                                                                <constraint firstAttribute="width" constant="6" id="pkV-Rz-Ra2"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="sHV-5N-UWZ" firstAttribute="leading" secondItem="3qF-9R-qVz" secondAttribute="trailing" constant="4" id="FCD-ev-4EG"/>
+                                                        <constraint firstItem="3qF-9R-qVz" firstAttribute="centerY" secondItem="sHV-5N-UWZ" secondAttribute="centerY" id="gHv-ge-3rn"/>
                                                         <constraint firstAttribute="trailing" secondItem="sHV-5N-UWZ" secondAttribute="trailing" constant="16" id="lLP-v3-rig"/>
                                                     </constraints>
                                                 </view>
@@ -1699,7 +1718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKN-gE-lu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4625" y="596"/>
+            <point key="canvasLocation" x="4624.8000000000002" y="595.50224887556226"/>
         </scene>
         <!--ProcedureAddViewController-->
         <scene sceneID="GJa-aL-xaB">
@@ -1754,6 +1773,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ezu-9o-Htw">
+                                                    <rect key="frame" x="289" y="13" width="6" height="6"/>
+                                                    <color key="backgroundColor" red="0.25882352939999997" green="0.68627450980000004" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="6" id="BF4-lE-83z"/>
+                                                        <constraint firstAttribute="width" constant="6" id="TDE-v8-wT7"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="23 days ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkJ-QZ-t9l">
                                                     <rect key="frame" x="16" y="31.5" width="74" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1769,6 +1796,7 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="boA-k6-uvL" firstAttribute="leading" secondItem="Ezu-9o-Htw" secondAttribute="trailing" constant="4" id="9po-0H-Wyp"/>
                                                 <constraint firstAttribute="bottom" secondItem="WOw-Ok-JAD" secondAttribute="bottom" constant="4" id="E3r-Ji-z2n"/>
                                                 <constraint firstItem="zLK-bz-9fG" firstAttribute="leading" secondItem="0l3-nY-dS7" secondAttribute="leading" id="NWn-ob-PFf"/>
                                                 <constraint firstItem="boA-k6-uvL" firstAttribute="top" secondItem="0l3-nY-dS7" secondAttribute="top" id="UN7-7G-PKA"/>
@@ -1779,6 +1807,7 @@
                                                 <constraint firstItem="0l3-nY-dS7" firstAttribute="top" secondItem="2GK-nf-CAl" secondAttribute="top" constant="8" id="fnG-Co-fUT"/>
                                                 <constraint firstItem="WOw-Ok-JAD" firstAttribute="leading" secondItem="2GK-nf-CAl" secondAttribute="leading" id="g3d-Ec-86u"/>
                                                 <constraint firstAttribute="trailing" secondItem="boA-k6-uvL" secondAttribute="trailing" constant="20" id="iMm-4T-gg8"/>
+                                                <constraint firstItem="Ezu-9o-Htw" firstAttribute="centerY" secondItem="boA-k6-uvL" secondAttribute="centerY" id="shK-QJ-6EN"/>
                                                 <constraint firstItem="MkJ-QZ-t9l" firstAttribute="leading" secondItem="0l3-nY-dS7" secondAttribute="leading" id="ts7-fI-bcp"/>
                                                 <constraint firstItem="MkJ-QZ-t9l" firstAttribute="top" secondItem="0l3-nY-dS7" secondAttribute="bottom" constant="4" id="zFk-q3-ak5"/>
                                             </constraints>

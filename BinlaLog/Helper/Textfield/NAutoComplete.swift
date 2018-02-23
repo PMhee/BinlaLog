@@ -12,7 +12,14 @@ class NAutoComplete: NTextField {
     
     ////////////////////////////////////////////////////////////////////////
     // Public interface
-    
+    @IBInspectable var type : Int = 0
+    var sender = UIViewController()
+    var isClickInfo = false
+    /*
+     type : 0 = nothing
+     type : 1 = symptom
+     type : 2 = diagnosis
+    */
     /// Maximum number of results to be shown in the suggestions list
     open var maxNumberOfResults = 0
     
@@ -551,7 +558,6 @@ extension NAutoComplete: UITableViewDelegate, UITableViewDataSource {
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: NAutoComplete.cellIdentifier)
         }
-        
         cell!.backgroundColor = UIColor.clear
         cell!.layoutMargins = UIEdgeInsets.zero
         cell!.preservesSuperviewLayoutMargins = false
@@ -568,12 +574,12 @@ extension NAutoComplete: UITableViewDelegate, UITableViewDataSource {
         cell!.detailTextLabel?.attributedText = filteredResults[(indexPath as NSIndexPath).row].attributedSubtitle
         
         cell!.imageView?.image = filteredResults[(indexPath as NSIndexPath).row].image
-        
         cell!.selectionStyle = .none
-        
+        if self.type == 1 || self.type == 2{
+            cell!.accessoryType = .detailDisclosureButton
+        }
         return cell!
     }
-    
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -581,6 +587,7 @@ extension NAutoComplete: UITableViewDelegate, UITableViewDataSource {
         return 30
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.isClickInfo = false
         if itemSelectionHandler == nil {
             self.text = filteredResults[(indexPath as NSIndexPath).row].title
         } else {
@@ -589,6 +596,10 @@ extension NAutoComplete: UITableViewDelegate, UITableViewDataSource {
         }
         self.endEditing(true)
         clearResults()
+    }
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        self.isClickInfo = true
+        Helper.showEBook(sender: self.sender, title: filteredResults[(indexPath as NSIndexPath).row].title)
     }
 }
 

@@ -12,13 +12,39 @@ class BackNotification:Back{
     static func getInstance() ->BackNotification{
         return BackNotification()
     }
+    func removeNotification(){
+        try! Realm().write {
+            BackUser.getInstance().get()?.notificationLogbook.removeAll()
+            BackUser.getInstance().get()?.notificationPatient.removeAll()
+        }
+    }
+    func loadNotificationLogbook(content:NSDictionary){
+        try! Realm().write {
+            if let id = content.value(forKey: "id") as? String{
+                let logbookid = ForeignLogbook()
+                logbookid.logbookid = id
+                BackUser.getInstance().get()?.notificationLogbook.append(logbookid)
+            }
+        }
+    }
+    func loadNotificationPatient(content:NSDictionary){
+        try! Realm().write {
+            if let id = content.value(forKey: "id") as? String{
+                let logbookid = ForeignLogbook()
+                logbookid.logbookid = id
+                BackUser.getInstance().get()?.notificationLogbook.append(logbookid)
+            }
+        }
+    }
     func enumNotification(finish:@escaping() -> Void){
        APINotification.listNotificationLogbook(updatetime: self.getLogbookLastUpdatetime()?.convertToServer() ?? "", finish: {(success) in
         if let content = success.value(forKey: "content") as? NSDictionary{
             if let array = content.value(forKey: "data") as? NSArray{
+                self.removeNotification()
                 for i in 0..<array.count{
                     if let data = array[i] as? NSDictionary{
                         BackRotation.getInstance().loadLogbook(content: data)
+                        self.loadNotificationLogbook(content: data)
                     }
                 }
                 finish()
@@ -65,7 +91,7 @@ class BackNotification:Back{
         }, fail: {})
     }
     func updateProcedureComment(viewModel:ProcedureAddViewController.ViewModel,finish:@escaping()->Void){
-        APINotification.updateCommentLogbook(message: viewModel.message, verifystatus: 1,verifycodeid: viewModel.verificationid, logbookid: viewModel.logbookid, finish: {(success) in
+        APINotification.updateCommentLogbook(message: viewModel.message, verifystatus: viewModel.verifystatus,verifycodeid: viewModel.verificationid, logbookid: viewModel.logbookid, finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 BackRotation.getInstance().loadLogbook(content: content)
             }
@@ -73,7 +99,7 @@ class BackNotification:Back{
         }, fail: {})
     }
     func updatePatientComment(viewModel:PatientViewController.ViewModel,finish:@escaping()->Void){
-        APINotification.updateCommentPatient(message: viewModel.message, verifystatus: 1, verifycodeid: viewModel.verificationid, patientid: viewModel.patientcareid, finish: {(success) in
+        APINotification.updateCommentPatient(message: viewModel.message, verifystatus: viewModel.verifystatus, verifycodeid: viewModel.verificationid, patientid: viewModel.patientcareid, finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 BackRotation.getInstance().loadPatientCare(content: content)
             }

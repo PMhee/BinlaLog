@@ -43,6 +43,9 @@
 		B72E2EB7200F62EA008D9B5C /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EB5200F62EA008D9B5C /* Logbook.swift */; };
 		B72E2EBA20109D11008D9B5C /* TMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB920109D11008D9B5C /* TMain.storyboard */; };
 		B72E2EBB20109D11008D9B5C /* TMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB920109D11008D9B5C /* TMain.storyboard */; };
+		B72E911F203FE70D00141BD8 /* ic-person.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E911E203FE70C00141BD8 /* ic-person.png */; };
+		B72E9120203FE70D00141BD8 /* ic-person.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E911E203FE70C00141BD8 /* ic-person.png */; };
+		B72E9121203FE70D00141BD8 /* ic-person.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E911E203FE70C00141BD8 /* ic-person.png */; };
 		B72ED81A1FF0B7C10088F78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED8191FF0B7C10088F78C /* AppDelegate.swift */; };
 		B72ED81F1FF0B7C10088F78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED81D1FF0B7C10088F78C /* Main.storyboard */; };
 		B72ED8241FF0B7C10088F78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8221FF0B7C10088F78C /* LaunchScreen.storyboard */; };
@@ -251,6 +254,176 @@
 		B7A8B150200883730022F547 /* emotion-love.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13C200883710022F547 /* emotion-love.png */; };
 		B7A8B152200887360022F547 /* ProcedureAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B151200887360022F547 /* ProcedureAddController.swift */; };
 		B7A8B153200887360022F547 /* ProcedureAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B151200887360022F547 /* ProcedureAddController.swift */; };
+		B7B496EF203D3187001CA3FB /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B24A202C66EE004CF168 /* Verification.swift */; };
+		B7B496F0203D3187001CA3FB /* TProcedureNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */; };
+		B7B496F1203D3187001CA3FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58C1FF0BFD600F5A5AD /* LoginViewController.swift */; };
+		B7B496F2203D3187001CA3FB /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D24A52005D4A600756A36 /* Observer.swift */; };
+		B7B496F3203D3187001CA3FB /* APIProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E6B1FFF6BB40078E56A /* APIProcedure.swift */; };
+		B7B496F4203D3187001CA3FB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5951FF0DA6E00F5A5AD /* LoginController.swift */; };
+		B7B496F5203D3187001CA3FB /* SummaryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C04064201EE743001A9B18 /* SummaryPatientViewController.swift */; };
+		B7B496F6203D3187001CA3FB /* SummaryProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0972420179A7200A7D327 /* SummaryProcedureViewController.swift */; };
+		B7B496F7203D3187001CA3FB /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175E20062F580067090B /* Rotation.swift */; };
+		B7B496F8203D3187001CA3FB /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0C1FF109FA005BBAB4 /* Back.swift */; };
+		B7B496F9203D3187001CA3FB /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */; };
+		B7B496FA203D3187001CA3FB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417622006314C0067090B /* Course.swift */; };
+		B7B496FB203D3187001CA3FB /* HomeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F41FFF4A190004F4F2 /* HomeCellTableViewCell.swift */; };
+		B7B496FC203D3187001CA3FB /* APIRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C87B602006354D00512808 /* APIRotation.swift */; };
+		B7B496FD203D3187001CA3FB /* Diagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EE2004AB2800C1233A /* Diagnosis.swift */; };
+		B7B496FE203D3187001CA3FB /* APINotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19962032EB9F0058DEB7 /* APINotification.swift */; };
+		B7B496FF203D3187001CA3FB /* TMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF179720219DE700B0AE0E /* TMainViewController.swift */; };
+		B7B49700203D3187001CA3FB /* DiseaseSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F42004C22E00C1233A /* DiseaseSearchKey.swift */; };
+		B7B49701203D3187001CA3FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D11FFE125B00BB5B00 /* HomeViewController.swift */; };
+		B7B49702203D3187001CA3FB /* BackPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E1200478FB00C1233A /* BackPatient.swift */; };
+		B7B49703203D3187001CA3FB /* ProcedureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F81FFF4C300004F4F2 /* ProcedureController.swift */; };
+		B7B49704203D3187001CA3FB /* HistoryRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414F01FFE332400BB5B00 /* HistoryRotationViewController.swift */; };
+		B7B49705203D3187001CA3FB /* BackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7898E0D2007314F0030A943 /* BackCourse.swift */; };
+		B7B49706203D3187001CA3FB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F3202D485900BABAE0 /* Person.swift */; };
+		B7B49707203D3187001CA3FB /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */; };
+		B7B49708203D3187001CA3FB /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03C2015C03F005C941F /* SummaryViewController.swift */; };
+		B7B49709203D3187001CA3FB /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76907072024171D00C84126 /* RankViewController.swift */; };
+		B7B4970A203D3187001CA3FB /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EC2004873D00C1233A /* TagView.swift */; };
+		B7B4970B203D3187001CA3FB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C58E1FF0C67D00F5A5AD /* Constant.swift */; };
+		B7B4970C203D3187001CA3FB /* PatientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E731FFF761D0078E56A /* PatientController.swift */; };
+		B7B4970D203D3187001CA3FB /* DiagnosisSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F02004ABD900C1233A /* DiagnosisSearchKey.swift */; };
+		B7B4970E203D3187001CA3FB /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */; };
+		B7B4970F203D3187001CA3FB /* NLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEE2005F04D00625E8C /* NLabel.swift */; };
+		B7B49710203D3187001CA3FB /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */; };
+		B7B49711203D3187001CA3FB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB60FE1FFCD63500560472 /* MoreViewController.swift */; };
+		B7B49712203D3187001CA3FB /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E320047ACE00C1233A /* Symptom.swift */; };
+		B7B49713203D3187001CA3FB /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E701FFF751A0078E56A /* PatientViewController.swift */; };
+		B7B49714203D3187001CA3FB /* NViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175A2006215D0067090B /* NViewController.swift */; };
+		B7B49715203D3187001CA3FB /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675F22004C1D500C1233A /* Disease.swift */; };
+		B7B49716203D3187001CA3FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAE92005DF7C00625E8C /* Notification.swift */; };
+		B7B49717203D3187001CA3FB /* NButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71414D41FFE16C600BB5B00 /* NButtonBorder.swift */; };
+		B7B49718203D3187001CA3FB /* NAutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675DF2004724700C1233A /* NAutoComplete.swift */; };
+		B7B49719203D3187001CA3FB /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F21FFF49940004F4F2 /* ProcedureViewController.swift */; };
+		B7B4971A203D3187001CA3FB /* ProcedureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B032201593E7005C941F /* ProcedureTableViewCell.swift */; };
+		B7B4971B203D3187001CA3FB /* BackProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC54200762AA00FBC3A0 /* BackProcedure.swift */; };
+		B7B4971C203D3187001CA3FB /* Foreign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714175C20062F170067090B /* Foreign.swift */; };
+		B7B4971D203D3187001CA3FB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1F61FFF4AA70004F4F2 /* HomeController.swift */; };
+		B7B4971E203D3187001CA3FB /* Procedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC562007636000FBC3A0 /* Procedure.swift */; };
+		B7B4971F203D3187001CA3FB /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72F6202D488700BABAE0 /* Department.swift */; };
+		B7B49720203D3187001CA3FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8641FF0F26A00FA7789 /* User.swift */; };
+		B7B49721203D3187001CA3FB /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E82004870D00C1233A /* CloseButton.swift */; };
+		B7B49722203D3187001CA3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ED8191FF0B7C10088F78C /* AppDelegate.swift */; };
+		B7B49723203D3187001CA3FB /* BackVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B248202C66C3004CF168 /* BackVerification.swift */; };
+		B7B49724203D3187001CA3FB /* BackRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71417602006302B0067090B /* BackRotation.swift */; };
+		B7B49725203D3187001CA3FB /* KeyboardwoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711F43C2036F26D001169B4 /* KeyboardwoTab.swift */; };
+		B7B49726203D3187001CA3FB /* BackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA081FF0F44E005BBAB4 /* BackUser.swift */; };
+		B7B49727203D3187001CA3FB /* HistoryPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1DA1FFF32170004F4F2 /* HistoryPatientViewController.swift */; };
+		B7B49728203D3187001CA3FB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13B1FFE3E07008DFD00 /* HistoryViewController.swift */; };
+		B7B49729203D3187001CA3FB /* ProcedureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BACC582007636B00FBC3A0 /* ProcedureGroup.swift */; };
+		B7B4972A203D3187001CA3FB /* TPatientNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */; };
+		B7B4972B203D3187001CA3FB /* NTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E607D1203A97C9005EEA06 /* NTableView.swift */; };
+		B7B4972C203D3187001CA3FB /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EB5200F62EA008D9B5C /* Logbook.swift */; };
+		B7B4972D203D3187001CA3FB /* ProcedureAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B151200887360022F547 /* ProcedureAddController.swift */; };
+		B7B4972E203D3187001CA3FB /* TVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */; };
+		B7B4972F203D3187001CA3FB /* NViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFD1EC1FFF44F00004F4F2 /* NViewCard.swift */; };
+		B7B49730203D3187001CA3FB /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB61131FFCDB9200560472 /* MoreController.swift */; };
+		B7B49731203D3187001CA3FB /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675EA2004872500C1233A /* TagListView.swift */; };
+		B7B49732203D3187001CA3FB /* LoadingPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F85B1FF0E02F00FA7789 /* LoadingPresentation.swift */; };
+		B7B49733203D3187001CA3FB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611D1FFCED4300560472 /* FirstViewController.swift */; };
+		B7B49734203D3187001CA3FB /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */; };
+		B7B49735203D3187001CA3FB /* SummaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E3CF82017339D00608C9D /* SummaryDetailViewController.swift */; };
+		B7B49736203D3187001CA3FB /* SymptomSearchKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675E520047B6000C1233A /* SymptomSearchKey.swift */; };
+		B7B49737203D3187001CA3FB /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */; };
+		B7B49738203D3187001CA3FB /* APIPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781E691FFF69C80078E56A /* APIPatient.swift */; };
+		B7B49739203D3187001CA3FB /* ProcedureAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8B12D200867A50022F547 /* ProcedureAddViewController.swift */; };
+		B7B4973A203D3187001CA3FB /* BackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A19992032F0D70058DEB7 /* BackNotification.swift */; };
+		B7B4973B203D3187001CA3FB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF17AF2021BFB100B0AE0E /* ProfileViewController.swift */; };
+		B7B4973C203D3187001CA3FB /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA6901FFCC44000B9A5DC /* NTextField.swift */; };
+		B7B4973D203D3187001CA3FB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */; };
+		B7B4973E203D3187001CA3FB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6C5891FF0BF9100F5A5AD /* Helper.swift */; };
+		B7B4973F203D3187001CA3FB /* PatientCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75AA304200C5A54001922DF /* PatientCare.swift */; };
+		B7B49740203D3187001CA3FB /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB611F1FFCED9200560472 /* FirstController.swift */; };
+		B7B49741203D3187001CA3FB /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E2EAF200F28D9008D9B5C /* FilterTableViewCell.swift */; };
+		B7B49742203D3187001CA3FB /* APIVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B246202C65F1004CF168 /* APIVerification.swift */; };
+		B7B49743203D3187001CA3FB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C41E32034490B00438C8A /* CommentViewController.swift */; };
+		B7B49744203D3187001CA3FB /* ProcedureInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760B03520159E9D005C941F /* ProcedureInfoTableViewCell.swift */; };
+		B7B49745203D3187001CA3FB /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E72FC202D9A6500BABAE0 /* NotificationViewController.swift */; };
+		B7B49746203D3187001CA3FB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0A1FF0FAD4005BBAB4 /* API.swift */; };
+		B7B49747203D3187001CA3FB /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769070B20241C2600C84126 /* DayAxisValueFormatter.swift */; };
+		B7B49748203D3187001CA3FB /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748782C20281066005763F9 /* AchievementViewController.swift */; };
+		B7B49749203D3187001CA3FB /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA061FF0F443005BBAB4 /* APIUser.swift */; };
+		B7B4974B203D3187001CA3FB /* Pods_BinlaLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE868201C6BB1F1E52F61D71 /* Pods_BinlaLog.framework */; };
+		B7B4974D203D3187001CA3FB /* mdculog-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7898E05200723100030A943 /* mdculog-logo.jpg */; };
+		B7B4974E203D3187001CA3FB /* pic-patient.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E71FFF42130004F4F2 /* pic-patient.png */; };
+		B7B4974F203D3187001CA3FB /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E5F8581FF0DFAF00FA7789 /* Helper.storyboard */; };
+		B7B49750203D3187001CA3FB /* ic-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */; };
+		B7B49751203D3187001CA3FB /* ic-level-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971B2017983600A7D327 /* ic-level-easy.png */; };
+		B7B49752203D3187001CA3FB /* mdcu-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7898E0A200728760030A943 /* mdcu-info.plist */; };
+		B7B49753203D3187001CA3FB /* ic-general.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487830202864EE005763F9 /* ic-general.png */; };
+		B7B49754203D3187001CA3FB /* pic-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17AA2021B4BB00B0AE0E /* pic-1.jpeg */; };
+		B7B49755203D3187001CA3FB /* ic-code.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF179A2021A4FB00B0AE0E /* ic-code.png */; };
+		B7B49756203D3187001CA3FB /* ic-tag.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */; };
+		B7B49757203D3187001CA3FB /* emotion-angry-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1382008836E0022F547 /* emotion-angry-grey.png */; };
+		B7B49758203D3187001CA3FB /* ic-draft.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61091FFCDA4800560472 /* ic-draft.png */; };
+		B7B49759203D3187001CA3FB /* pic-0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */; };
+		B7B4975A203D3187001CA3FB /* ic-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FCBE53200F067600CCC7B8 /* ic-filter.png */; };
+		B7B4975B203D3187001CA3FB /* ic-perform.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02820159295005C941F /* ic-perform.png */; };
+		B7B4975C203D3187001CA3FB /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A6C5921FF0D89A00F5A5AD /* Logo.png */; };
+		B7B4975D203D3187001CA3FB /* ic-ortho.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782F202864EC005763F9 /* ic-ortho.png */; };
+		B7B4975E203D3187001CA3FB /* pic-rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB2200F58D7008D9B5C /* pic-rocket.png */; };
+		B7B4975F203D3187001CA3FB /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B760B0382015B828005C941F /* Summary.storyboard */; };
+		B7B49760203D3187001CA3FB /* ic-ent.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783720286504005763F9 /* ic-ent.png */; };
+		B7B49761203D3187001CA3FB /* emotion-crying.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13A2008836F0022F547 /* emotion-crying.png */; };
+		B7B49762203D3187001CA3FB /* ic-level-hard.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971C2017983800A7D327 /* ic-level-hard.png */; };
+		B7B49763203D3187001CA3FB /* Procedure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1EE1FFF46E80004F4F2 /* Procedure.storyboard */; };
+		B7B49764203D3187001CA3FB /* ic-verify.png in Resources */ = {isa = PBXBuildFile; fileRef = B76E72F9202D878B00BABAE0 /* ic-verify.png */; };
+		B7B49765203D3187001CA3FB /* ic-book.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B130200874500022F547 /* ic-book.png */; };
+		B7B49766203D3187001CA3FB /* emotion-love-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1362008836C0022F547 /* emotion-love-grey.png */; };
+		B7B49767203D3187001CA3FB /* ic-star.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E51FFF410F0004F4F2 /* ic-star.png */; };
+		B7B49768203D3187001CA3FB /* TMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E2EB920109D11008D9B5C /* TMain.storyboard */; };
+		B7B49769203D3187001CA3FB /* tab-more.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61031FFCD81700560472 /* tab-more.png */; };
+		B7B4976A203D3187001CA3FB /* ic-location.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E31FFF3E390004F4F2 /* ic-location.png */; };
+		B7B4976B203D3187001CA3FB /* emotion-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1392008836E0022F547 /* emotion-angry.png */; };
+		B7B4976C203D3187001CA3FB /* ic-key.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6981FFCCBF500B9A5DC /* ic-key.png */; };
+		B7B4976D203D3187001CA3FB /* ic-anes.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487832202864FB005763F9 /* ic-anes.png */; };
+		B7B4976E203D3187001CA3FB /* pic-procedure.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E81FFF42180004F4F2 /* pic-procedure.png */; };
+		B7B4976F203D3187001CA3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8201FF0B7C10088F78C /* Assets.xcassets */; };
+		B7B49770203D3187001CA3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED8221FF0B7C10088F78C /* LaunchScreen.storyboard */; };
+		B7B49771203D3187001CA3FB /* emotion-love.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13C200883710022F547 /* emotion-love.png */; };
+		B7B49772203D3187001CA3FB /* ic-level-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F0971D2017983900A7D327 /* ic-level-medium.png */; };
+		B7B49773203D3187001CA3FB /* ic-surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487834202864FF005763F9 /* ic-surgery.png */; };
+		B7B49774203D3187001CA3FB /* emotion-straight-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1352008836C0022F547 /* emotion-straight-grey.png */; };
+		B7B49775203D3187001CA3FB /* ic-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D675F62004CE0300C1233A /* ic-calendar.png */; };
+		B7B49776203D3187001CA3FB /* ic-entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C04061201EE03C001A9B18 /* ic-entrance.png */; };
+		B7B49778203D3187001CA3FB /* ic-oph.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783820286504005763F9 /* ic-oph.png */; };
+		B7B49779203D3187001CA3FB /* pic-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CFD1E11FFF3A770004F4F2 /* pic-profile.png */; };
+		B7B4977A203D3187001CA3FB /* ic-syringe-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B748782920280FBE005763F9 /* ic-syringe-white.png */; };
+		B7B4977B203D3187001CA3FB /* tab-home.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61011FFCD81400560472 /* tab-home.png */; };
+		B7B4977C203D3187001CA3FB /* ic-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A62021B3D900B0AE0E /* ic-clock.png */; };
+		B7B4977D203D3187001CA3FB /* ic-logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610B1FFCDA4A00560472 /* ic-logout.png */; };
+		B7B4977E203D3187001CA3FB /* ic-observe.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02E2015935A005C941F /* ic-observe.png */; };
+		B7B4977F203D3187001CA3FB /* ic-stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBE2003784A00F99930 /* ic-stethoscope.png */; };
+		B7B49780203D3187001CA3FB /* rotation-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B71414D71FFE29B300BB5B00 /* rotation-ped.png */; };
+		B7B49781203D3187001CA3FB /* emotion-straight.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B13B200883700022F547 /* emotion-straight.png */; };
+		B7B49782203D3187001CA3FB /* emotion-smile.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1332008836A0022F547 /* emotion-smile.png */; };
+		B7B49783203D3187001CA3FB /* ic-ped.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487831202864F6005763F9 /* ic-ped.png */; };
+		B7B49784203D3187001CA3FB /* emotion-smile-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1342008836B0022F547 /* emotion-smile-grey.png */; };
+		B7B49785203D3187001CA3FB /* pic-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EF17A92021B4B700B0AE0E /* pic-2.jpeg */; };
+		B7B49786203D3187001CA3FB /* emotion-crying-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A8B1372008836D0022F547 /* emotion-crying-grey.png */; };
+		B7B49787203D3187001CA3FB /* ic-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EA6971FFCCBF500B9A5DC /* ic-user.png */; };
+		B7B49788203D3187001CA3FB /* tab-patient.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB61041FFCD81700560472 /* tab-patient.png */; };
+		B7B49789203D3187001CA3FB /* ic-rehab.png in Resources */ = {isa = PBXBuildFile; fileRef = B7487833202864FC005763F9 /* ic-rehab.png */; };
+		B7B4978A203D3187001CA3FB /* ic-noti.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41D72033EEDB00438C8A /* ic-noti.png */; };
+		B7B4978B203D3187001CA3FB /* ic-syringe.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBF2003784B00F99930 /* ic-syringe.png */; };
+		B7B4978C203D3187001CA3FB /* ic-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B74C41E02034419C00438C8A /* ic-chat.png */; };
+		B7B4978D203D3187001CA3FB /* ic-form.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610C1FFCDA4B00560472 /* ic-form.png */; };
+		B7B4978E203D3187001CA3FB /* ic-passcode.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610D1FFCDA4B00560472 /* ic-passcode.png */; };
+		B7B4978F203D3187001CA3FB /* ic-lab.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783520286500005763F9 /* ic-lab.png */; };
+		B7B49790203D3187001CA3FB /* ic-assist.png in Resources */ = {isa = PBXBuildFile; fileRef = B760B02920159296005C941F /* ic-assist.png */; };
+		B7B49791203D3187001CA3FB /* ic-virus.png in Resources */ = {isa = PBXBuildFile; fileRef = B74D3DBD2003784800F99930 /* ic-virus.png */; };
+		B7B49792203D3187001CA3FB /* ic-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB610A1FFCDA4A00560472 /* ic-facebook.png */; };
+		B7B49793203D3187001CA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72ED81D1FF0B7C10088F78C /* Main.storyboard */; };
+		B7B49794203D3187001CA3FB /* ic-obgyn.png in Resources */ = {isa = PBXBuildFile; fileRef = B748783620286503005763F9 /* ic-obgyn.png */; };
+		B7B4979D203D48E4001CA3FB /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B4979C203D48E4001CA3FB /* Book.storyboard */; };
+		B7B4979E203D48E4001CA3FB /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B4979C203D48E4001CA3FB /* Book.storyboard */; };
+		B7B4979F203D48E4001CA3FB /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B4979C203D48E4001CA3FB /* Book.storyboard */; };
+		B7B497A2203D493C001CA3FB /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B497A1203D493C001CA3FB /* BookViewController.swift */; };
+		B7B497A3203D493C001CA3FB /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B497A1203D493C001CA3FB /* BookViewController.swift */; };
+		B7B497A4203D493C001CA3FB /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B497A1203D493C001CA3FB /* BookViewController.swift */; };
+		B7B497A5203D5138001CA3FB /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7781E6D1FFF71820078E56A /* Patient.storyboard */; };
 		B7B7FAEA2005DF7C00625E8C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAE92005DF7C00625E8C /* Notification.swift */; };
 		B7B7FAEC2005EF6D00625E8C /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */; };
 		B7B7FAEF2005F04D00625E8C /* NLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B7FAEE2005F04D00625E8C /* NLabel.swift */; };
@@ -383,6 +556,7 @@
 		B72E2EB2200F58D7008D9B5C /* pic-rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic-rocket.png"; sourceTree = "<group>"; };
 		B72E2EB5200F62EA008D9B5C /* Logbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logbook.swift; sourceTree = "<group>"; };
 		B72E2EB920109D11008D9B5C /* TMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TMain.storyboard; sourceTree = "<group>"; };
+		B72E911E203FE70C00141BD8 /* ic-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-person.png"; sourceTree = "<group>"; };
 		B72ED8161FF0B7C10088F78C /* BinlaLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinlaLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72ED8191FF0B7C10088F78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72ED81E1FF0B7C10088F78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -467,6 +641,10 @@
 		B7A8B13B200883700022F547 /* emotion-straight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-straight.png"; sourceTree = "<group>"; };
 		B7A8B13C200883710022F547 /* emotion-love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotion-love.png"; sourceTree = "<group>"; };
 		B7A8B151200887360022F547 /* ProcedureAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureAddController.swift; sourceTree = "<group>"; };
+		B7B4979A203D3187001CA3FB /* GILog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GILog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B4979B203D3187001CA3FB /* MDCULog copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MDCULog copy-Info.plist"; path = "/Users/tanakorn/Documents/XCODE/BinlaLog/MDCULog copy-Info.plist"; sourceTree = "<absolute>"; };
+		B7B4979C203D48E4001CA3FB /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
+		B7B497A1203D493C001CA3FB /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		B7B7FAE92005DF7C00625E8C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
 		B7B7FAEE2005F04D00625E8C /* NLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLabel.swift; sourceTree = "<group>"; };
@@ -574,6 +752,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B7B4974A203D3187001CA3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7B4974B203D3187001CA3FB /* Pods_BinlaLog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -638,6 +824,7 @@
 				D6313FC269A73CDFF02E7DAD /* Pods */,
 				B7898E0A200728760030A943 /* mdcu-info.plist */,
 				72A53F86193209A5B7420D0E /* Frameworks */,
+				B7B4979B203D3187001CA3FB /* MDCULog copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -648,6 +835,7 @@
 				B72ED82A1FF0B7C20088F78C /* BinlaLogTests.xctest */,
 				B72ED8351FF0B7C20088F78C /* BinlaLogUITests.xctest */,
 				B7898DFF200711A30030A943 /* MDCULog.app */,
+				B7B4979A203D3187001CA3FB /* GILog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -723,6 +911,7 @@
 				B7CFD1EE1FFF46E80004F4F2 /* Procedure.storyboard */,
 				B7781E6D1FFF71820078E56A /* Patient.storyboard */,
 				B760B0382015B828005C941F /* Summary.storyboard */,
+				B7B4979C203D48E4001CA3FB /* Book.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -756,6 +945,7 @@
 				B7CFD1F01FFF47D60004F4F2 /* Procedure */,
 				B7781E6F1FFF75020078E56A /* Patient */,
 				B760B03B2015C01A005C941F /* Summary */,
+				B7B497A0203D4924001CA3FB /* Book */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -772,6 +962,7 @@
 		B75EA6961FFCCBD400B9A5DC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				B72E911E203FE70C00141BD8 /* ic-person.png */,
 				B74C41E02034419C00438C8A /* ic-chat.png */,
 				B74C41D72033EEDB00438C8A /* ic-noti.png */,
 				B76E72F9202D878B00BABAE0 /* ic-verify.png */,
@@ -931,6 +1122,14 @@
 				B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B7B497A0203D4924001CA3FB /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				B7B497A1203D493C001CA3FB /* BookViewController.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 		B7B7FAED2005F04200625E8C /* Label */ = {
@@ -1169,6 +1368,26 @@
 			productReference = B7898DFF200711A30030A943 /* MDCULog.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B7B496EC203D3187001CA3FB /* GILog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7B49797203D3187001CA3FB /* Build configuration list for PBXNativeTarget "GILog" */;
+			buildPhases = (
+				B7B496ED203D3187001CA3FB /* [CP] Check Pods Manifest.lock */,
+				B7B496EE203D3187001CA3FB /* Sources */,
+				B7B4974A203D3187001CA3FB /* Frameworks */,
+				B7B4974C203D3187001CA3FB /* Resources */,
+				B7B49795203D3187001CA3FB /* [CP] Embed Pods Frameworks */,
+				B7B49796203D3187001CA3FB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GILog;
+			productName = BinlaLog;
+			productReference = B7B4979A203D3187001CA3FB /* GILog.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1196,6 +1415,9 @@
 					B7898D94200711A30030A943 = {
 						ProvisioningStyle = Automatic;
 					};
+					B7B496EC203D3187001CA3FB = {
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B72ED8111FF0B7C10088F78C /* Build configuration list for PBXProject "BinlaLog" */;
@@ -1213,6 +1435,7 @@
 			targets = (
 				B72ED8151FF0B7C10088F78C /* BinlaLog */,
 				B7898D94200711A30030A943 /* MDCULog */,
+				B7B496EC203D3187001CA3FB /* GILog */,
 				B72ED8291FF0B7C20088F78C /* BinlaLogTests */,
 				B72ED8341FF0B7C20088F78C /* BinlaLogUITests */,
 			);
@@ -1273,12 +1496,14 @@
 				B7FB61101FFCDA4C00560472 /* ic-logout.png in Resources */,
 				B7A8B14B200883730022F547 /* emotion-crying.png in Resources */,
 				B7EF17A72021B3DE00B0AE0E /* ic-clock.png in Resources */,
+				B7B4979D203D48E4001CA3FB /* Book.storyboard in Resources */,
 				B72E2EB3200F58DD008D9B5C /* pic-rocket.png in Resources */,
 				B7F097222017983A00A7D327 /* ic-level-medium.png in Resources */,
 				B74D3DC12003784E00F99930 /* ic-stethoscope.png in Resources */,
 				B71414D81FFE29B500BB5B00 /* rotation-ped.png in Resources */,
 				B76E72FA202D878B00BABAE0 /* ic-verify.png in Resources */,
 				B7F0971E2017983A00A7D327 /* ic-level-easy.png in Resources */,
+				B72E911F203FE70D00141BD8 /* ic-person.png in Resources */,
 				B75EA6991FFCCBF600B9A5DC /* ic-user.png in Resources */,
 				B760B02A20159297005C941F /* ic-perform.png in Resources */,
 				B760B02F2015935C005C941F /* ic-observe.png in Resources */,
@@ -1380,14 +1605,97 @@
 				B74C41D92033EEDC00438C8A /* ic-noti.png in Resources */,
 				B7898DF3200711A30030A943 /* ic-syringe.png in Resources */,
 				B74C41E22034419E00438C8A /* ic-chat.png in Resources */,
+				B72E9120203FE70D00141BD8 /* ic-person.png in Resources */,
 				B7898DF4200711A30030A943 /* ic-form.png in Resources */,
 				B7898DF5200711A30030A943 /* ic-passcode.png in Resources */,
+				B7B4979E203D48E4001CA3FB /* Book.storyboard in Resources */,
 				B748784620286508005763F9 /* ic-lab.png in Resources */,
 				B760B02D20159297005C941F /* ic-assist.png in Resources */,
 				B7898DF7200711A30030A943 /* ic-virus.png in Resources */,
 				B7898DF8200711A30030A943 /* ic-facebook.png in Resources */,
 				B7898DF9200711A30030A943 /* Main.storyboard in Resources */,
 				B748784820286508005763F9 /* ic-obgyn.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7B4974C203D3187001CA3FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7B4974D203D3187001CA3FB /* mdculog-logo.jpg in Resources */,
+				B7B4974E203D3187001CA3FB /* pic-patient.png in Resources */,
+				B7B4974F203D3187001CA3FB /* Helper.storyboard in Resources */,
+				B7B49750203D3187001CA3FB /* ic-edit.png in Resources */,
+				B7B49751203D3187001CA3FB /* ic-level-easy.png in Resources */,
+				B7B49752203D3187001CA3FB /* mdcu-info.plist in Resources */,
+				B7B49753203D3187001CA3FB /* ic-general.png in Resources */,
+				B7B49754203D3187001CA3FB /* pic-1.jpeg in Resources */,
+				B7B49755203D3187001CA3FB /* ic-code.png in Resources */,
+				B7B49756203D3187001CA3FB /* ic-tag.png in Resources */,
+				B7B49757203D3187001CA3FB /* emotion-angry-grey.png in Resources */,
+				B7B49758203D3187001CA3FB /* ic-draft.png in Resources */,
+				B7B49759203D3187001CA3FB /* pic-0.jpeg in Resources */,
+				B7B4975A203D3187001CA3FB /* ic-filter.png in Resources */,
+				B7B4975B203D3187001CA3FB /* ic-perform.png in Resources */,
+				B7B4975C203D3187001CA3FB /* Logo.png in Resources */,
+				B7B497A5203D5138001CA3FB /* Patient.storyboard in Resources */,
+				B7B4975D203D3187001CA3FB /* ic-ortho.png in Resources */,
+				B7B4975E203D3187001CA3FB /* pic-rocket.png in Resources */,
+				B7B4975F203D3187001CA3FB /* Summary.storyboard in Resources */,
+				B7B49760203D3187001CA3FB /* ic-ent.png in Resources */,
+				B7B49761203D3187001CA3FB /* emotion-crying.png in Resources */,
+				B7B49762203D3187001CA3FB /* ic-level-hard.png in Resources */,
+				B7B49763203D3187001CA3FB /* Procedure.storyboard in Resources */,
+				B7B49764203D3187001CA3FB /* ic-verify.png in Resources */,
+				B7B49765203D3187001CA3FB /* ic-book.png in Resources */,
+				B7B49766203D3187001CA3FB /* emotion-love-grey.png in Resources */,
+				B7B49767203D3187001CA3FB /* ic-star.png in Resources */,
+				B7B49768203D3187001CA3FB /* TMain.storyboard in Resources */,
+				B7B49769203D3187001CA3FB /* tab-more.png in Resources */,
+				B7B4976A203D3187001CA3FB /* ic-location.png in Resources */,
+				B7B4976B203D3187001CA3FB /* emotion-angry.png in Resources */,
+				B7B4976C203D3187001CA3FB /* ic-key.png in Resources */,
+				B7B4976D203D3187001CA3FB /* ic-anes.png in Resources */,
+				B7B4976E203D3187001CA3FB /* pic-procedure.png in Resources */,
+				B7B4976F203D3187001CA3FB /* Assets.xcassets in Resources */,
+				B7B49770203D3187001CA3FB /* LaunchScreen.storyboard in Resources */,
+				B7B49771203D3187001CA3FB /* emotion-love.png in Resources */,
+				B7B49772203D3187001CA3FB /* ic-level-medium.png in Resources */,
+				B7B49773203D3187001CA3FB /* ic-surgery.png in Resources */,
+				B7B49774203D3187001CA3FB /* emotion-straight-grey.png in Resources */,
+				B7B49775203D3187001CA3FB /* ic-calendar.png in Resources */,
+				B7B49776203D3187001CA3FB /* ic-entrance.png in Resources */,
+				B7B49778203D3187001CA3FB /* ic-oph.png in Resources */,
+				B7B49779203D3187001CA3FB /* pic-profile.png in Resources */,
+				B7B4977A203D3187001CA3FB /* ic-syringe-white.png in Resources */,
+				B7B4977B203D3187001CA3FB /* tab-home.png in Resources */,
+				B7B4977C203D3187001CA3FB /* ic-clock.png in Resources */,
+				B7B4977D203D3187001CA3FB /* ic-logout.png in Resources */,
+				B7B4977E203D3187001CA3FB /* ic-observe.png in Resources */,
+				B7B4977F203D3187001CA3FB /* ic-stethoscope.png in Resources */,
+				B7B49780203D3187001CA3FB /* rotation-ped.png in Resources */,
+				B7B49781203D3187001CA3FB /* emotion-straight.png in Resources */,
+				B7B49782203D3187001CA3FB /* emotion-smile.png in Resources */,
+				B7B49783203D3187001CA3FB /* ic-ped.png in Resources */,
+				B7B49784203D3187001CA3FB /* emotion-smile-grey.png in Resources */,
+				B7B49785203D3187001CA3FB /* pic-2.jpeg in Resources */,
+				B7B49786203D3187001CA3FB /* emotion-crying-grey.png in Resources */,
+				B7B49787203D3187001CA3FB /* ic-user.png in Resources */,
+				B7B49788203D3187001CA3FB /* tab-patient.png in Resources */,
+				B7B49789203D3187001CA3FB /* ic-rehab.png in Resources */,
+				B7B4978A203D3187001CA3FB /* ic-noti.png in Resources */,
+				B7B4978B203D3187001CA3FB /* ic-syringe.png in Resources */,
+				B7B4978C203D3187001CA3FB /* ic-chat.png in Resources */,
+				B72E9121203FE70D00141BD8 /* ic-person.png in Resources */,
+				B7B4978D203D3187001CA3FB /* ic-form.png in Resources */,
+				B7B4978E203D3187001CA3FB /* ic-passcode.png in Resources */,
+				B7B4979F203D48E4001CA3FB /* Book.storyboard in Resources */,
+				B7B4978F203D3187001CA3FB /* ic-lab.png in Resources */,
+				B7B49790203D3187001CA3FB /* ic-assist.png in Resources */,
+				B7B49791203D3187001CA3FB /* ic-virus.png in Resources */,
+				B7B49792203D3187001CA3FB /* ic-facebook.png in Resources */,
+				B7B49793203D3187001CA3FB /* Main.storyboard in Resources */,
+				B7B49794203D3187001CA3FB /* ic-obgyn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1574,6 +1882,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B7B496ED203D3187001CA3FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B49795203D3187001CA3FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B49796203D3187001CA3FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1586,6 +1939,7 @@
 				B76D24A62005D4A600756A36 /* Observer.swift in Sources */,
 				B7781E6C1FFF6BB40078E56A /* APIProcedure.swift in Sources */,
 				B7A6C5961FF0DA6F00F5A5AD /* LoginController.swift in Sources */,
+				B7B497A2203D493C001CA3FB /* BookViewController.swift in Sources */,
 				B7C04065201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
 				B7F0972520179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
 				B714175F20062F580067090B /* Rotation.swift in Sources */,
@@ -1700,6 +2054,7 @@
 				B7898D97200711A30030A943 /* LoginViewController.swift in Sources */,
 				B7898D98200711A30030A943 /* Observer.swift in Sources */,
 				B7898D99200711A30030A943 /* APIProcedure.swift in Sources */,
+				B7B497A3203D493C001CA3FB /* BookViewController.swift in Sources */,
 				B7898D9A200711A30030A943 /* LoginController.swift in Sources */,
 				B7C04066201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
 				B7F0972620179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
@@ -1786,6 +2141,105 @@
 				B769070D20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */,
 				B748782E20281066005763F9 /* AchievementViewController.swift in Sources */,
 				B7898DCF200711A30030A943 /* APIUser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7B496EE203D3187001CA3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7B496EF203D3187001CA3FB /* Verification.swift in Sources */,
+				B7B496F0203D3187001CA3FB /* TProcedureNotificationViewController.swift in Sources */,
+				B7B496F1203D3187001CA3FB /* LoginViewController.swift in Sources */,
+				B7B496F2203D3187001CA3FB /* Observer.swift in Sources */,
+				B7B496F3203D3187001CA3FB /* APIProcedure.swift in Sources */,
+				B7B497A4203D493C001CA3FB /* BookViewController.swift in Sources */,
+				B7B496F4203D3187001CA3FB /* LoginController.swift in Sources */,
+				B7B496F5203D3187001CA3FB /* SummaryPatientViewController.swift in Sources */,
+				B7B496F6203D3187001CA3FB /* SummaryProcedureViewController.swift in Sources */,
+				B7B496F7203D3187001CA3FB /* Rotation.swift in Sources */,
+				B7B496F8203D3187001CA3FB /* Back.swift in Sources */,
+				B7B496F9203D3187001CA3FB /* LoadingViewController.swift in Sources */,
+				B7B496FA203D3187001CA3FB /* Course.swift in Sources */,
+				B7B496FB203D3187001CA3FB /* HomeCellTableViewCell.swift in Sources */,
+				B7B496FC203D3187001CA3FB /* APIRotation.swift in Sources */,
+				B7B496FD203D3187001CA3FB /* Diagnosis.swift in Sources */,
+				B7B496FE203D3187001CA3FB /* APINotification.swift in Sources */,
+				B7B496FF203D3187001CA3FB /* TMainViewController.swift in Sources */,
+				B7B49700203D3187001CA3FB /* DiseaseSearchKey.swift in Sources */,
+				B7B49701203D3187001CA3FB /* HomeViewController.swift in Sources */,
+				B7B49702203D3187001CA3FB /* BackPatient.swift in Sources */,
+				B7B49703203D3187001CA3FB /* ProcedureController.swift in Sources */,
+				B7B49704203D3187001CA3FB /* HistoryRotationViewController.swift in Sources */,
+				B7B49705203D3187001CA3FB /* BackCourse.swift in Sources */,
+				B7B49706203D3187001CA3FB /* Person.swift in Sources */,
+				B7B49707203D3187001CA3FB /* ScrollView.swift in Sources */,
+				B7B49708203D3187001CA3FB /* SummaryViewController.swift in Sources */,
+				B7B49709203D3187001CA3FB /* RankViewController.swift in Sources */,
+				B7B4970A203D3187001CA3FB /* TagView.swift in Sources */,
+				B7B4970B203D3187001CA3FB /* Constant.swift in Sources */,
+				B7B4970C203D3187001CA3FB /* PatientController.swift in Sources */,
+				B7B4970D203D3187001CA3FB /* DiagnosisSearchKey.swift in Sources */,
+				B7B4970E203D3187001CA3FB /* WarningViewController.swift in Sources */,
+				B7B4970F203D3187001CA3FB /* NLabel.swift in Sources */,
+				B7B49710203D3187001CA3FB /* Keyboard.swift in Sources */,
+				B7B49711203D3187001CA3FB /* MoreViewController.swift in Sources */,
+				B7B49712203D3187001CA3FB /* Symptom.swift in Sources */,
+				B7B49713203D3187001CA3FB /* PatientViewController.swift in Sources */,
+				B7B49714203D3187001CA3FB /* NViewController.swift in Sources */,
+				B7B49715203D3187001CA3FB /* Disease.swift in Sources */,
+				B7B49716203D3187001CA3FB /* Notification.swift in Sources */,
+				B7B49717203D3187001CA3FB /* NButtonBorder.swift in Sources */,
+				B7B49718203D3187001CA3FB /* NAutoComplete.swift in Sources */,
+				B7B49719203D3187001CA3FB /* ProcedureViewController.swift in Sources */,
+				B7B4971A203D3187001CA3FB /* ProcedureTableViewCell.swift in Sources */,
+				B7B4971B203D3187001CA3FB /* BackProcedure.swift in Sources */,
+				B7B4971C203D3187001CA3FB /* Foreign.swift in Sources */,
+				B7B4971D203D3187001CA3FB /* HomeController.swift in Sources */,
+				B7B4971E203D3187001CA3FB /* Procedure.swift in Sources */,
+				B7B4971F203D3187001CA3FB /* Department.swift in Sources */,
+				B7B49720203D3187001CA3FB /* User.swift in Sources */,
+				B7B49721203D3187001CA3FB /* CloseButton.swift in Sources */,
+				B7B49722203D3187001CA3FB /* AppDelegate.swift in Sources */,
+				B7B49723203D3187001CA3FB /* BackVerification.swift in Sources */,
+				B7B49724203D3187001CA3FB /* BackRotation.swift in Sources */,
+				B7B49725203D3187001CA3FB /* KeyboardwoTab.swift in Sources */,
+				B7B49726203D3187001CA3FB /* BackUser.swift in Sources */,
+				B7B49727203D3187001CA3FB /* HistoryPatientViewController.swift in Sources */,
+				B7B49728203D3187001CA3FB /* HistoryViewController.swift in Sources */,
+				B7B49729203D3187001CA3FB /* ProcedureGroup.swift in Sources */,
+				B7B4972A203D3187001CA3FB /* TPatientNotificationViewController.swift in Sources */,
+				B7B4972B203D3187001CA3FB /* NTableView.swift in Sources */,
+				B7B4972C203D3187001CA3FB /* Logbook.swift in Sources */,
+				B7B4972D203D3187001CA3FB /* ProcedureAddController.swift in Sources */,
+				B7B4972E203D3187001CA3FB /* TVerificationViewController.swift in Sources */,
+				B7B4972F203D3187001CA3FB /* NViewCard.swift in Sources */,
+				B7B49730203D3187001CA3FB /* MoreController.swift in Sources */,
+				B7B49731203D3187001CA3FB /* TagListView.swift in Sources */,
+				B7B49732203D3187001CA3FB /* LoadingPresentation.swift in Sources */,
+				B7B49733203D3187001CA3FB /* FirstViewController.swift in Sources */,
+				B7B49734203D3187001CA3FB /* HistoryController.swift in Sources */,
+				B7B49735203D3187001CA3FB /* SummaryDetailViewController.swift in Sources */,
+				B7B49736203D3187001CA3FB /* SymptomSearchKey.swift in Sources */,
+				B7B49737203D3187001CA3FB /* DatePickerViewController.swift in Sources */,
+				B7B49738203D3187001CA3FB /* APIPatient.swift in Sources */,
+				B7B49739203D3187001CA3FB /* ProcedureAddViewController.swift in Sources */,
+				B7B4973A203D3187001CA3FB /* BackNotification.swift in Sources */,
+				B7B4973B203D3187001CA3FB /* ProfileViewController.swift in Sources */,
+				B7B4973C203D3187001CA3FB /* NTextField.swift in Sources */,
+				B7B4973D203D3187001CA3FB /* FilterViewController.swift in Sources */,
+				B7B4973E203D3187001CA3FB /* Helper.swift in Sources */,
+				B7B4973F203D3187001CA3FB /* PatientCare.swift in Sources */,
+				B7B49740203D3187001CA3FB /* FirstController.swift in Sources */,
+				B7B49741203D3187001CA3FB /* FilterTableViewCell.swift in Sources */,
+				B7B49742203D3187001CA3FB /* APIVerification.swift in Sources */,
+				B7B49743203D3187001CA3FB /* CommentViewController.swift in Sources */,
+				B7B49744203D3187001CA3FB /* ProcedureInfoTableViewCell.swift in Sources */,
+				B7B49745203D3187001CA3FB /* NotificationViewController.swift in Sources */,
+				B7B49746203D3187001CA3FB /* API.swift in Sources */,
+				B7B49747203D3187001CA3FB /* DayAxisValueFormatter.swift in Sources */,
+				B7B49748203D3187001CA3FB /* AchievementViewController.swift in Sources */,
+				B7B49749203D3187001CA3FB /* APIUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2071,6 +2525,42 @@
 			};
 			name = Release;
 		};
+		B7B49798203D3187001CA3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770D6A4F0DCADE0FEB06F6A9 /* Pods-BinlaLog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2KJV4DXXN;
+				INFOPLIST_FILE = "MDCULog copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DGILOG";
+				PRODUCT_BUNDLE_IDENTIFIER = Nont.GILog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7B49799203D3187001CA3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FA76ED9B9AD080CD7A34DE /* Pods-BinlaLog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2KJV4DXXN;
+				INFOPLIST_FILE = "MDCULog copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DGILOG";
+				PRODUCT_BUNDLE_IDENTIFIER = Nont.GILog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2115,6 +2605,15 @@
 			buildConfigurations = (
 				B7898DFD200711A30030A943 /* Debug */,
 				B7898DFE200711A30030A943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7B49797203D3187001CA3FB /* Build configuration list for PBXNativeTarget "GILog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7B49798203D3187001CA3FB /* Debug */,
+				B7B49799203D3187001CA3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

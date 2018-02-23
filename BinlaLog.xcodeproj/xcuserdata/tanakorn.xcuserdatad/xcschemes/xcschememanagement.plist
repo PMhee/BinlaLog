@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>MDCULog copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>B7898D94200711A30030A943</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7B496EC203D3187001CA3FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

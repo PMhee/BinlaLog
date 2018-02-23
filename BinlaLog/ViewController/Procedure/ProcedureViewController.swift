@@ -15,7 +15,6 @@ class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableV
     var procedureid : String = ""
     var courseid : String = ""
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var cons_bottom_tableView: NSLayoutConstraint!
     var searchController = UISearchController(searchResultsController: nil)
     var viewModel = ViewModel(){
         didSet{

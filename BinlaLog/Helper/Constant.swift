@@ -15,8 +15,14 @@ class Constant{
     private let logo = "mdculog-logo.jpg"
     private let link = "https://ilogbook.md.chula.ac.th/laravel/api/v1/"
     private let header = ["appid":"68ad50cf9341d14a1122da5b00bcfab80c943181","appsecret":"e24968be22f4f750f700e9f1523574ed","Accept":"application/json"]
+    #elseif GILOG
+    private let appName = "GILog"
+    private let colorMain = 0x2EB187
+    private let logo = "mdculog-logo.jpg"
+    private let link = "https://ilogbook.md.chula.ac.th/laravel/api/v1/"
+    private let header = ["appid":"68ad50cf9341d14a1122da5b00bcfab80c943181","appsecret":"e24968be22f4f750f700e9f1523574ed","Accept":"application/json"]
     #else
-    private let appName = "Binla Log"
+    private let appName = "BinlaLog"
     private let colorMain = 0x000080
     private let logo = "Logo.png"
     private let link = "http://binlalog.medicine.psu.ac.th/api/v1/"

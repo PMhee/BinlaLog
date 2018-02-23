@@ -9,7 +9,12 @@
 import UIKit
 import MapKit
 class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
-
+    //Handle APP
+    func handleApp(){
+        #if GILOG
+            self.tf_hn.keyboardType = .numberPad
+        #endif
+    }
     //Routing Data
     var procedureid : String = ""
     var rotationid : String = ""
@@ -195,6 +200,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setUI()
+        self.handleApp()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -32,6 +32,18 @@ class APIRotation:API{
             finish(success)
         }, failure: {(error) in})
     }
+    static func deleteLogbook(logbookid:String,finish: @escaping (_ response: NSDictionary) -> Void){
+        self.request(urlType: .service, httpMethod: .delete, path: "logbook/procedure/id/\(logbookid)", parameter: [:], success: {(success) in
+            print(success)
+            finish(success)
+        }, failure: {(error) in})
+    }
+    static func deletePatient(patientid:String,finish: @escaping (_ response: NSDictionary) -> Void){
+        self.request(urlType: .service, httpMethod: .delete, path: "logbook/patientcare/id/\(patientid)", parameter: [:], success: {(success) in
+            print(success)
+            finish(success)
+        }, failure: {(error) in})
+    }
     static func updatePatientCare(name:String,patientcareid:String,HN:String,symptomid:[String],dx:[String],diagnosisid:[String],diseaseid:[String],location:String,starttime:String,endtime:String,rotationid:String,latitude:Double,longitude:Double,patienttype:Int,verification:String,note:String,finish: @escaping (_ response:NSDictionary) -> Void){
         let parameter = ["name":name,"HN":HN,"symptomid": symptomid,"dx":dx,"diagnosisid":diagnosisid,"location":[latitude,longitude],"diseaseid":diseaseid,"starttime":starttime,"endtime":endtime,"rotationid":rotationid,"patienttype":patienttype,"verifycode":verification,"note":note] as [String:Any]
         if patientcareid == ""{

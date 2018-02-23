@@ -28,6 +28,7 @@ class HistoryRotationViewController: UIViewController,UITableViewDelegate,UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(doSearchProcedure), name: .textChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(isDelete), name: .isDelete, object: nil)
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -49,12 +50,22 @@ class HistoryRotationViewController: UIViewController,UITableViewDelegate,UITabl
             let img_emotion = cell.viewWithTag(3) as! UIImageView
             let lb_date = cell.viewWithTag(4) as! UILabel
             let lb_verification = cell.viewWithTag(5) as! UILabel
+            let vw_message = cell.viewWithTag(6)
+            vw_message?.isHidden = true
+            vw_message?.layer.cornerRadius = 3
+            vw_message?.layer.masksToBounds = true
+            if self.viewModel.logbookProcedure[indexPath.row].logbook?.verifymessage ?? "" != ""{
+                vw_message?.isHidden = false
+            }
             if let logbook = self.viewModel.logbookProcedure[indexPath.row].logbook{
                 switch logbook.verificationstatus{
                 case 0 :
                     lb_verification.text = "Pending"
                     lb_verification.textColor = UIColor.lightGray
                 case 1 :
+                    lb_verification.text = "Accepted"
+                    lb_verification.textColor = UIColor(netHex:0x63D79F)
+                case 2 :
                     lb_verification.text = "Accepted"
                     lb_verification.textColor = UIColor(netHex:0x63D79F)
                 case -1:
@@ -102,6 +113,16 @@ class HistoryRotationViewController: UIViewController,UITableViewDelegate,UITabl
             self.performSegue(withIdentifier: "edit", sender: self)
         }
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            Helper.showLoading(sender: self)
+            BackRotation.getInstance().deleteLogbook(logbookid: self.viewModel.logbookProcedure[indexPath.row].logbook?.id ?? "", finish: {
+                self.viewModel.logbookProcedure.remove(at: indexPath.row)
+                self.dismiss(animated: false, completion: nil)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
+        }
+    }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
@@ -124,6 +145,9 @@ extension HistoryRotationViewController{
     struct LogbookProcedure{
         var logbook : Logbook?
         var procedure : Procedure?
+    }
+    @objc func isDelete(notification:Notification){
+        self.tableView.isEditing = !self.tableView.isEditing
     }
     @objc func doSearchProcedure(notification:Notification){
         if let key = notification.userInfo?["text"] as? String{

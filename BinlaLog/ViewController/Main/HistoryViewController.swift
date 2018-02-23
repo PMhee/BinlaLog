@@ -28,6 +28,10 @@ class HistoryViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     @IBAction func btn_summary_action(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "summary", sender: self)
     }
+    @IBAction func btn_trash_action(_ sender: UIBarButtonItem) {
+        NotificationCenter.default.post(name: .isDelete, object: nil)
+    }
+    @IBOutlet weak var btn_item_trash: UIBarButtonItem!
     
     
     @IBOutlet weak var lb_rotation: UILabel!

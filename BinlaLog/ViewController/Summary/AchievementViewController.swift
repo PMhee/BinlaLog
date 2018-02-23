@@ -19,9 +19,6 @@ class AchievementViewController: UIViewController,UISearchResultsUpdating {
     var index = 0
     var viewModel = ViewModel(){
         didSet{
-            self.collectionView.reloadData()
-            self.collectionView.layoutIfNeeded()
-            self.cons_collection_height.constant = self.collectionView.contentSize.height
         }
     }
     override func viewDidLoad() {
@@ -119,12 +116,21 @@ extension AchievementViewController{
     }
     func doSearchProcedure(key:String){
         self.viewModel.procedures = BackProcedure.getInstance().list(key: key)
+        self.collectionView.reloadData()
+        self.collectionView.layoutIfNeeded()
+        self.cons_collection_height.constant = self.collectionView.contentSize.height
     }
     func initProcedure(){
         BackProcedure.getInstance().enumProcedure {
             self.viewModel.procedures = BackProcedure.getInstance().list(key: "").sorted(byKeyPath: "name", ascending: true)
+            self.collectionView.reloadData()
+            self.collectionView.layoutIfNeeded()
+            self.cons_collection_height.constant = self.collectionView.contentSize.height
         }
         self.viewModel.procedures = BackProcedure.getInstance().list(key: "").sorted(byKeyPath: "name", ascending: true)
+        self.collectionView.reloadData()
+        self.collectionView.layoutIfNeeded()
+        self.cons_collection_height.constant = self.collectionView.contentSize.height
     }
     func initLogbook(){
         var j = 0

@@ -28,3 +28,9 @@ class ForeignProcgroup:Object{
 class ForeignDepartment:Object{
     @objc dynamic var departmentid : String = ""
 }
+class ForeignLogbook:Object{
+    @objc dynamic var logbookid : String = ""
+}
+class ForeignPatientcare:Object{
+    @objc dynamic var patientcareid : String = ""
+}

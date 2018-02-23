@@ -10,4 +10,5 @@ import Foundation
 extension Notification.Name{
     static let dateChange = Notification.Name("dateChange")
     static let textChange = Notification.Name("textChange")
+    static let isDelete = Notification.Name("isDelete")
 }

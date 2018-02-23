@@ -9,6 +9,24 @@
 import UIKit
 import MapKit
 class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDelegate {
+    //GI not need disease
+    @IBOutlet weak var const_top_disease: NSLayoutConstraint!
+    @IBOutlet weak var vw_disease_icon: UIView!
+    
+    //Handle APP
+    func handleApp(){
+        #if GILOG
+            self.tf_hn.keyboardType = .numberPad
+            self.tf_symptom.type = 1
+            self.tf_diagnosis.type = 2
+            self.tf_symptom.sender = self
+            self.tf_diagnosis.sender = self
+            self.tf_disease.isHidden = true
+            self.vw_disease_tag.isHidden = true
+            self.vw_disease_icon.isHidden = true
+            self.const_top_disease.constant = -47
+        #endif
+    }
     //Route
     var patientcareid : String = ""
     var rotationid : String = ""
@@ -87,7 +105,9 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
         guard let key = sender.text else {
             return
         }
-        self.addSymptom(key: key)
+        if !self.tf_symptom.isClickInfo{
+            self.addSymptom(key: key)
+        }
         sender.text = ""
     }
     @IBAction func tf_diagnosis_change(_ sender: NAutoComplete) {
@@ -101,7 +121,9 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
         guard let key = sender.text else {
             return
         }
-        self.addDiagnosis(key: key)
+        if !self.tf_diagnosis.isClickInfo{
+            self.addDiagnosis(key: key)
+        }
         sender.text = ""
     }
     @IBAction func tf_disease_change(_ sender: NAutoComplete) {
@@ -114,7 +136,9 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
         guard let key = sender.text else {
             return
         }
-        self.addDisease(key: key)
+        if !self.tf_disease.isClickInfo{
+            self.addDisease(key: key)
+        }
         sender.text = ""
     }
     func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
@@ -320,6 +344,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.addObserver()
+        self.handleApp()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

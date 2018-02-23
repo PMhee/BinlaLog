@@ -33,6 +33,7 @@ extension PatientViewController{
         var lbuserid : String = ""
         var verifydate : Date?
         var note : String = ""
+        var verifystatus : Int = 0
     }
     func doClose(){
         self.dismiss(animated: true, completion: nil)
@@ -83,7 +84,9 @@ extension PatientViewController{
             if BackPatient.getInstance().getSymptom(key: key) != nil{
                 self.viewModel.symptom.append(key)
             }else{
-                Helper.showWarning(sender: self, text: "Cannot add symptom outside autocomplete list")
+                if !key.isEmpty{
+                    Helper.showWarning(sender: self, text: "Cannot add symptom outside autocomplete list")
+                }
             }
             
         }else{
@@ -135,7 +138,10 @@ extension PatientViewController{
         if self.canAddTag(list: self.viewModel.diagnosis, title: key){
             if let diag = BackPatient.getInstance().getDiagnosis(key: key){
                 if let dise = BackPatient.getInstance().getDisease(id: diag.diseaseid){
-                    self.addDisease(key: dise.name)
+                    #if GILOG
+                    #else
+                        self.addDisease(key: dise.name)
+                    #endif
                 }
             }
             self.viewModel.diagnosis.append(key)
@@ -182,11 +188,13 @@ extension PatientViewController{
             if BackPatient.getInstance().getDisease(key: key) != nil{
                 self.viewModel.disease.append(key)
             }else{
-                Helper.showWarning(sender: self, text: "Cannot add disease outside autocomplete list")
+                if !key.isEmpty{
+                    Helper.showWarning(sender: self, text: "Cannot add disease outside autocomplete list")
+                }
             }
         }else{
             if !key.isEmpty{
-                Helper.showWarning(sender: self, text: "You cannot add a duplicate disease")
+               // Helper.showWarning(sender: self, text: "You cannot add a duplicate disease")
             }
         }
         self.updateDiseaseConstrain()
@@ -272,6 +280,7 @@ extension PatientViewController.ViewModel{
         self.lbuserid = patientcare.lbuserid
         self.verifydate = patientcare.verifytime
         self.message = patientcare.verifymessage
+        self.verifystatus = patientcare.verificationstatus
         if let rotation = BackRotation.getInstance().get(id: self.rotationid){
             self.course = rotation.rotationname
             self.deadline = rotation.logbookendtime.addingTimeInterval(-1)
@@ -281,11 +290,14 @@ extension PatientViewController.ViewModel{
             }else{
                 self.startdate = patientcare.starttime!
             }
-            if patientcare.endtime == nil{
-                self.enddate = rotation.endtime
-            }else{
-                self.enddate = patientcare.endtime!
-            }
+                if patientcare.endtime == nil{
+                    #if GILOG
+                    #else
+                    self.enddate = rotation.endtime
+                    #endif
+                }else{
+                    self.enddate = patientcare.endtime!
+                }
         }
     }
     

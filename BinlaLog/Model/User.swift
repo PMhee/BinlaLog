@@ -42,4 +42,6 @@ class User:Object{
     @objc dynamic var currentSelectVerification : Int = 0
     var currentRotation = List<ForeignRotation>()
     var recentRotation = List<ForeignRotation>()
+    var notificationLogbook = List<ForeignLogbook>()
+    var notificationPatient = List<ForeignPatientcare>()
 }

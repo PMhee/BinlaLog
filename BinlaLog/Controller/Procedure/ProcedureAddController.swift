@@ -38,6 +38,7 @@ extension ProcedureAddViewController{
                 self.viewModel.verification = verification.verifycode
                 self.viewModel.verificationid = verification.id
             }
+            self.viewModel.verifystatus = logbook.verificationstatus
             self.lb_verification_date.watch(subject: logbook.verifytime?.convertToStringOnlyDate() ?? "")
             if let proc = BackProcedure.getInstance().get(id: logbook.procedureid){
                 self.procedureid = proc.id
@@ -157,6 +158,7 @@ extension ProcedureAddViewController{
         var message : String = ""
         var verificationid :String = ""
         var note : String = ""
+        var verifystatus : Int = 0
     }
 }
 extension ProcedureAddViewController:CLLocationManagerDelegate{

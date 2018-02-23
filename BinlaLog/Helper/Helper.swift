@@ -446,6 +446,15 @@ class Helper{
         sender.modalPresentationStyle = .overCurrentContext
         sender.present(vc, animated: false, completion: nil)
     }
+    static func showEBook(sender:UIViewController,title:String){
+        let storyboard = UIStoryboard(name: "Book", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BookViewController") as! UINavigationController
+        if let des = vc.topViewController as? BookViewController{
+            des.eBookTitle = title
+        }
+        sender.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+    }
     static func showWarning(sender:UIViewController, text:String){
         let v = UIView(frame:CGRect(x: 0, y: 0, width: sender.view.frame.width, height: 30))
         let lb = UILabel(frame: CGRect(x: v.frame.origin.x, y: v.frame.origin.y, width: v.frame.width  , height: v.frame.height))

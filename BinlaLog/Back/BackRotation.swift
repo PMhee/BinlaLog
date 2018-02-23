@@ -114,6 +114,9 @@ class BackRotation{
             if let updatetime = content.value(forKey: "updatetime") as? String{
                 patientcare.updatetime = updatetime.convertToDate()
             }
+            if let deletetime = content.value(forKey: "deletetime") as? String{
+                patientcare.deletetime = deletetime.convertToDate()
+            }
             if let note = content.value(forKey: "note") as? String{
                 patientcare.note = note
             }
@@ -241,6 +244,11 @@ class BackRotation{
         return try! Realm().objects(Rotation.self).filter("id IN %@",rotation).sorted(byKeyPath: "endtime", ascending: false)
     }
     //Logbook
+    func deleteLogbook(logbookid:String,finish:@escaping () -> Void){
+        APIRotation.deleteLogbook(logbookid:logbookid, finish: {(success) in
+            finish()
+        })
+    }
     func EnumLogbook(updatetime:Date?,rotationid:String,finish: @escaping () -> Void){
         var date = ""
         if updatetime != nil{
@@ -326,6 +334,9 @@ class BackRotation{
             }
             if let updatetime = content.value(forKey: "updatetime") as? String{
                 logbook.updatetime = updatetime.convertToDate()
+            }
+            if let deletetime = content.value(forKey: "deletetime") as? String{
+                logbook.deletetime = deletetime.convertToDate()
             }
             if let validation = content.value(forKey: "validation") as? NSDictionary{
                 if let verifycodeid = validation.value(forKey: "verifycodeid") as? String{
@@ -467,6 +478,11 @@ class BackRotation{
         return try! Realm().objects(Logbook.self).filter("rotationid == %@ AND deletetime == nil",rotationid).sorted(byKeyPath: "updatetime", ascending: false).first?.updatetime
     }
     //Patient Care
+    func deletePatient(patientid:String,finish:@escaping () -> Void){
+        APIRotation.deletePatient(patientid:patientid, finish: {(success) in
+            finish()
+        })
+    }
     func EnumPatientCare(updatetime:Date?,rotationid:String,finish: @escaping () -> Void){
         var date = ""
         if updatetime != nil{
