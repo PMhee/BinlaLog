@@ -32,5 +32,11 @@ class APIPatient:API{
             fail("")
         })
     }
-    
+    static func getPatient(hn:String,finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping  (_ error: String) -> Void){
+        self.request(urlType: .service, httpMethod: .get, path: "meta/disease/list", parameter: [:], success: {(success) in
+            finish(success)
+        }, failure: {(error) in
+            fail("")
+        })
+    }
 }

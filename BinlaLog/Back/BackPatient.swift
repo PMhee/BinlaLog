@@ -205,7 +205,13 @@ class BackPatient:Back{
     func listDisease(key:String) -> Results<Disease>{
         return try! Realm().objects(Disease.self).filter("ANY searchKey.key contains[c] %@ OR name contains[c] %@ OR des contains[c] %@",key,key,key)
     }
-    
+    //Patient
+    func loadpatient(){
+        
+    }
+    func enumPatient(){
+        
+    }
     
     
     func get() {
