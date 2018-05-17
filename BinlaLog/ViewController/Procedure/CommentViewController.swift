@@ -10,7 +10,7 @@ import UIKit
 
 class CommentViewController: UIViewController,UITextViewDelegate {
     @IBAction func btn_accept_action(_ sender: UIButton) {
-        if !(self.viewModel?.message.isEmpty)!{
+        if !(self.viewModel?.message ?? "" == "" ){
             self.viewModel?.verifystatus = 2
         }else{
             self.viewModel?.verifystatus = 1

@@ -19,6 +19,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBAction func btn_signin_action(_ sender: UIButton) {
         self.doSignin()
     }
+    @IBOutlet weak var btn_forgot: UIButton!
     @IBOutlet weak var tf_password: NTextField!
     @IBOutlet weak var tf_username: NTextField!
     @IBAction func tf_username_change(_ sender: UITextField) {
@@ -27,6 +28,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBAction func tf_password_change(_ sender: UITextField) {
         self.viewModel.password = sender.text!
     }
+    @IBAction func btn_forgot_action(_ sender: UIButton) {
+        #if BINLALOG
+        let alert = UIAlertController(title: "Please contact Admin", message: "074-451-5333", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Call", style: .default, handler: {(action) in
+            guard let number = URL(string: "tel://0744515333") else { return }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(number)
+            } else {
+                // Fallback on earlier versions
+            }
+        }))
+        self.present(alert, animated: true)
+        #endif
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 1, animations: {
             self.scrollView.frame.size.height -= 100
@@ -50,6 +66,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     func setUI(){
         self.btn_login.backgroundColor = Constant().getColorMain()
+        self.btn_forgot.setTitleColor(Constant().getColorMain(), for: .normal)
         self.tf_username.makeRectTextfield(color: UIColor(netHex:0xeeeeee))
         self.tf_password.makeRectTextfield(color: UIColor(netHex:0xeeeeee))
         self.img_logo.layer.cornerRadius = 5

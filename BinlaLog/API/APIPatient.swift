@@ -17,8 +17,8 @@ class APIPatient:API{
         })
     }
     static func listDiagnosis(keyword:String,finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping  (_ error: String) -> Void){
-        //let parameter = ["keyword":keyword,"data":"true"]
-        self.request(urlType: .service, httpMethod: .get, path: "meta/diagnosis/list", parameter: [:], success: {(success) in
+        let parameter = ["q":keyword,"data":"true"]
+        self.request(urlType: .service, httpMethod: .get, path: "meta/diagnosis/list", parameter: parameter, success: {(success) in
             finish(success)
         }, failure: {(error) in
             fail("")

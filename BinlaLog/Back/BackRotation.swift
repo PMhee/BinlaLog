@@ -14,8 +14,9 @@ class BackRotation{
     }
     func loadRotation(dict:NSDictionary) ->String{
         var rotations = ""
-        try! Realm().write {
-            if let content = dict.value(forKey: "rotation") as? NSDictionary{
+        if let content = dict.value(forKey: "rotation") as? NSDictionary{
+            BackCourse.getInstance().loadCourse(dict: content)
+            try! Realm().write {
                 var rotation = Rotation()
                 if let id = content.value(forKey: "id") as? String{
                     rotation.id = id
@@ -119,6 +120,9 @@ class BackRotation{
             }
             if let note = content.value(forKey: "note") as? String{
                 patientcare.note = note
+            }
+            if let hospitalid = content.value(forKey: "hospitalid") as? String{
+                patientcare.hospitalid = hospitalid
             }
             if let validation = content.value(forKey: "validation") as? NSDictionary{
                 if let verifycodeid = validation.value(forKey: "verifycodeid") as? String{
@@ -272,8 +276,12 @@ class BackRotation{
     }
     func loadLogbook(content:NSDictionary){
         var logbook = Logbook()
-        if let procedure = content.value(forKey: "procedure") as? NSDictionary{
-            BackProcedure.getInstance().loadProcedure(content: procedure)
+        if let procedures = content.value(forKey: "procedures") as? NSArray{
+            for i in 0..<procedures.count{
+                if let procedure = procedures[i] as? NSDictionary{
+                    BackProcedure.getInstance().loadProcedure(content: procedure)
+                }
+            }
         }
         self.loadRotation(dict: content)
         try! Realm().write {
@@ -323,8 +331,16 @@ class BackRotation{
             if let patienttype = content.value(forKey: "patienttype") as? Int{
                 logbook.patienttype = patienttype
             }
-            if let procedureid = content.value(forKey: "procedureid") as? String{
-                logbook.procedureid = procedureid
+            logbook.procedureid.removeAll()
+            if let procedures = content.value(forKey: "procedureids") as? NSArray{
+                for i in 0..<procedures.count{
+                    if let procedureid = procedures[i] as? String{
+                        let foreign = ForeignProcedure()
+                        foreign.procedureid = procedureid
+                        logbook.procedureid.append(foreign)
+                    }
+                }
+                
             }
             if let rotationid = content.value(forKey: "rotationid") as? String{
                 logbook.rotationid = rotationid
@@ -337,6 +353,9 @@ class BackRotation{
             }
             if let deletetime = content.value(forKey: "deletetime") as? String{
                 logbook.deletetime = deletetime.convertToDate()
+            }
+            if let hospitalid = content.value(forKey: "hospitalid") as? String{
+                logbook.hospitalid = hospitalid
             }
             if let validation = content.value(forKey: "validation") as? NSDictionary{
                 if let verifycodeid = validation.value(forKey: "verifycodeid") as? String{
@@ -369,7 +388,7 @@ class BackRotation{
         return try! Realm().objects(Logbook.self).filter("id == %@",id).first
     }
     func listLogbook(procedureid:String) ->Results<Logbook>{
-        return try! Realm().objects(Logbook.self).filter("procedureid == %@ AND deletetime == nil",procedureid)
+        return try! Realm().objects(Logbook.self).filter("Any procedureid.procedureid == %@ AND deletetime == nil",procedureid)
     }
     func listLogbook() ->Results<Logbook>{
         return try! Realm().objects(Logbook.self).filter("deletetime == nil && verifytime != nil").sorted(byKeyPath: "verifytime", ascending: false)
@@ -383,15 +402,15 @@ class BackRotation{
         }
     }
     func listLogbook(rotationid:String,procedureid:String) ->Results<Logbook>{
-        return try! Realm().objects(Logbook.self).filter("rotationid == %@ AND procedureid == %@ AND deletetime == nil",rotationid,procedureid).sorted(byKeyPath: "updatetime", ascending: false)
+        return try! Realm().objects(Logbook.self).filter("rotationid == %@ AND Any procedureid.procedureid == %@ AND deletetime == nil",rotationid,procedureid).sorted(byKeyPath: "updatetime", ascending: false)
     }
     func listLogbookProgress(procedureid:String,rotationid:String) ->[Int:Int]{
         var list = [Int:Int]()
         var temp : Results<Logbook>?
         if rotationid == ""{
-            temp = try! Realm().objects(Logbook.self).filter("procedureid == %@ AND deletetime == nil",procedureid)
+            temp = try! Realm().objects(Logbook.self).filter("Any procedureid.procedureid == %@ AND deletetime == nil",procedureid)
         }else{
-            temp = try! Realm().objects(Logbook.self).filter("procedureid == %@ && rotationid == %@ AND deletetime == nil",procedureid,rotationid)
+            temp = try! Realm().objects(Logbook.self).filter("Any procedureid.procedureid == %@ && rotationid == %@ AND deletetime == nil",procedureid,rotationid)
         }
         
         for i in 0..<temp!.count{
@@ -421,7 +440,13 @@ class BackRotation{
         default:
             lt = 0
         }
-        APIRotation.updateLogbook(logbookid: viewModel.logbookid,rotationid: viewModel.rotationid, HN: viewModel.hn, procedureid: viewModel.procedureid, feeling: viewModel.feeling, location: "(\(viewModel.latitude),\(viewModel.longitude))", patienttype: viewModel.patientType, logtype: lt, donetime: viewModel.date.convertToServer(),deviceid: dvid,verification: viewModel.verification,latitude: viewModel.latitude,longitude: viewModel.longitude,note:viewModel.note, finish: {(success) in
+        var proc = [String]()
+        for i in 0..<viewModel.procedures.count{
+            if let procedure = BackProcedure.getInstance().get(key:viewModel.procedures[i]).first{
+                proc.append(procedure.id)
+            }
+        }
+        APIRotation.updateLogbook(logbookid: viewModel.logbookid,rotationid: viewModel.rotationid, HN: viewModel.hn, procedureid: proc, feeling: viewModel.feeling, location: "(\(viewModel.latitude),\(viewModel.longitude))", patienttype: viewModel.patientType, logtype: lt, donetime: viewModel.date.convertToServer(),deviceid: dvid,verification: viewModel.verification,latitude: viewModel.latitude,longitude: viewModel.longitude,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 self.loadLogbook(content: content)
             }
@@ -437,10 +462,12 @@ class BackRotation{
         let temp = self.summaryLogbookDone(rotationid: rotationid)
         var sum = [String:Int]()
         for i in 0..<temp.count{
-            if sum[BackProcedure.getInstance().get(id: temp[i].procedureid)?.name ?? ""] == nil{
-                sum[BackProcedure.getInstance().get(id: temp[i].procedureid)?.name ?? ""] = 1
-            }else{
-                sum[BackProcedure.getInstance().get(id: temp[i].procedureid)?.name ?? ""]! += 1
+            for j in 0..<temp[i].procedureid.count{
+                if sum[BackProcedure.getInstance().get(id: temp[i].procedureid[j].procedureid)?.name ?? ""] == nil{
+                    sum[BackProcedure.getInstance().get(id: temp[i].procedureid[j].procedureid)?.name ?? ""] = 1
+                }else{
+                    sum[BackProcedure.getInstance().get(id: temp[i].procedureid[j].procedureid)?.name ?? ""]! += 1
+                }
             }
         }
         return sum
@@ -461,9 +488,9 @@ class BackRotation{
         var result = [Int:Int]()
         var temp : Results<Logbook>?
         if rotationid == ""{
-            temp = try! Realm().objects(Logbook.self).filter("procedureid == %@ AND deletetime == nil",procedureid)
+            temp = try! Realm().objects(Logbook.self).filter("Any procedureid.procedureid == %@ AND deletetime == nil",procedureid)
         }else{
-            temp = try! Realm().objects(Logbook.self).filter("rotationid == %@ AND procedureid == %@ AND deletetime == nil",rotationid,procedureid)
+            temp = try! Realm().objects(Logbook.self).filter("rotationid == %@ AND Any procedureid.procedureid == %@ AND deletetime == nil",rotationid,procedureid)
         }
         for i in 0..<temp!.count{
             if result[temp![i].feeling] == nil{
@@ -524,7 +551,9 @@ class BackRotation{
                 dx.append(viewModel.diagnosis[i])
             }
         }
-        APIRotation.updatePatientCare(name: viewModel.name, patientcareid:viewModel.patientcareid , HN: viewModel.hn, symptomid: symptoms,dx:dx, diagnosisid: diagnosiss, diseaseid: diseases, location: "(\(viewModel.latitude),\(viewModel.longitude))", starttime: viewModel.startdate.convertToServer(), endtime: viewModel.enddate.convertToServer(), rotationid: viewModel.rotationid,latitude: viewModel.latitude,longitude: viewModel.longitude,patienttype: viewModel.type,verification:viewModel.verification,note:viewModel.note, finish: {(success) in
+
+        APIRotation.updatePatientCare(name: viewModel.name, patientcareid:viewModel.patientcareid , HN: viewModel.hn, symptomid: symptoms,dx:dx, diagnosisid: diagnosiss, diseaseid: diseases, location: "(\(viewModel.latitude),\(viewModel.longitude))", starttime: viewModel.startdate.convertToServer(), endtime: viewModel.enddate.convertToServer(), rotationid: viewModel.rotationid,latitude: viewModel.latitude,longitude: viewModel.longitude,patienttype: viewModel.type,verification:viewModel.verification,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", finish: {(success) in
+            print(success)
             if let content = success.value(forKey: "content") as? NSDictionary{
                 self.loadPatientCare(content: content)
             }

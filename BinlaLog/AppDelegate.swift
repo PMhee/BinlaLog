@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        let configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = configuration
         // Override point for customization after application launch.
         UINavigationBar.appearance().barTintColor = Constant().getColorMain()
         UITabBar.appearance().tintColor = Constant().getColorMain()

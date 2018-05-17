@@ -11,19 +11,23 @@ import RealmSwift
 extension ProcedureViewController{
     struct ViewModel {
         var searchKey : String?
-        var procedures : [String:Results<Procedure>]?
+        var procedures = [String:[Procedure]]()
     }
     func doClose(){
         self.dismiss(animated: true, completion: nil)
     }
     func loadDataFromServer(){
+        
         BackProcedure.getInstance().enumProcedure(courseid: self.courseid, finish: {
             self.doSearchProcedure(key: self.viewModel.searchKey ?? "")
+        },error:{
         })
         self.doSearchProcedure(key: self.viewModel.searchKey ?? "")
     }
     func doSearchProcedure(key:String){
-        let procedures = BackProcedure.getInstance().list(key: key)
+        //let procedures = BackProcedure.getInstance().list(arr: <#T##[String : Results<Procedure>]#>, key: <#T##String#>)
+        //let procedures = BackProcedure.getInstance().list(courseid: self.courseid, key: key)
+        let procedures = BackProcedure.getInstance().list(courseid: self.courseid, key: key)
         self.viewModel.procedures = BackProcedure.getInstance().groupProcedure(procedures: procedures)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

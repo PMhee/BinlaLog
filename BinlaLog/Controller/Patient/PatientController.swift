@@ -34,6 +34,34 @@ extension PatientViewController{
         var verifydate : Date?
         var note : String = ""
         var verifystatus : Int = 0
+        var institute : String = ""
+        var hospitals = [Hospital]()
+    }
+    func initHospital(){
+        BackUser.getInstance().enumHospital {
+            self.viewModel.hospitals = Array(BackUser.getInstance().listHospital())
+            if self.viewModel.hospitals.count > 0 {
+                self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
+            }
+        }
+        self.viewModel.hospitals = Array(BackUser.getInstance().listHospital())
+        if self.viewModel.hospitals.count > 0 {
+            self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
+        }
+    }
+    func findNearestHospital() -> Int{
+        var min = 999999999999999.0
+        var index = 0
+        let latitude = self.viewModel.latitude
+        let longitude = self.viewModel.longitude
+        for i in 0..<self.viewModel.hospitals.count{
+            let distance =  sqrt(pow((latitude - self.viewModel.hospitals[i].latitude),2) + pow((longitude - self.viewModel.hospitals[i].longitude),2))
+            if min > distance{
+                min = distance
+                index = i
+            }
+        }
+        return index
     }
     func doClose(){
         self.dismiss(animated: true, completion: nil)
@@ -128,11 +156,14 @@ extension PatientViewController{
     }
     func searchServerDiagnosis(key:String){
         BackPatient.getInstance().searchDiagnosis(key: key, finish: {
+            let data = self.searchDiagnosis(key: key)
+            self.tf_diagnosis.filterStrings(data)
         })
     }
     func doSearchDiagnosis(key:String){
-        let data = self.searchDiagnosis(key: key)
-        self.tf_diagnosis.filterStrings(data)
+//        let data = self.searchDiagnosis(key: key)
+//        self.tf_diagnosis.filterStrings(data)
+        self.searchServerDiagnosis(key: key)
     }
     func addDiagnosis(key:String){
         if self.canAddTag(list: self.viewModel.diagnosis, title: key){
@@ -252,6 +283,7 @@ extension PatientViewController:CLLocationManagerDelegate{
                 self.viewModel.longitude = userLocation.coordinate.longitude
                 yourLocation.title = "Your Location"
                 self.map.addAnnotation(yourLocation)
+                self.initHospital()
             }
         }
     }
@@ -281,6 +313,9 @@ extension PatientViewController.ViewModel{
         self.verifydate = patientcare.verifytime
         self.message = patientcare.verifymessage
         self.verifystatus = patientcare.verificationstatus
+        if let hospital = BackUser.getInstance().getHospital(id: patientcare.hospitalid){
+            self.institute = hospital.name
+        }
         if let rotation = BackRotation.getInstance().get(id: self.rotationid){
             self.course = rotation.rotationname
             self.deadline = rotation.logbookendtime.addingTimeInterval(-1)

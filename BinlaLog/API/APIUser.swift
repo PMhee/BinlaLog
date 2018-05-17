@@ -24,6 +24,13 @@ class APIUser:API{
             fail("")
         })
     }
+    static func changePassword(old:String,new:String,finish: @escaping (_ response: NSDictionary) -> Void){
+        let parameter = ["oldpasswd":old,"newpasswd":new]
+        self.request(urlType: .service, httpMethod: .put, path: "changePW", parameter: parameter, success: {(success) in
+            finish(success)
+        }, failure: {(error) in
+        })
+    }
     static func getUserInfo(finish: @escaping (_ response: NSDictionary) -> Void){
         self.request(urlType: .service, httpMethod: .get, path: "userInfo", parameter: [:], success: {(success) in
             finish(success)
@@ -50,6 +57,13 @@ class APIUser:API{
         self.request(urlType: .service, httpMethod: .get, path: "userInfo/rank", parameter: parameter, success: {(finish) in
             success(finish)
         }, failure: {(error) in
+        })
+    }
+    static func getHospital(success:@escaping (_ response:NSDictionary) ->Void){
+        self.request(urlType: .service, httpMethod: .get, path: "meta/hospital/list", parameter: [:], success: {(finish) in
+            success(finish)
+        }, failure: {(error) in
+            
         })
     }
 }

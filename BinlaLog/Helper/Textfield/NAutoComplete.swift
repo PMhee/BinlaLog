@@ -589,7 +589,9 @@ extension NAutoComplete: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.isClickInfo = false
         if itemSelectionHandler == nil {
-            self.text = filteredResults[(indexPath as NSIndexPath).row].title
+            if indexPath.row < filteredResults.count{
+                self.text = filteredResults[(indexPath as NSIndexPath).row].title
+            }
         } else {
             let index = indexPath.row
             itemSelectionHandler!(filteredResults, index)

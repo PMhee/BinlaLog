@@ -31,6 +31,12 @@ class ForeignDepartment:Object{
 class ForeignLogbook:Object{
     @objc dynamic var logbookid : String = ""
 }
+class ForeignProcedure:Object{
+    @objc dynamic var procedureid : String = ""
+}
 class ForeignPatientcare:Object{
     @objc dynamic var patientcareid : String = ""
+}
+class ForeignTask:Object{
+    @objc dynamic var taskid : String = ""
 }

@@ -45,6 +45,8 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     @IBOutlet weak var vw_symptom_tag: TagListView!
     @IBOutlet weak var tf_diagnosis: NAutoComplete!
     @IBOutlet weak var tf_disease: NAutoComplete!
+    @IBOutlet weak var tf_institute: NTextField!
+    
     @IBOutlet weak var vw_diagnosis_tag: TagListView!
     @IBOutlet weak var cons_height_symptom_tag: NSLayoutConstraint!
     @IBOutlet weak var cons_height_diagnosis_tag: NSLayoutConstraint!
@@ -159,6 +161,13 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
                 Helper.showDatePicker(sender: self,date:self.viewModel.enddate, restrictDate: self.viewModel.deadline)
             }
             return false
+        }else if textField.tag == 10{
+            var array = [String]()
+            for i in 0..<self.viewModel.hospitals.count{
+                array.append(self.viewModel.hospitals[i].name)
+            }
+            Helper.showPicker(sender: self, arr: array)
+            return false
         }else{
             return true
         }
@@ -179,6 +188,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             self.tf_enddate.isEnabled = false
             self.tf_passcode.isEnabled = false
             self.tv_note.isEditable = false
+            self.tf_institute.isEnabled = false
             self.tf_hn.textColor = .lightGray
             self.tf_name.textColor = .lightGray
             self.segment_type.tintColor = .lightGray
@@ -189,6 +199,10 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             self.tf_enddate.textColor = .lightGray
             self.tf_passcode.textColor = .lightGray
             self.tv_note.textColor = .lightGray
+            self.tf_institute.textColor = .lightGray
+            self.vw_disease_tag.enableRemoveButton = false
+            self.vw_symptom_tag.enableRemoveButton = false
+            self.vw_diagnosis_tag.enableRemoveButton = false
             self.navigationItem.setRightBarButton(nil, animated: false)
         }else{
             self.vw_message.isHidden = true
@@ -211,6 +225,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     }
     func addObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(dateChange), name: .dateChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pickerChange), name: .pickerChange, object: nil)
     }
     @objc func dateChange(notification:Notification){
         if let date = notification.userInfo?["date"] as? Date{
@@ -222,7 +237,11 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             
         }
     }
-    
+    @objc func pickerChange(notification:Notification){
+        if let data = notification.userInfo?["data"] as? String{
+            self.viewModel.institute = data
+        }
+    }
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     func initMap(){
@@ -301,6 +320,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
                 self.lb_placeholder_note.isHidden = true
             }
             self.tv_note.text = self.viewModel.note
+            self.tf_institute.watch(subject: self.viewModel.institute)
             self.addTeacherComment()
         }
     }

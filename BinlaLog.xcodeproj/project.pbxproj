@@ -10,6 +10,21 @@
 		4822D4892713A7FB550D470F /* Pods_BinlaLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE868201C6BB1F1E52F61D71 /* Pods_BinlaLog.framework */; };
 		4D1348D3C7BC6A6E1E41B272 /* Pods_BinlaLogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD91D67B765BDF42832BEF2 /* Pods_BinlaLogUITests.framework */; };
 		648617830048B7FF6756E8EA /* Pods_BinlaLogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CC892160410A7678BAA6F6 /* Pods_BinlaLogTests.framework */; };
+		B7069C9720AC1BAF005E18B3 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9620AC1BAF005E18B3 /* Quest.swift */; };
+		B7069C9820AC1BAF005E18B3 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9620AC1BAF005E18B3 /* Quest.swift */; };
+		B7069C9920AC1BAF005E18B3 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9620AC1BAF005E18B3 /* Quest.swift */; };
+		B7069C9B20AC1BE4005E18B3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9A20AC1BE4005E18B3 /* Task.swift */; };
+		B7069C9C20AC1BE4005E18B3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9A20AC1BE4005E18B3 /* Task.swift */; };
+		B7069C9D20AC1BE4005E18B3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069C9A20AC1BE4005E18B3 /* Task.swift */; };
+		B7069C9F20AC307A005E18B3 /* Quest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7069C9E20AC307A005E18B3 /* Quest.storyboard */; };
+		B7069CA020AC307A005E18B3 /* Quest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7069C9E20AC307A005E18B3 /* Quest.storyboard */; };
+		B7069CA120AC307A005E18B3 /* Quest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7069C9E20AC307A005E18B3 /* Quest.storyboard */; };
+		B7069CA320AC453B005E18B3 /* QuestAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069CA220AC453B005E18B3 /* QuestAddViewController.swift */; };
+		B7069CA420AC453B005E18B3 /* QuestAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069CA220AC453B005E18B3 /* QuestAddViewController.swift */; };
+		B7069CA520AC453B005E18B3 /* QuestAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7069CA220AC453B005E18B3 /* QuestAddViewController.swift */; };
+		B7099A9220903CA300B303CE /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7099A9120903CA300B303CE /* QuestViewController.swift */; };
+		B7099A9320903CA300B303CE /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7099A9120903CA300B303CE /* QuestViewController.swift */; };
+		B7099A9420903CA300B303CE /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7099A9120903CA300B303CE /* QuestViewController.swift */; };
 		B709B247202C65F1004CF168 /* APIVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B246202C65F1004CF168 /* APIVerification.swift */; };
 		B709B249202C66C3004CF168 /* BackVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B248202C66C3004CF168 /* BackVerification.swift */; };
 		B709B24B202C66EE004CF168 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709B24A202C66EE004CF168 /* Verification.swift */; };
@@ -90,6 +105,9 @@
 		B74FF13E1FFE3EFE008DFD00 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */; };
 		B75AA305200C5A54001922DF /* PatientCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75AA304200C5A54001922DF /* PatientCare.swift */; };
 		B75AA306200C5A5B001922DF /* PatientCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75AA304200C5A54001922DF /* PatientCare.swift */; };
+		B75B909F2090774C00DD6D02 /* ic-penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = B75B909E2090774B00DD6D02 /* ic-penguin.png */; };
+		B75B90A02090774C00DD6D02 /* ic-penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = B75B909E2090774B00DD6D02 /* ic-penguin.png */; };
+		B75B90A12090774C00DD6D02 /* ic-penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = B75B909E2090774B00DD6D02 /* ic-penguin.png */; };
 		B75EA68D1FFCA0CF00B9A5DC /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */; };
 		B75EA68F1FFCAA1900B9A5DC /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */; };
 		B75EA6911FFCC44000B9A5DC /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EA6901FFCC44000B9A5DC /* NTextField.swift */; };
@@ -219,6 +237,12 @@
 		B7898E0C200728770030A943 /* mdcu-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7898E0A200728760030A943 /* mdcu-info.plist */; };
 		B7898E0E200731500030A943 /* BackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7898E0D2007314F0030A943 /* BackCourse.swift */; };
 		B7898E0F200731500030A943 /* BackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7898E0D2007314F0030A943 /* BackCourse.swift */; };
+		B796B6232074B88000176FBB /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6222074B88000176FBB /* PickerViewController.swift */; };
+		B796B6242074B88300176FBB /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6222074B88000176FBB /* PickerViewController.swift */; };
+		B796B6252074B88400176FBB /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6222074B88000176FBB /* PickerViewController.swift */; };
+		B796B6272074E7B500176FBB /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6262074E7B500176FBB /* Hospital.swift */; };
+		B796B6282074E7B500176FBB /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6262074E7B500176FBB /* Hospital.swift */; };
+		B796B6292074E7B500176FBB /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796B6262074E7B500176FBB /* Hospital.swift */; };
 		B79ACA071FF0F443005BBAB4 /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA061FF0F443005BBAB4 /* APIUser.swift */; };
 		B79ACA091FF0F44E005BBAB4 /* BackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA081FF0F44E005BBAB4 /* BackUser.swift */; };
 		B79ACA0B1FF0FAD4005BBAB4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79ACA0A1FF0FAD4005BBAB4 /* API.swift */; };
@@ -471,6 +495,12 @@
 		B7E5F8651FF0F26B00FA7789 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5F8641FF0F26A00FA7789 /* User.swift */; };
 		B7E607D2203A97C9005EEA06 /* NTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E607D1203A97C9005EEA06 /* NTableView.swift */; };
 		B7E607D3203A97C9005EEA06 /* NTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E607D1203A97C9005EEA06 /* NTableView.swift */; };
+		B7E978272076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E978262076377500C0E5A9 /* TChangePasswordViewController.swift */; };
+		B7E978282076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E978262076377500C0E5A9 /* TChangePasswordViewController.swift */; };
+		B7E978292076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E978262076377500C0E5A9 /* TChangePasswordViewController.swift */; };
+		B7E9782B2076403C00C0E5A9 /* ic-key-black.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E9782A2076403500C0E5A9 /* ic-key-black.png */; };
+		B7E9782C2076403C00C0E5A9 /* ic-key-black.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E9782A2076403500C0E5A9 /* ic-key-black.png */; };
+		B7E9782D2076403C00C0E5A9 /* ic-key-black.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E9782A2076403500C0E5A9 /* ic-key-black.png */; };
 		B7EF179820219DE700B0AE0E /* TMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF179720219DE700B0AE0E /* TMainViewController.swift */; };
 		B7EF179920219DE700B0AE0E /* TMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF179720219DE700B0AE0E /* TMainViewController.swift */; };
 		B7EF179B2021A4FC00B0AE0E /* ic-code.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EF179A2021A4FB00B0AE0E /* ic-code.png */; };
@@ -535,6 +565,11 @@
 		5D0ACF6E985F94210B27E73C /* Pods-BinlaLogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLogUITests/Pods-BinlaLogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70C803951049C6A98150AC17 /* Pods-BinlaLogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLogTests/Pods-BinlaLogTests.release.xcconfig"; sourceTree = "<group>"; };
 		770D6A4F0DCADE0FEB06F6A9 /* Pods-BinlaLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinlaLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinlaLog/Pods-BinlaLog.debug.xcconfig"; sourceTree = "<group>"; };
+		B7069C9620AC1BAF005E18B3 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		B7069C9A20AC1BE4005E18B3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B7069C9E20AC307A005E18B3 /* Quest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quest.storyboard; sourceTree = "<group>"; };
+		B7069CA220AC453B005E18B3 /* QuestAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestAddViewController.swift; sourceTree = "<group>"; };
+		B7099A9120903CA300B303CE /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		B709B246202C65F1004CF168 /* APIVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIVerification.swift; sourceTree = "<group>"; };
 		B709B248202C66C3004CF168 /* BackVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackVerification.swift; sourceTree = "<group>"; };
 		B709B24A202C66EE004CF168 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
@@ -591,6 +626,7 @@
 		B74FF13B1FFE3E07008DFD00 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B74FF13D1FFE3EFE008DFD00 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryController.swift; path = BinlaLog/Controller/HistoryController.swift; sourceTree = SOURCE_ROOT; };
 		B75AA304200C5A54001922DF /* PatientCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCare.swift; sourceTree = "<group>"; };
+		B75B909E2090774B00DD6D02 /* ic-penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-penguin.png"; sourceTree = "<group>"; };
 		B75EA68C1FFCA0CF00B9A5DC /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		B75EA68E1FFCAA1900B9A5DC /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		B75EA6901FFCC44000B9A5DC /* NTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NTextField.swift; path = ../NTextField.swift; sourceTree = "<group>"; };
@@ -619,6 +655,8 @@
 		B7898E05200723100030A943 /* mdculog-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mdculog-logo.jpg"; sourceTree = "<group>"; };
 		B7898E0A200728760030A943 /* mdcu-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "mdcu-info.plist"; sourceTree = "<group>"; };
 		B7898E0D2007314F0030A943 /* BackCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCourse.swift; sourceTree = "<group>"; };
+		B796B6222074B88000176FBB /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		B796B6262074E7B500176FBB /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		B79ACA061FF0F443005BBAB4 /* APIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUser.swift; sourceTree = "<group>"; };
 		B79ACA081FF0F44E005BBAB4 /* BackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUser.swift; sourceTree = "<group>"; };
 		B79ACA0A1FF0FAD4005BBAB4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -686,6 +724,8 @@
 		B7E5F8601FF0E10D00FA7789 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		B7E5F8641FF0F26A00FA7789 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E607D1203A97C9005EEA06 /* NTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTableView.swift; sourceTree = "<group>"; };
+		B7E978262076377500C0E5A9 /* TChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B7E9782A2076403500C0E5A9 /* ic-key-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-key-black.png"; sourceTree = "<group>"; };
 		B7EF179720219DE700B0AE0E /* TMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMainViewController.swift; sourceTree = "<group>"; };
 		B7EF179A2021A4FB00B0AE0E /* ic-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-code.png"; sourceTree = "<group>"; };
 		B7EF17A02021A8B900B0AE0E /* pic-0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pic-0.jpeg"; sourceTree = "<group>"; };
@@ -771,6 +811,15 @@
 				ECD91D67B765BDF42832BEF2 /* Pods_BinlaLogUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7099A9020903C9400B303CE /* Quest */ = {
+			isa = PBXGroup;
+			children = (
+				B7099A9120903CA300B303CE /* QuestViewController.swift */,
+				B7069CA220AC453B005E18B3 /* QuestAddViewController.swift */,
+			);
+			path = Quest;
 			sourceTree = "<group>";
 		};
 		B71414D31FFE16B500BB5B00 /* Button */ = {
@@ -898,6 +947,9 @@
 				B709B24A202C66EE004CF168 /* Verification.swift */,
 				B76E72F3202D485900BABAE0 /* Person.swift */,
 				B76E72F6202D488700BABAE0 /* Department.swift */,
+				B796B6262074E7B500176FBB /* Hospital.swift */,
+				B7069C9620AC1BAF005E18B3 /* Quest.swift */,
+				B7069C9A20AC1BE4005E18B3 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -912,6 +964,7 @@
 				B7781E6D1FFF71820078E56A /* Patient.storyboard */,
 				B760B0382015B828005C941F /* Summary.storyboard */,
 				B7B4979C203D48E4001CA3FB /* Book.storyboard */,
+				B7069C9E20AC307A005E18B3 /* Quest.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -939,6 +992,7 @@
 		B72ED84B1FF0B9BB0088F78C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B7099A9020903C9400B303CE /* Quest */,
 				B7EF179620219DCC00B0AE0E /* TMain */,
 				B7E5F85D1FF0E09400FA7789 /* Helper */,
 				B7A6C58B1FF0BFB100F5A5AD /* Main */,
@@ -959,50 +1013,59 @@
 			path = Textfield;
 			sourceTree = "<group>";
 		};
+		B75B909D2090773D00DD6D02 /* Quests */ = {
+			isa = PBXGroup;
+			children = (
+				B75B909E2090774B00DD6D02 /* ic-penguin.png */,
+			);
+			path = Quests;
+			sourceTree = "<group>";
+		};
 		B75EA6961FFCCBD400B9A5DC /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				B72E911E203FE70C00141BD8 /* ic-person.png */,
-				B74C41E02034419C00438C8A /* ic-chat.png */,
-				B74C41D72033EEDB00438C8A /* ic-noti.png */,
-				B76E72F9202D878B00BABAE0 /* ic-verify.png */,
+				B7E9782A2076403500C0E5A9 /* ic-key-black.png */,
 				B7487832202864FB005763F9 /* ic-anes.png */,
-				B748783720286504005763F9 /* ic-ent.png */,
-				B7487830202864EE005763F9 /* ic-general.png */,
-				B748783520286500005763F9 /* ic-lab.png */,
-				B748783620286503005763F9 /* ic-obgyn.png */,
-				B748783820286504005763F9 /* ic-oph.png */,
-				B748782F202864EC005763F9 /* ic-ortho.png */,
-				B7487831202864F6005763F9 /* ic-ped.png */,
-				B7487833202864FC005763F9 /* ic-rehab.png */,
-				B7487834202864FF005763F9 /* ic-surgery.png */,
-				B748782920280FBE005763F9 /* ic-syringe-white.png */,
+				B760B02920159296005C941F /* ic-assist.png */,
+				B7A8B130200874500022F547 /* ic-book.png */,
+				B7D675F62004CE0300C1233A /* ic-calendar.png */,
+				B74C41E02034419C00438C8A /* ic-chat.png */,
 				B7EF17A62021B3D900B0AE0E /* ic-clock.png */,
 				B7EF179A2021A4FB00B0AE0E /* ic-code.png */,
+				B7FB61091FFCDA4800560472 /* ic-draft.png */,
+				B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */,
+				B748783720286504005763F9 /* ic-ent.png */,
 				B7C04061201EE03C001A9B18 /* ic-entrance.png */,
+				B7FB610A1FFCDA4A00560472 /* ic-facebook.png */,
+				B7FCBE53200F067600CCC7B8 /* ic-filter.png */,
+				B7FB610C1FFCDA4B00560472 /* ic-form.png */,
+				B7487830202864EE005763F9 /* ic-general.png */,
+				B75EA6981FFCCBF500B9A5DC /* ic-key.png */,
+				B748783520286500005763F9 /* ic-lab.png */,
 				B7F0971B2017983600A7D327 /* ic-level-easy.png */,
 				B7F0971C2017983800A7D327 /* ic-level-hard.png */,
 				B7F0971D2017983900A7D327 /* ic-level-medium.png */,
-				B760B02E2015935A005C941F /* ic-observe.png */,
-				B760B02920159296005C941F /* ic-assist.png */,
-				B760B02820159295005C941F /* ic-perform.png */,
-				B7A8B130200874500022F547 /* ic-book.png */,
-				B7D675F62004CE0300C1233A /* ic-calendar.png */,
-				B74D3DBE2003784A00F99930 /* ic-stethoscope.png */,
-				B74D3DBF2003784B00F99930 /* ic-syringe.png */,
-				B74D3DBD2003784800F99930 /* ic-virus.png */,
-				B7CFD1E51FFF410F0004F4F2 /* ic-star.png */,
 				B7CFD1E31FFF3E390004F4F2 /* ic-location.png */,
-				B7CFD1DE1FFF39DC0004F4F2 /* ic-edit.png */,
-				B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */,
-				B75EA6981FFCCBF500B9A5DC /* ic-key.png */,
-				B75EA6971FFCCBF500B9A5DC /* ic-user.png */,
-				B7FB61091FFCDA4800560472 /* ic-draft.png */,
-				B7FB610A1FFCDA4A00560472 /* ic-facebook.png */,
-				B7FB610C1FFCDA4B00560472 /* ic-form.png */,
 				B7FB610B1FFCDA4A00560472 /* ic-logout.png */,
+				B74C41D72033EEDB00438C8A /* ic-noti.png */,
+				B748783620286503005763F9 /* ic-obgyn.png */,
+				B760B02E2015935A005C941F /* ic-observe.png */,
+				B748783820286504005763F9 /* ic-oph.png */,
+				B748782F202864EC005763F9 /* ic-ortho.png */,
 				B7FB610D1FFCDA4B00560472 /* ic-passcode.png */,
-				B7FCBE53200F067600CCC7B8 /* ic-filter.png */,
+				B7487831202864F6005763F9 /* ic-ped.png */,
+				B760B02820159295005C941F /* ic-perform.png */,
+				B72E911E203FE70C00141BD8 /* ic-person.png */,
+				B7487833202864FC005763F9 /* ic-rehab.png */,
+				B7CFD1E51FFF410F0004F4F2 /* ic-star.png */,
+				B74D3DBE2003784A00F99930 /* ic-stethoscope.png */,
+				B7487834202864FF005763F9 /* ic-surgery.png */,
+				B748782920280FBE005763F9 /* ic-syringe-white.png */,
+				B74D3DBF2003784B00F99930 /* ic-syringe.png */,
+				B7CFD1DC1FFF334D0004F4F2 /* ic-tag.png */,
+				B75EA6971FFCCBF500B9A5DC /* ic-user.png */,
+				B76E72F9202D878B00BABAE0 /* ic-verify.png */,
+				B74D3DBD2003784800F99930 /* ic-virus.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -1063,6 +1126,7 @@
 		B7A6C5851FF0BDBE00F5A5AD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B75B909D2090773D00DD6D02 /* Quests */,
 				B7CFD1E01FFF3A690004F4F2 /* Pictures */,
 				B71414D91FFE30AA00BB5B00 /* Emotions */,
 				B71414D61FFE299500BB5B00 /* rotation */,
@@ -1208,6 +1272,7 @@
 				B7D675FA2004DAA500C1233A /* DatePickerViewController.swift */,
 				B7B7FAEB2005EF6D00625E8C /* WarningViewController.swift */,
 				B7FCBE56200F0CB300CCC7B8 /* FilterViewController.swift */,
+				B796B6222074B88000176FBB /* PickerViewController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1256,6 +1321,7 @@
 				B7EF17A32021AA5A00B0AE0E /* TVerificationViewController.swift */,
 				B71A19932032EB460058DEB7 /* TProcedureNotificationViewController.swift */,
 				B74C41DA2033F8AA00438C8A /* TPatientNotificationViewController.swift */,
+				B7E978262076377500C0E5A9 /* TChangePasswordViewController.swift */,
 			);
 			path = TMain;
 			sourceTree = "<group>";
@@ -1466,6 +1532,7 @@
 				B7A8B147200883730022F547 /* emotion-angry-grey.png in Resources */,
 				B748784520286508005763F9 /* ic-lab.png in Resources */,
 				B7CFD1EF1FFF46E80004F4F2 /* Procedure.storyboard in Resources */,
+				B7E9782B2076403C00C0E5A9 /* ic-key-black.png in Resources */,
 				B7CFD1E61FFF41120004F4F2 /* ic-star.png in Resources */,
 				B748783920286507005763F9 /* ic-ortho.png in Resources */,
 				B7FB61071FFCD81800560472 /* tab-more.png in Resources */,
@@ -1475,11 +1542,13 @@
 				B7F097202017983A00A7D327 /* ic-level-hard.png in Resources */,
 				B7A8B145200883730022F547 /* emotion-crying-grey.png in Resources */,
 				B748783B20286508005763F9 /* ic-general.png in Resources */,
+				B7069C9F20AC307A005E18B3 /* Quest.storyboard in Resources */,
 				B7C04062201EE03D001A9B18 /* ic-entrance.png in Resources */,
 				B7CFD1EA1FFF421B0004F4F2 /* pic-procedure.png in Resources */,
 				B748782A20280FBE005763F9 /* ic-syringe-white.png in Resources */,
 				B74C41D82033EEDC00438C8A /* ic-noti.png in Resources */,
 				B7898E0B200728770030A943 /* mdcu-info.plist in Resources */,
+				B75B909F2090774C00DD6D02 /* ic-penguin.png in Resources */,
 				B7898E01200713AA0030A943 /* Assets.xcassets in Resources */,
 				B748783D20286508005763F9 /* ic-ped.png in Resources */,
 				B7A8B149200883730022F547 /* emotion-angry.png in Resources */,
@@ -1585,11 +1654,13 @@
 				B7C04063201EE03D001A9B18 /* ic-entrance.png in Resources */,
 				B7898DE9200711A30030A943 /* Patient.storyboard in Resources */,
 				B748784C20286508005763F9 /* ic-oph.png in Resources */,
+				B75B90A02090774C00DD6D02 /* ic-penguin.png in Resources */,
 				B7898DEA200711A30030A943 /* pic-profile.png in Resources */,
 				B748782B20280FBE005763F9 /* ic-syringe-white.png in Resources */,
 				B7898DEB200711A30030A943 /* tab-home.png in Resources */,
 				B7EF17A82021B3DE00B0AE0E /* ic-clock.png in Resources */,
 				B7898DEC200711A30030A943 /* ic-logout.png in Resources */,
+				B7069CA020AC307A005E18B3 /* Quest.storyboard in Resources */,
 				B760B0302015935C005C941F /* ic-observe.png in Resources */,
 				B7898DED200711A30030A943 /* ic-stethoscope.png in Resources */,
 				B7898DEF200711A30030A943 /* rotation-ped.png in Resources */,
@@ -1606,6 +1677,7 @@
 				B7898DF3200711A30030A943 /* ic-syringe.png in Resources */,
 				B74C41E22034419E00438C8A /* ic-chat.png in Resources */,
 				B72E9120203FE70D00141BD8 /* ic-person.png in Resources */,
+				B7E9782C2076403C00C0E5A9 /* ic-key-black.png in Resources */,
 				B7898DF4200711A30030A943 /* ic-form.png in Resources */,
 				B7898DF5200711A30030A943 /* ic-passcode.png in Resources */,
 				B7B4979E203D48E4001CA3FB /* Book.storyboard in Resources */,
@@ -1666,11 +1738,13 @@
 				B7B49775203D3187001CA3FB /* ic-calendar.png in Resources */,
 				B7B49776203D3187001CA3FB /* ic-entrance.png in Resources */,
 				B7B49778203D3187001CA3FB /* ic-oph.png in Resources */,
+				B75B90A12090774C00DD6D02 /* ic-penguin.png in Resources */,
 				B7B49779203D3187001CA3FB /* pic-profile.png in Resources */,
 				B7B4977A203D3187001CA3FB /* ic-syringe-white.png in Resources */,
 				B7B4977B203D3187001CA3FB /* tab-home.png in Resources */,
 				B7B4977C203D3187001CA3FB /* ic-clock.png in Resources */,
 				B7B4977D203D3187001CA3FB /* ic-logout.png in Resources */,
+				B7069CA120AC307A005E18B3 /* Quest.storyboard in Resources */,
 				B7B4977E203D3187001CA3FB /* ic-observe.png in Resources */,
 				B7B4977F203D3187001CA3FB /* ic-stethoscope.png in Resources */,
 				B7B49780203D3187001CA3FB /* rotation-ped.png in Resources */,
@@ -1687,6 +1761,7 @@
 				B7B4978B203D3187001CA3FB /* ic-syringe.png in Resources */,
 				B7B4978C203D3187001CA3FB /* ic-chat.png in Resources */,
 				B72E9121203FE70D00141BD8 /* ic-person.png in Resources */,
+				B7E9782D2076403C00C0E5A9 /* ic-key-black.png in Resources */,
 				B7B4978D203D3187001CA3FB /* ic-form.png in Resources */,
 				B7B4978E203D3187001CA3FB /* ic-passcode.png in Resources */,
 				B7B4979F203D48E4001CA3FB /* Book.storyboard in Resources */,
@@ -1939,9 +2014,11 @@
 				B76D24A62005D4A600756A36 /* Observer.swift in Sources */,
 				B7781E6C1FFF6BB40078E56A /* APIProcedure.swift in Sources */,
 				B7A6C5961FF0DA6F00F5A5AD /* LoginController.swift in Sources */,
+				B7099A9220903CA300B303CE /* QuestViewController.swift in Sources */,
 				B7B497A2203D493C001CA3FB /* BookViewController.swift in Sources */,
 				B7C04065201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
 				B7F0972520179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
+				B7069CA320AC453B005E18B3 /* QuestAddViewController.swift in Sources */,
 				B714175F20062F580067090B /* Rotation.swift in Sources */,
 				B79ACA0D1FF109FA005BBAB4 /* Back.swift in Sources */,
 				B7E5F8611FF0E10D00FA7789 /* LoadingViewController.swift in Sources */,
@@ -1968,6 +2045,7 @@
 				B7B7FAEC2005EF6D00625E8C /* WarningViewController.swift in Sources */,
 				B709B247202C65F1004CF168 /* APIVerification.swift in Sources */,
 				B7B7FAEF2005F04D00625E8C /* NLabel.swift in Sources */,
+				B7069C9720AC1BAF005E18B3 /* Quest.swift in Sources */,
 				B75EA68D1FFCA0CF00B9A5DC /* Keyboard.swift in Sources */,
 				B7FB60FF1FFCD63500560472 /* MoreViewController.swift in Sources */,
 				B7D675E420047ACE00C1233A /* Symptom.swift in Sources */,
@@ -2000,9 +2078,11 @@
 				B7A8B152200887360022F547 /* ProcedureAddController.swift in Sources */,
 				B7EF17A42021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */,
 				B7BACC592007636B00FBC3A0 /* ProcedureGroup.swift in Sources */,
+				B7069C9B20AC1BE4005E18B3 /* Task.swift in Sources */,
 				B7FB61141FFCDB9200560472 /* MoreController.swift in Sources */,
 				B7D675EB2004872500C1233A /* TagListView.swift in Sources */,
 				B7E5F85C1FF0E02F00FA7789 /* LoadingPresentation.swift in Sources */,
+				B7E978272076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */,
 				B7FB611E1FFCED4300560472 /* FirstViewController.swift in Sources */,
 				B74FF13E1FFE3EFE008DFD00 /* HistoryController.swift in Sources */,
 				B70E3CF92017339D00608C9D /* SummaryDetailViewController.swift in Sources */,
@@ -2012,6 +2092,7 @@
 				B7A8B12E200867A50022F547 /* ProcedureAddViewController.swift in Sources */,
 				B71A199A2032F0D70058DEB7 /* BackNotification.swift in Sources */,
 				B7EF17B02021BFB100B0AE0E /* ProfileViewController.swift in Sources */,
+				B796B6232074B88000176FBB /* PickerViewController.swift in Sources */,
 				B75EA6911FFCC44000B9A5DC /* NTextField.swift in Sources */,
 				B7FCBE57200F0CB300CCC7B8 /* FilterViewController.swift in Sources */,
 				B7A6C58A1FF0BF9100F5A5AD /* Helper.swift in Sources */,
@@ -2020,6 +2101,7 @@
 				B72E2EB0200F28D9008D9B5C /* FilterTableViewCell.swift in Sources */,
 				B760B03620159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */,
 				B74C41E42034490B00438C8A /* CommentViewController.swift in Sources */,
+				B796B6272074E7B500176FBB /* Hospital.swift in Sources */,
 				B79ACA0B1FF0FAD4005BBAB4 /* API.swift in Sources */,
 				B76E72FD202D9A6500BABAE0 /* NotificationViewController.swift in Sources */,
 				B769070C20241C2600C84126 /* DayAxisValueFormatter.swift in Sources */,
@@ -2054,9 +2136,11 @@
 				B7898D97200711A30030A943 /* LoginViewController.swift in Sources */,
 				B7898D98200711A30030A943 /* Observer.swift in Sources */,
 				B7898D99200711A30030A943 /* APIProcedure.swift in Sources */,
+				B7099A9320903CA300B303CE /* QuestViewController.swift in Sources */,
 				B7B497A3203D493C001CA3FB /* BookViewController.swift in Sources */,
 				B7898D9A200711A30030A943 /* LoginController.swift in Sources */,
 				B7C04066201EE743001A9B18 /* SummaryPatientViewController.swift in Sources */,
+				B7069CA420AC453B005E18B3 /* QuestAddViewController.swift in Sources */,
 				B7F0972620179A7300A7D327 /* SummaryProcedureViewController.swift in Sources */,
 				B7898D9C200711A30030A943 /* Rotation.swift in Sources */,
 				B7898D9D200711A30030A943 /* Back.swift in Sources */,
@@ -2083,6 +2167,7 @@
 				B7898DAC200711A30030A943 /* DiagnosisSearchKey.swift in Sources */,
 				B7898DAD200711A30030A943 /* WarningViewController.swift in Sources */,
 				B7898DAE200711A30030A943 /* NLabel.swift in Sources */,
+				B7069C9820AC1BAF005E18B3 /* Quest.swift in Sources */,
 				B7898DAF200711A30030A943 /* Keyboard.swift in Sources */,
 				B7898DB0200711A30030A943 /* MoreViewController.swift in Sources */,
 				B7898DB1200711A30030A943 /* Symptom.swift in Sources */,
@@ -2115,9 +2200,11 @@
 				B7A8B153200887360022F547 /* ProcedureAddController.swift in Sources */,
 				B7EF17A52021AA5A00B0AE0E /* TVerificationViewController.swift in Sources */,
 				B7898DC2200711A30030A943 /* NViewCard.swift in Sources */,
+				B7069C9C20AC1BE4005E18B3 /* Task.swift in Sources */,
 				B7898DC3200711A30030A943 /* MoreController.swift in Sources */,
 				B7898DC4200711A30030A943 /* TagListView.swift in Sources */,
 				B7898DC5200711A30030A943 /* LoadingPresentation.swift in Sources */,
+				B7E978282076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */,
 				B7898DC6200711A30030A943 /* FirstViewController.swift in Sources */,
 				B7898DC7200711A30030A943 /* HistoryController.swift in Sources */,
 				B70E3CFA2017339D00608C9D /* SummaryDetailViewController.swift in Sources */,
@@ -2127,6 +2214,7 @@
 				B7A8B12F200867A50022F547 /* ProcedureAddViewController.swift in Sources */,
 				B71A199B2032F0D70058DEB7 /* BackNotification.swift in Sources */,
 				B7EF17B12021BFB100B0AE0E /* ProfileViewController.swift in Sources */,
+				B796B6242074B88300176FBB /* PickerViewController.swift in Sources */,
 				B7898DCB200711A30030A943 /* NTextField.swift in Sources */,
 				B7FCBE58200F0CB300CCC7B8 /* FilterViewController.swift in Sources */,
 				B7898DCC200711A30030A943 /* Helper.swift in Sources */,
@@ -2135,6 +2223,7 @@
 				B72E2EB1200F3F1D008D9B5C /* FilterTableViewCell.swift in Sources */,
 				B709B24D202C66F6004CF168 /* APIVerification.swift in Sources */,
 				B74C41E52034490B00438C8A /* CommentViewController.swift in Sources */,
+				B796B6282074E7B500176FBB /* Hospital.swift in Sources */,
 				B760B03720159E9D005C941F /* ProcedureInfoTableViewCell.swift in Sources */,
 				B76E72FE202D9A6500BABAE0 /* NotificationViewController.swift in Sources */,
 				B7898DCE200711A30030A943 /* API.swift in Sources */,
@@ -2153,9 +2242,11 @@
 				B7B496F1203D3187001CA3FB /* LoginViewController.swift in Sources */,
 				B7B496F2203D3187001CA3FB /* Observer.swift in Sources */,
 				B7B496F3203D3187001CA3FB /* APIProcedure.swift in Sources */,
+				B7099A9420903CA300B303CE /* QuestViewController.swift in Sources */,
 				B7B497A4203D493C001CA3FB /* BookViewController.swift in Sources */,
 				B7B496F4203D3187001CA3FB /* LoginController.swift in Sources */,
 				B7B496F5203D3187001CA3FB /* SummaryPatientViewController.swift in Sources */,
+				B7069CA520AC453B005E18B3 /* QuestAddViewController.swift in Sources */,
 				B7B496F6203D3187001CA3FB /* SummaryProcedureViewController.swift in Sources */,
 				B7B496F7203D3187001CA3FB /* Rotation.swift in Sources */,
 				B7B496F8203D3187001CA3FB /* Back.swift in Sources */,
@@ -2182,6 +2273,7 @@
 				B7B4970D203D3187001CA3FB /* DiagnosisSearchKey.swift in Sources */,
 				B7B4970E203D3187001CA3FB /* WarningViewController.swift in Sources */,
 				B7B4970F203D3187001CA3FB /* NLabel.swift in Sources */,
+				B7069C9920AC1BAF005E18B3 /* Quest.swift in Sources */,
 				B7B49710203D3187001CA3FB /* Keyboard.swift in Sources */,
 				B7B49711203D3187001CA3FB /* MoreViewController.swift in Sources */,
 				B7B49712203D3187001CA3FB /* Symptom.swift in Sources */,
@@ -2214,9 +2306,11 @@
 				B7B4972D203D3187001CA3FB /* ProcedureAddController.swift in Sources */,
 				B7B4972E203D3187001CA3FB /* TVerificationViewController.swift in Sources */,
 				B7B4972F203D3187001CA3FB /* NViewCard.swift in Sources */,
+				B7069C9D20AC1BE4005E18B3 /* Task.swift in Sources */,
 				B7B49730203D3187001CA3FB /* MoreController.swift in Sources */,
 				B7B49731203D3187001CA3FB /* TagListView.swift in Sources */,
 				B7B49732203D3187001CA3FB /* LoadingPresentation.swift in Sources */,
+				B7E978292076377600C0E5A9 /* TChangePasswordViewController.swift in Sources */,
 				B7B49733203D3187001CA3FB /* FirstViewController.swift in Sources */,
 				B7B49734203D3187001CA3FB /* HistoryController.swift in Sources */,
 				B7B49735203D3187001CA3FB /* SummaryDetailViewController.swift in Sources */,
@@ -2226,6 +2320,7 @@
 				B7B49739203D3187001CA3FB /* ProcedureAddViewController.swift in Sources */,
 				B7B4973A203D3187001CA3FB /* BackNotification.swift in Sources */,
 				B7B4973B203D3187001CA3FB /* ProfileViewController.swift in Sources */,
+				B796B6252074B88400176FBB /* PickerViewController.swift in Sources */,
 				B7B4973C203D3187001CA3FB /* NTextField.swift in Sources */,
 				B7B4973D203D3187001CA3FB /* FilterViewController.swift in Sources */,
 				B7B4973E203D3187001CA3FB /* Helper.swift in Sources */,
@@ -2234,6 +2329,7 @@
 				B7B49741203D3187001CA3FB /* FilterTableViewCell.swift in Sources */,
 				B7B49742203D3187001CA3FB /* APIVerification.swift in Sources */,
 				B7B49743203D3187001CA3FB /* CommentViewController.swift in Sources */,
+				B796B6292074E7B500176FBB /* Hospital.swift in Sources */,
 				B7B49744203D3187001CA3FB /* ProcedureInfoTableViewCell.swift in Sources */,
 				B7B49745203D3187001CA3FB /* NotificationViewController.swift in Sources */,
 				B7B49746203D3187001CA3FB /* API.swift in Sources */,
@@ -2414,6 +2510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nont.BinlaLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2500,7 +2597,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DMDCULOG";
-				PRODUCT_BUNDLE_IDENTIFIER = Nont.MDCULog;
+				PRODUCT_BUNDLE_IDENTIFIER = iLogbook.chula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2518,7 +2615,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DMDCULOG";
-				PRODUCT_BUNDLE_IDENTIFIER = Nont.MDCULog;
+				PRODUCT_BUNDLE_IDENTIFIER = iLogbook.chula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

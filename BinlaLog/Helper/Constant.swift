@@ -13,7 +13,7 @@ class Constant{
     private let appName = "MDCULog"
     private let colorMain = 0x2EB187
     private let logo = "mdculog-logo.jpg"
-    private let link = "https://ilogbook.md.chula.ac.th/laravel/api/v1/"
+    private let link = "https://ilogbook.md.chula.ac.th/newapi/api/v1/"
     private let header = ["appid":"68ad50cf9341d14a1122da5b00bcfab80c943181","appsecret":"e24968be22f4f750f700e9f1523574ed","Accept":"application/json"]
     #elseif GILOG
     private let appName = "GILog"
@@ -25,7 +25,7 @@ class Constant{
     private let appName = "BinlaLog"
     private let colorMain = 0x000080
     private let logo = "Logo.png"
-    private let link = "http://binlalog.medicine.psu.ac.th/api/v1/"
+    private let link = "http://binlalog.medicine.psu.ac.th/binla/api/v1/"
     private let header = ["appid":"67ce627d50a0ea834172b5bf4d794d3143e97483","appsecret":"f44e3569e2a2f27801f8a493bb8bdc1f","Accept":"application/json"]
     #endif
     private let fburl = "fb://profile/1852404088340314"

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7898D94200711A30030A943"
-               BuildableName = "MDCULog.app"
-               BlueprintName = "MDCULog"
+               BlueprintIdentifier = "B7B496EC203D3187001CA3FB"
+               BuildableName = "GILog.app"
+               BlueprintName = "GILog"
                ReferencedContainer = "container:BinlaLog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,16 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7898D94200711A30030A943"
-            BuildableName = "MDCULog.app"
-            BlueprintName = "MDCULog"
+            BlueprintIdentifier = "B7B496EC203D3187001CA3FB"
+            BuildableName = "GILog.app"
+            BlueprintName = "GILog"
             ReferencedContainer = "container:BinlaLog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -46,7 +45,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -57,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7898D94200711A30030A943"
-            BuildableName = "MDCULog.app"
-            BlueprintName = "MDCULog"
+            BlueprintIdentifier = "B7B496EC203D3187001CA3FB"
+            BuildableName = "GILog.app"
+            BlueprintName = "GILog"
             ReferencedContainer = "container:BinlaLog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7898D94200711A30030A943"
-            BuildableName = "MDCULog.app"
-            BlueprintName = "MDCULog"
+            BlueprintIdentifier = "B7B496EC203D3187001CA3FB"
+            BuildableName = "GILog.app"
+            BlueprintName = "GILog"
             ReferencedContainer = "container:BinlaLog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

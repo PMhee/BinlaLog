@@ -85,7 +85,7 @@ extension TProcedureNotificationViewController{
         self.viewModel.logbookProcedure = []
         for i in 0..<logbooks.count{
             let logbook = logbooks[i]
-            if let procedure = BackProcedure.getInstance().get(id: logbook.procedureid){
+            if let procedure = BackProcedure.getInstance().get(id: logbook.procedureid.first?.procedureid ?? ""){
                 var lbpc = LogbookProcedure()
                 lbpc.logbook = logbook
                 lbpc.procedure = procedure

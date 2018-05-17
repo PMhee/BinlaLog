@@ -16,6 +16,8 @@ class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableV
     var courseid : String = ""
     @IBOutlet var tableView: UITableView!
     var searchController = UISearchController(searchResultsController: nil)
+    @IBOutlet weak var act_loading: UIActivityIndicatorView!
+    var viewLoading = UIViewController()
     var viewModel = ViewModel(){
         didSet{
             self.tableView.reloadData()
@@ -80,7 +82,7 @@ class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         self.index = indexPath.row
         if self.viewModel.procedures != nil{
-            if self.viewModel.procedures!.count > 0 {
+            if self.viewModel.procedures.count > 0 {
                 self.performSegue(withIdentifier: "add", sender: self)
             }
         }
@@ -88,41 +90,31 @@ class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableV
 }
 extension ProcedureViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.viewModel.procedures != nil{
-            if self.viewModel.procedures!.count != 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProcedureTableViewCell
-                if let gr = BackProcedure.getInstance().getGroup(id: Array(self.viewModel.procedures!.keys)[indexPath.row]){
-                    cell.lb_procedure_group.text = gr.procgroupname
-                }
-                cell.procedures = Array(self.viewModel.procedures!.values)[indexPath.row]
-                cell.setDelegate()
-                cell.sender = self
-                return cell
-            }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "notfound", for: indexPath)
-                return cell
+        if self.viewModel.procedures.count != 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProcedureTableViewCell
+            if let gr = BackProcedure.getInstance().getGroup(id: Array(self.viewModel.procedures.keys)[indexPath.row]){
+                cell.lb_procedure_group.text = gr.procgroupname
             }
+            cell.procedures = Array(self.viewModel.procedures)[indexPath.row].value
+            cell.setDelegate()
+            cell.sender = self
+            return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "notfound", for: indexPath)
             return cell
         }
-        
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.viewModel.procedures != nil {
-            if self.viewModel.procedures!.count == 0{
-                return 1
-            }else{
-            return self.viewModel.procedures!.count
-            }
-        }else{
-            return 0
-        }
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if self.viewModel.procedures.count == 0{
+        return 1
+    }else{
+        return self.viewModel.procedures.count
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
+}
+func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+}
+func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 44
+}
 }

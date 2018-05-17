@@ -136,14 +136,17 @@ class BackProcedure{
     func isAchieve(procedureid:String) ->Bool{
         return BackRotation.getInstance().listLogbook(procedureid: procedureid).count > 0 ? true : false
     }
-    func groupProcedure(procedures:Results<Procedure>) ->[String:Results<Procedure>]{
+    func groupProcedure(procedures:List<Procedure>) ->[String:[Procedure]]{
         var gr = [String:Int]()
         for i in 0..<procedures.count{
             gr[procedures[i].proceduregroup] = 0
         }
-        var result = [String:Results<Procedure>]()
+        var result = [String:[Procedure]]()
+        let arr = Array(procedures)
         for (key, value) in gr {
-            result[key] = procedures.filter("proceduregroup == %@",key)
+            result[key] = arr.filter({
+                return $0.proceduregroup == key ? true : false
+            })
         }
         return result
     }
@@ -162,6 +165,23 @@ class BackProcedure{
     func list(key:String) -> Results<Procedure>{
         return try! Realm().objects(Procedure.self).filter("name contains[c] %@",key).sorted(byKeyPath: "name", ascending: true)
     }
+    func list(procgroupid:String) -> Results<Procedure>{
+        return try! Realm().objects(Procedure.self).filter("proceduregroup == %@",procgroupid)
+    }
+    func list(courseid:String,key:String) -> List<Procedure>{
+        let arr = List<Procedure>()
+        if let course = BackCourse.getInstance().get(id: courseid){
+            for i in 0..<course.procgroupids.count{
+                if let procgroup = self.getGroup(id: course.procgroupids[i].procgroupid){
+                    let res = try! Realm().objects(Procedure.self).filter("name contains[c] %@ AND proceduregroup == %@",key,procgroup.id).sorted(byKeyPath: "name", ascending: true)
+                    for j in 0..<res.count{
+                        arr.append(res[j])
+                    }
+                }
+            }
+        }
+        return arr
+    }
     func enumProcedure(finish: @escaping () -> Void){
         APIProcedure.listProcedure(finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
@@ -176,10 +196,11 @@ class BackProcedure{
             finish()
         }, fail: {(error) in})
     }
-    func enumProcedure(courseid:String,finish: @escaping () -> Void){
+    func enumProcedure(courseid:String,finish: @escaping () -> Void,error: @escaping () -> Void){
         APIProcedure.listProcedure(courseid: courseid, finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 if let array = content.value(forKey: "proceduregroups") as? NSArray{
+                    BackCourse.getInstance().loadProcgroup(courseid: courseid, procgroup: array)
                     for i in 0..<array.count{
                         if let content = array[i] as? NSDictionary{
                             self.loadProcedure(dict: content)
@@ -188,6 +209,6 @@ class BackProcedure{
                 }
             }
             finish()
-        }, fail: {(error) in})
+        }, fail: {(e) in error()})
     }
 }

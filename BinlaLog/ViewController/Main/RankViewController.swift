@@ -38,7 +38,7 @@ extension RankViewController{
     }
     func initRank(){
         APIUser.getRank(success: {(success) in
-            print(success)
+
             if let content = success.value(forKey: "content") as? NSDictionary{
                 if let array = content.value(forKey: "graph") as? NSArray{
                     for i in 0..<array.count{
@@ -135,7 +135,7 @@ extension RankViewController{
         l.orientation = .horizontal
         l.drawInside = false
         l.form = .circle
-        l.formSize = 9
+        l.formSize = 3
         l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
         l.xEntrySpace = 4
         chartView.legend.enabled = false
@@ -181,7 +181,7 @@ extension RankViewController{
             set1.drawValuesEnabled = false
             let data = BarChartData(dataSet: set1)
             data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
-            data.barWidth = 7
+            data.barWidth = 1
             chartView.data = data
         }
     }

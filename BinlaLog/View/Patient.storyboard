@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8pG-og-a3g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8pG-og-a3g">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dJP-Pr-rph"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HfK-xq-43f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="38g-e1-rcx" customClass="ScrollView" customModule="BinlaLog" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1436"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-lc-jfG" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="406" height="102"/>
@@ -554,7 +554,7 @@
                                                     <constraint firstItem="YHd-4y-JZ3" firstAttribute="centerX" secondItem="raU-9U-UOm" secondAttribute="centerX" id="qyZ-wu-cqY"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Disease" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23k-Bg-8Ns" customClass="NAutoComplete" customModule="BinlaLog" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Disease Group" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23k-Bg-8Ns" customClass="NAutoComplete" customModule="BinlaLog" customModuleProvider="target">
                                                 <rect key="frame" x="65.666666666666657" y="246" width="324.33333333333337" height="50"/>
                                                 <color key="backgroundColor" red="0.90832228120000003" green="0.90832228120000003" blue="0.90832228120000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -763,7 +763,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODM-tX-SWa" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="900" width="406" height="180"/>
+                                        <rect key="frame" x="4" y="900" width="406" height="260"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsa-Xb-XiS">
                                                 <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
@@ -801,8 +801,32 @@
                                                     <constraint firstItem="SQF-yW-61Y" firstAttribute="leading" secondItem="cXy-xQ-Maf" secondAttribute="trailing" constant="8" id="xN1-2k-iq7"/>
                                                 </constraints>
                                             </view>
+                                            <textField opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coK-5z-ySf" customClass="NTextField" customModule="BinlaLog" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="66" width="374" height="50"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="oht-15-Td9"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="left">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="VwF-3a-Wcy" id="VWg-FX-QkF"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-Fd-njL">
+                                                <rect key="frame" x="369" y="82" width="13" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="udX-Yg-rc5">
-                                                <rect key="frame" x="16" y="58" width="374" height="114"/>
+                                                <rect key="frame" x="16" y="132" width="374" height="120"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="VwF-3a-Wcy" id="bT3-vv-eH4"/>
                                                 </connections>
@@ -811,17 +835,22 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="udX-Yg-rc5" secondAttribute="bottom" constant="8" id="1aT-4a-sTP"/>
-                                            <constraint firstItem="udX-Yg-rc5" firstAttribute="top" secondItem="Hsa-Xb-XiS" secondAttribute="bottom" constant="8" id="28T-eP-YKd"/>
                                             <constraint firstItem="Hsa-Xb-XiS" firstAttribute="width" secondItem="ODM-tX-SWa" secondAttribute="width" id="2Qt-53-hts"/>
-                                            <constraint firstAttribute="height" constant="180" id="3CE-Ck-1gD"/>
+                                            <constraint firstAttribute="height" constant="260" id="3CE-Ck-1gD"/>
+                                            <constraint firstItem="pay-Fd-njL" firstAttribute="trailing" secondItem="coK-5z-ySf" secondAttribute="trailing" constant="-8" id="IIr-47-8z2"/>
+                                            <constraint firstItem="udX-Yg-rc5" firstAttribute="top" secondItem="coK-5z-ySf" secondAttribute="bottom" constant="16" id="MMi-hd-Tpj"/>
                                             <constraint firstItem="Hsa-Xb-XiS" firstAttribute="centerX" secondItem="ODM-tX-SWa" secondAttribute="centerX" id="R8B-e6-A8m"/>
+                                            <constraint firstItem="coK-5z-ySf" firstAttribute="leading" secondItem="udX-Yg-rc5" secondAttribute="leading" id="RjO-VZ-vV0"/>
+                                            <constraint firstItem="coK-5z-ySf" firstAttribute="trailing" secondItem="udX-Yg-rc5" secondAttribute="trailing" id="UhR-qe-Y8j"/>
+                                            <constraint firstItem="coK-5z-ySf" firstAttribute="top" secondItem="Hsa-Xb-XiS" secondAttribute="bottom" constant="16" id="iEZ-ca-tUK"/>
                                             <constraint firstAttribute="trailing" secondItem="udX-Yg-rc5" secondAttribute="trailing" constant="16" id="jdm-2s-47n"/>
                                             <constraint firstItem="Hsa-Xb-XiS" firstAttribute="top" secondItem="ODM-tX-SWa" secondAttribute="top" id="mVv-vu-fdv"/>
                                             <constraint firstItem="udX-Yg-rc5" firstAttribute="leading" secondItem="ODM-tX-SWa" secondAttribute="leading" constant="16" id="phG-Yr-XPh"/>
+                                            <constraint firstItem="pay-Fd-njL" firstAttribute="centerY" secondItem="coK-5z-ySf" secondAttribute="centerY" id="uR9-S8-8EH"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqg-61-zsN" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="1084" width="406" height="128"/>
+                                        <rect key="frame" x="4" y="1164" width="406" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AW-q6-tpT">
                                                 <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
@@ -1070,7 +1099,7 @@
                                 </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-KB-Byy" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                <rect key="frame" x="334" y="592" width="60" height="60"/>
+                                <rect key="frame" x="334" y="1356" width="60" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPz-J0-Y1R">
                                         <rect key="frame" x="15" y="15" width="30" height="30"/>
@@ -1121,6 +1150,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="cons_bottom" destination="MEi-HN-jel" id="67J-RX-AnR"/>
                         <outlet property="cons_height_diagnosis_tag" destination="1i8-iL-Wtc" id="BIe-Xc-1mG"/>
@@ -1142,6 +1172,7 @@
                         <outlet property="tf_disease" destination="23k-Bg-8Ns" id="t3b-0h-CTj"/>
                         <outlet property="tf_enddate" destination="RFQ-PB-SYB" id="nHT-e7-MLo"/>
                         <outlet property="tf_hn" destination="riP-w9-ocj" id="2KX-rB-x46"/>
+                        <outlet property="tf_institute" destination="coK-5z-ySf" id="mt1-04-NfI"/>
                         <outlet property="tf_name" destination="HYg-vh-6R8" id="9co-cv-vEE"/>
                         <outlet property="tf_passcode" destination="tOB-aq-2kT" id="Edh-kW-klc"/>
                         <outlet property="tf_startdate" destination="Q6Q-28-2Fm" id="9Ve-RS-bgy"/>

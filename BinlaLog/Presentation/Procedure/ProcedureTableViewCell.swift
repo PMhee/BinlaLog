@@ -13,7 +13,7 @@ class ProcedureTableViewCell: UITableViewCell,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var cons_tableView_height: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lb_procedure_group: UILabel!
-    var procedures : Results<Procedure>?
+    var procedures = [Procedure]()
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -27,31 +27,26 @@ class ProcedureTableViewCell: UITableViewCell,UITableViewDelegate,UITableViewDat
         self.cons_tableView_height.constant = self.tableView.contentSize.height
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.procedures != nil{
-            return self.procedures!.count
-        }else{
-            return 0
-        }
-        
+        return self.procedures.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProcedureInfoTableViewCell
-        if indexPath.row < self.procedures!.count{
-            switch procedures![indexPath.row].proctype {
+        if indexPath.row < self.procedures.count{
+            switch procedures[indexPath.row].proctype {
             case 1:cell.vw_level.backgroundColor = Constant().getLvEasy()
             case 2:cell.vw_level.backgroundColor = Constant().getLvMedium()
             case 3:cell.vw_level.backgroundColor = Constant().getLvHard()
             default:
                 cell.vw_level.backgroundColor = Constant().getLvEasy()
             }
-            cell.lb_procedure.text = self.procedures![indexPath.row].name
+            cell.lb_procedure.text = self.procedures[indexPath.row].name
             cell.btn_info.tag = indexPath.row
             if cell.isEnableInfo{
-                cell.lb_des.text = self.procedures![indexPath.row].des
+                cell.lb_des.text = self.procedures[indexPath.row].des
             }else{
                 cell.lb_des.text = ""
             }
-            let progress = BackRotation.getInstance().listLogbookProgress(procedureid: self.procedures![indexPath.row].id,rotationid: self.sender.rotationid)
+            let progress = BackRotation.getInstance().listLogbookProgress(procedureid: self.procedures[indexPath.row].id,rotationid: self.sender.rotationid)
             cell.lb_assist.text = "0"
             cell.lb_perform.text = "0"
             cell.lb_observe.text = "0"
@@ -77,7 +72,7 @@ class ProcedureTableViewCell: UITableViewCell,UITableViewDelegate,UITableViewDat
         return 44
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.sender.procedureid = self.procedures![indexPath.row].id
+        self.sender.procedureid = self.procedures[indexPath.row].id
         self.sender.performSegue(withIdentifier: "add", sender: self)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

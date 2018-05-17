@@ -34,9 +34,7 @@ class HistoryRotationViewController: UIViewController,UITableViewDelegate,UITabl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.initViewModel()
-        self.loadTop {
-            
-            }
+        self.loadTop {}
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.viewModel.logbookProcedure.count == 0{
@@ -131,7 +129,7 @@ class HistoryRotationViewController: UIViewController,UITableViewDelegate,UITabl
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.viewModel.logbookProcedure.count == 0{
-            return 1
+            return 0
         }else{
             return self.viewModel.logbookProcedure.count
         }
@@ -147,7 +145,9 @@ extension HistoryRotationViewController{
         var procedure : Procedure?
     }
     @objc func isDelete(notification:Notification){
+        if self.viewModel.logbookProcedure.count > 0 {
         self.tableView.isEditing = !self.tableView.isEditing
+        }
     }
     @objc func doSearchProcedure(notification:Notification){
         if let key = notification.userInfo?["text"] as? String{
@@ -168,11 +168,13 @@ extension HistoryRotationViewController{
         self.viewModel.logbookProcedure = []
         for i in 0..<logbooks.count{
             let logbook = logbooks[i]
-            if let procedure = BackProcedure.getInstance().get(id: logbook.procedureid){
-                var lbpc = LogbookProcedure()
-                lbpc.logbook = logbook
-                lbpc.procedure = procedure
-                self.viewModel.logbookProcedure.append(lbpc)
+            for j in 0..<logbook.procedureid.count{
+                if let procedure = BackProcedure.getInstance().get(id: logbook.procedureid[j].procedureid ?? ""){
+                    var lbpc = LogbookProcedure()
+                    lbpc.logbook = logbook
+                    lbpc.procedure = procedure
+                    self.viewModel.logbookProcedure.append(lbpc)
+                }
             }
         }
         self.staticProcedure = self.viewModel.logbookProcedure

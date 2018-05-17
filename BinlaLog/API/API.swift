@@ -22,10 +22,12 @@ class API{
         header["sessionid"] = sessionid
         Alamofire.request(code, method: httpMethod, parameters: parameter, encoding: URLEncoding.default, headers: header)
             .responseJSON { response in
-               // debugPrint(response)
+                //debugPrint(response)
                 if response.result.isSuccess{
                     if let res = response.result.value as? NSDictionary{
                         success(res)
+                        
+                        
                     }else{
                         failure(NSError(domain: "Slow Internet Connection", code: 401, userInfo: nil))
                     }

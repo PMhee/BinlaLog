@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
+class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListViewDelegate {
     //Handle APP
     func handleApp(){
         #if GILOG
@@ -19,9 +19,22 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     var procedureid : String = ""
     var rotationid : String = ""
     var logbookid : String = ""
+    var taskid : String = ""
+    var procedureids = [String]()
+    var isTask = false
     //Varaible
-    var isEnableEditing = true
     var isTeacher = false
+    var isEnableEditing = true
+    
+    //Quest
+    @IBOutlet weak var lb_quest_name: UILabel!
+    @IBOutlet weak var lb_quest_des: UILabel!
+    @IBOutlet weak var lb_quest_date: UILabel!
+    @IBOutlet weak var lb_quest_place: UILabel!
+    @IBOutlet weak var vw_quest: NViewCard!
+    
+    //
+    
     @IBOutlet var map: MKMapView!
     @IBOutlet weak var lb_rotation_name: UILabel!
     @IBOutlet weak var lb_rotation_deadline: UILabel!
@@ -30,6 +43,8 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var sg_patient_type: UISegmentedControl!
     @IBOutlet weak var vw_message: NViewCard!
     
+    @IBOutlet weak var tag_procedure: TagListView!
+    @IBOutlet weak var const_height_procedure_tag: NSLayoutConstraint!
     @IBOutlet weak var btn_info: UIButton!
     @IBOutlet weak var tf_procedure: NAutoComplete!
     @IBOutlet weak var img_feel_1: UIButton!
@@ -38,12 +53,16 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var img_feel_4: UIButton!
     @IBOutlet weak var img_feel_5: UIButton!
     @IBOutlet weak var tf_date: NTextField!
+    
+    @IBOutlet weak var tf_institute: NTextField!
     @IBOutlet weak var tf_passcode: UITextField!
     @IBOutlet weak var vw_signature: NViewCard!
     @IBOutlet weak var lb_message: NLabel!
     @IBOutlet weak var img_teacher_profile: UIImageView!
     @IBOutlet weak var lb_teacher_name: UILabel!
     @IBOutlet weak var lb_verification_date: UILabel!
+    
+    @IBOutlet weak var cons_course_top: NSLayoutConstraint!
     @IBOutlet weak var cons_bottom: NSLayoutConstraint!
     @IBOutlet weak var const_teacher_feedback_bottom: NSLayoutConstraint!
     @IBOutlet weak var cons_image_bottom: NSLayoutConstraint!
@@ -59,14 +78,16 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     @IBAction func btn_done_action(_ sender: UIBarButtonItem) {
         if Date() > self.viewModel.rotationdeadline{
             Helper.addAlert(sender: self, title: "", message: "The rotation has been end")
-        }else if self.viewModel.procedureName.isEmpty{
+        }else if self.viewModel.procedures.isEmpty{
             Helper.addAlert(sender: self, title: "", message: "Please fill procedure")
         }else if self.viewModel.latitude == 0.0 && self.viewModel.longitude == 0.0{
             Helper.addAlert(sender: self, title: "", message: "Please turn location in Settings>Privacy>Location Services on")
         }else if self.viewModel.feeling == -1{
             Helper.addAlert(sender: self, title: "", message: "Please select feeling")
-        }else if self.viewModel.hn.isEmpty{
+        }else if self.viewModel.hn.isEmpty && self.viewModel.patientType != 2 {
             Helper.addAlert(sender: self, title: "", message: "Please fill patient HN")
+        }else if self.viewModel.date > self.viewModel.rotationendtime{
+            Helper.addAlert(sender: self, title: "", message: "Cannot add logbook that date beyond rotation enddate: \(self.viewModel.rotationendtime)")
         }else if self.viewModel.date > self.viewModel.rotationdeadline{
             Helper.addAlert(sender: self, title: "", message: "Cannot add logbook that date beyond rotation deadline")
         }else if self.viewModel.date < self.viewModel.rotationstarttime{
@@ -117,6 +138,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     @IBAction func img_feel_5_action(_ sender: UIButton) {
         self.viewModel.feeling = 4
     }
+    
     @IBAction func tf_passcode_change(_ sender: UITextField) {
         guard let text = sender.text else {
             return
@@ -131,11 +153,18 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
         guard let text = sender.text else {
             return
         }
-        self.validateProcedure(text: text)
+        self.addProcedure(key: text)
     }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField.tag == 1{
             Helper.showDatePicker(sender: self, date: self.viewModel.date, restrictDate: self.viewModel.rotationdeadline)
+            return false
+        }else if textField.tag == 2{
+            var array = [String]()
+            for i in 0..<self.viewModel.hospitals.count{
+                array.append(self.viewModel.hospitals[i].name)
+            }
+            Helper.showPicker(sender: self, arr: array)
             return false
         }else{
             return true
@@ -146,7 +175,10 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
         didSet{
             self.lb_rotation_name.watch(subject: self.viewModel.rotationname)
             self.lb_rotation_deadline.watch(subject: self.viewModel.rotationdeadline.addingTimeInterval(-1).convertToString())
-            self.tf_procedure.watch(subject: self.viewModel.procedureName)
+            self.tag_procedure.removeAllTags()
+            for i in 0..<viewModel.procedures.count{
+                self.tag_procedure.addTag(viewModel.procedures[i])
+            }
             self.tf_date.watch(subject: self.viewModel.date.convertToStringOnlyDate())
             self.changeFeeling()
             self.sg_proctype.watch(subject: self.viewModel.logtype)
@@ -161,6 +193,8 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
                 self.lb_note_placeholder.isHidden = true
             }
             self.tv_note.text = self.viewModel.note
+            self.tf_institute.watch(subject: self.viewModel.institute)
+            
         }
     }
     deinit {
@@ -168,10 +202,16 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     }
     func addObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(dateChange), name: .dateChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pickerChange), name: .pickerChange, object: nil)
     }
     @objc func dateChange(notification:Notification){
         if let date = notification.userInfo?["date"] as? Date{
             self.viewModel.date = date
+        }
+    }
+    @objc func pickerChange(notification:Notification){
+        if let data = notification.userInfo?["data"] as? String{
+            self.viewModel.institute = data
         }
     }
     var locationManager = CLLocationManager()
@@ -189,8 +229,9 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initLogbook()
         self.initProcedure()
+        self.initLogbook()
+        self.initTask()
         self.initRotation()
         self.initProcedureAutoCompleteUI()
         self.addObserver()
@@ -206,14 +247,26 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
         super.viewDidAppear(animated)
         self.addTeacherComment()
     }
+    func initTask(){
+        if let task = BackCourse.getInstance().getTask(id: self.taskid){
+            self.lb_quest_name.text = task.name
+            self.lb_quest_des.text = task.des
+            self.lb_quest_date.text = task.datetime?.convertToStringOnlyDate() ?? ""
+            self.lb_quest_place.text = task.place
+            self.vw_quest.layoutIfNeeded()
+        }
+    }
     func setUI(){
         if self.isEnableEditing{
-            self.navigationItem.setLeftBarButton(nil, animated: false)
+            if !self.isTask{
+                self.navigationItem.setLeftBarButton(nil, animated: false)
+            }
         }
         self.vw_message.backgroundColor = Constant().getColorMain()
         self.vw_message.layer.cornerRadius = 30
         self.vw_message.layer.masksToBounds = true
         if self.isTeacher{
+            self.tag_procedure.enableRemoveButton = false
             self.tf_hn.isEnabled = false
             self.sg_proctype.isEnabled = false
             self.sg_patient_type.isEnabled = false
@@ -225,6 +278,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
             self.img_feel_5.isEnabled = false
             self.tf_date.isEnabled = false
             self.tf_passcode.isEnabled = false
+            self.tf_institute.isEnabled = false
             self.tf_hn.textColor = .lightGray
             self.sg_proctype.tintColor = .lightGray
             self.sg_patient_type.tintColor = .lightGray
@@ -233,10 +287,16 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
             self.tf_passcode.textColor = .lightGray
             self.lb_rotation_deadline.textColor = .lightGray
             self.tv_note.textColor = .lightGray
+            self.tf_institute.textColor = .lightGray
             self.btn_info.isHidden = true
             self.tv_note.isEditable = false
             self.navigationItem.setRightBarButton(nil, animated: false)
         }else{
+            if self.isTask{
+                self.tag_procedure.enableRemoveButton = false
+                self.tf_procedure.isEnabled = false
+                self.tf_procedure.textColor = .lightGray
+            }
             self.vw_message.isHidden = true
         }
         self.navigationController?.isNavigationBarHidden = false
@@ -248,15 +308,13 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate {
         self.lb_message.layer.masksToBounds = true
         self.tv_note.layer.borderWidth = 1
         self.tv_note.layer.borderColor = UIColor(netHex:0xeeeeee).cgColor
+        self.lb_quest_des.font = self.lb_quest_des.font.setItalic()
+    }
+    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        self.deleteProcedure(key: title)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "info"{
-                if let des = segue.destination as? SummaryProcedureViewController{
-                    des.rotationid = self.rotationid
-                    des.procedureid = self.viewModel.procedureid
-                    des.isEnableEditing = false
-                }
-        }else if segue.identifier == "feedback"{
+        if segue.identifier == "feedback"{
             if let des = segue.destination as? CommentViewController{
                 des.viewModel = self.viewModel
             }

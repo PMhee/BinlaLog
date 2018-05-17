@@ -14,8 +14,8 @@ class TMainViewController: UIViewController {
     @IBAction func btn_logout_action(_ sender: UIButton) {
         self.doLogout()
     }
-    let more = ["Get a verification code","Notification","Contact","Logout"]
-    let pic = ["ic-code.png","ic-noti.png","ic-facebook.png","ic-logout.png"]
+    let more = ["Get a verification code","Notification","Contact","Change Password","Logout"]
+    let pic = ["ic-code.png","ic-noti.png","ic-facebook.png","ic-key-black.png","ic-logout.png"]
     var viewModel = ViewModel(){
         didSet{
             self.tableView.reloadData()
@@ -68,7 +68,9 @@ extension TMainViewController:UITableViewDelegate,UITableViewDataSource{
             self.performSegue(withIdentifier: "notification", sender: self)
         }else if indexPath.row == 3{
             UIApplication.shared.openURL(URL(string: Constant().getFacebookURL())!)
-        }else if indexPath.row == 4 {
+        }else if indexPath.row == 4{
+            self.performSegue(withIdentifier: "changePassword", sender: self)
+        }else if indexPath.row == 5 {
             self.doLogout()
         }
     }

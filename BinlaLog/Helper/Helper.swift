@@ -9,6 +9,76 @@
 import Foundation
 import UIKit
 fileprivate var ActivityIndicatorViewAssociativeKey = "ActivityIndicatorViewAssociativeKey"
+extension UIFont{
+    var isBold: Bool
+    {
+        return fontDescriptor.symbolicTraits.contains(.traitBold)
+    }
+    
+    var isItalic: Bool
+    {
+        return fontDescriptor.symbolicTraits.contains(.traitItalic)
+    }
+    
+    func setBold() -> UIFont
+    {
+        if(isBold)
+        {
+            return self
+        }
+        else
+        {
+            var fontAtrAry = fontDescriptor.symbolicTraits
+            fontAtrAry.insert([.traitBold])
+            let fontAtrDetails = fontDescriptor.withSymbolicTraits(fontAtrAry)
+            return UIFont(descriptor: fontAtrDetails!, size: pointSize)
+        }
+    }
+    
+    func setItalic()-> UIFont
+    {
+        if(isItalic)
+        {
+            return self
+        }
+        else
+        {
+            var fontAtrAry = fontDescriptor.symbolicTraits
+            fontAtrAry.insert([.traitItalic])
+            let fontAtrDetails = fontDescriptor.withSymbolicTraits(fontAtrAry)
+            return UIFont(descriptor: fontAtrDetails!, size: pointSize)
+        }
+    }
+    func desetBold() -> UIFont
+    {
+        if(!isBold)
+        {
+            return self
+        }
+        else
+        {
+            var fontAtrAry = fontDescriptor.symbolicTraits
+            fontAtrAry.remove([.traitBold])
+            let fontAtrDetails = fontDescriptor.withSymbolicTraits(fontAtrAry)
+            return UIFont(descriptor: fontAtrDetails!, size: pointSize)
+        }
+    }
+    
+    func desetItalic()-> UIFont
+    {
+        if(!isItalic)
+        {
+            return self
+        }
+        else
+        {
+            var fontAtrAry = fontDescriptor.symbolicTraits
+            fontAtrAry.remove([.traitItalic])
+            let fontAtrDetails = fontDescriptor.withSymbolicTraits(fontAtrAry)
+            return UIFont(descriptor: fontAtrDetails!, size: pointSize)
+        }
+    }
+}
 public extension UIView {
     var activityIndicatorView: UIActivityIndicatorView {
         get {
@@ -432,17 +502,25 @@ class Helper{
         let vc = storyboard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
         sender.present(vc, animated: true, completion: nil)
     }
-    static func showLoading(sender:UIViewController){
+    static func showLoading(sender:UIViewController) -> UIViewController{
         let storyboard = UIStoryboard(name: "Helper", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoadingViewController") as! LoadingViewController
         sender.modalPresentationStyle = .overCurrentContext
         sender.present(vc, animated: false, completion: nil)
+        return vc
     }
     static func showDatePicker(sender:UIViewController,date:Date,restrictDate:Date){
         let storyboard = UIStoryboard(name: "Helper", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
         vc.setDate(date: date)
         vc.setRestrictedDate(date: restrictDate)
+        sender.modalPresentationStyle = .overCurrentContext
+        sender.present(vc, animated: false, completion: nil)
+    }
+    static func showPicker(sender:UIViewController,arr:[String]){
+        let storyboard = UIStoryboard(name: "Helper", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
+        vc.arr = arr
         sender.modalPresentationStyle = .overCurrentContext
         sender.present(vc, animated: false, completion: nil)
     }

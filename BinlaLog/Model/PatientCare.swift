@@ -30,4 +30,5 @@ class PatientCare:Object{
     @objc dynamic var verifymessage : String = ""
     @objc dynamic var verifytime : Date?
     @objc dynamic var note : String = ""
+    @objc dynamic var hospitalid : String = ""
 }

@@ -10,11 +10,51 @@ import Foundation
 import UIKit
 import MapKit
 extension ProcedureAddViewController{
-    
+    func initHospital(){
+        BackUser.getInstance().enumHospital {
+            self.viewModel.hospitals = Array(BackUser.getInstance().listHospital())
+            if self.viewModel.hospitals.count > 0 {
+                self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
+            }
+        }
+        self.viewModel.hospitals = Array(BackUser.getInstance().listHospital())
+        if self.viewModel.hospitals.count > 0 {
+        self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
+        }
+    }
+    func findNearestHospital() -> Int{
+        var min = 999999999999999.0
+        var index = 0
+        let latitude = self.viewModel.latitude
+        let longitude = self.viewModel.longitude
+        for i in 0..<self.viewModel.hospitals.count{
+            let distance =  sqrt(pow((latitude - self.viewModel.hospitals[i].latitude),2) + pow((longitude - self.viewModel.hospitals[i].longitude),2))
+            if min > distance{
+                min = distance
+                index = i
+            }
+        }
+        return index
+    }
     func initProcedureAutoCompleteUI(){
         self.tf_procedure.startVisibleWithoutInteraction = false
         let data = self.searchProcedure(key: "")
         self.tf_procedure.filterStrings(data)
+    }
+    func initProcedure(){
+        self.viewModel.procedures = []
+        if !self.procedureid.isEmpty{
+            if let proc = BackProcedure.getInstance().get(id: self.procedureid){
+                self.viewModel.procedures.append(proc.name)
+            }
+        }else if self.procedureids.count > 0{
+            for i in 0..<self.procedureids.count{
+                if let proc = BackProcedure.getInstance().get(id: self.procedureids[i]){
+                    self.viewModel.procedures.append(proc.name)
+                }
+            }
+        }
+        self.updateProcedureConstrain()
     }
     func initLogbook(){
         if let  logbook = BackRotation.getInstance().getLogbook(id: self.logbookid){
@@ -40,16 +80,22 @@ extension ProcedureAddViewController{
             }
             self.viewModel.verifystatus = logbook.verificationstatus
             self.lb_verification_date.watch(subject: logbook.verifytime?.convertToStringOnlyDate() ?? "")
-            if let proc = BackProcedure.getInstance().get(id: logbook.procedureid){
-                self.procedureid = proc.id
-                self.initProcedure()
+            self.viewModel.procedures = []
+            for i in 0..<logbook.procedureid.count{
+                if let proc = BackProcedure.getInstance().get(id: logbook.procedureid[i].procedureid){
+                    self.viewModel.procedures.append(proc.name)
+                }
             }
+            self.updateProcedureConstrain()
             if let rotate = BackRotation.getInstance().get(id: logbook.rotationid){
                 self.rotationid = rotate.id
                 self.initRotation()
             }
             if logbook.verificationstatus == 0 {
                 self.vw_signature.isHidden = true
+            }
+            if let hospital = BackUser.getInstance().getHospital(id: logbook.hospitalid) {
+                self.viewModel.institute = hospital.name
             }
             if self.viewModel.note.isEmpty{
                 self.lb_note_placeholder.isHidden = false
@@ -62,6 +108,8 @@ extension ProcedureAddViewController{
     func addTeacherComment(){
         self.cons_bottom.constant = 4
         self.const_teacher_feedback_bottom.constant = 102
+        self.vw_quest.layoutIfNeeded()
+        self.cons_course_top.constant = self.isTask ? self.vw_quest.frame.height + 8 : 4
         self.cons_image_bottom.constant = 8
         if let  logbook = BackRotation.getInstance().getLogbook(id: self.logbookid){
             if logbook.verificationstatus == 0 || self.isTeacher{
@@ -74,6 +122,7 @@ extension ProcedureAddViewController{
                 }
                 self.vw_signature.layoutIfNeeded()
                 self.cons_bottom.constant += self.const_teacher_feedback_bottom.constant + 8
+                self.cons_course_top.constant += self.const_teacher_feedback_bottom.constant + 8
             }
         }else{
             self.vw_signature.isHidden = true
@@ -85,21 +134,7 @@ extension ProcedureAddViewController{
             self.viewModel.rotationname = rotation.rotationname
             self.viewModel.rotationdeadline = rotation.logbookendtime
             self.viewModel.rotationstarttime = rotation.starttime
-        }
-    }
-    func initProcedure(){
-        if let procedure = BackProcedure.getInstance().get(id: procedureid){
-            self.viewModel.procedureName = procedure.name
-            self.viewModel.procedureid = procedure.id
-        }
-    }
-    func validateProcedure(text:String){
-        if let procedure = BackProcedure.getInstance().get(key: text).first{
-            self.viewModel.procedureName = procedure.name
-            self.viewModel.procedureid = procedure.id
-        }else{
-            self.viewModel.procedureName = ""
-            Helper.showWarning(sender: self, text: "Use cannot add procedure outside list")
+            self.viewModel.rotationendtime = rotation.endtime
         }
     }
     func searchProcedure(key:String) ->[String]{
@@ -138,10 +173,58 @@ extension ProcedureAddViewController{
             print()
         }
     }
+    func canAddTag(list:[String],title:String) ->Bool{
+        if title == ""{
+            return false
+        }
+        for i in 0..<list.count{
+            if list[i] == title{
+                return false
+            }
+        }
+        return true
+    }
+    func removeTag(list:[String],title:String) ->Int?{
+        for i in 0..<list.count{
+            if list[i] == title{
+                return i
+            }
+        }
+        return nil
+    }
+    func addProcedure(key:String){
+        if self.canAddTag(list: self.viewModel.procedures, title: key){
+            if BackProcedure.getInstance().get(key: key).first != nil{
+                self.viewModel.procedures.append(key)
+            }else{
+                if !key.isEmpty{
+                    Helper.showWarning(sender: self, text: "Cannot add procedure outside autocomplete list")
+                }
+            }
+        }else{
+            if !key.isEmpty{
+                 Helper.showWarning(sender: self, text: "You cannot add a duplicate procedure")
+            }
+        }
+        self.tf_procedure.text = ""
+        self.updateProcedureConstrain()
+    }
+    func deleteProcedure(key:String){
+        if let index = self.removeTag(list: self.viewModel.procedures, title: key){
+            self.viewModel.procedures.remove(at: index)
+        }
+        self.updateProcedureConstrain()
+    }
+    func updateProcedureConstrain(){
+        self.const_height_procedure_tag.constant = self.tag_procedure.frame.height
+        self.view.layoutIfNeeded()
+    }
     struct ViewModel {
+        var procedures = [String]()
         var rotationname : String = ""
         var rotationdeadline : Date = Date()
         var rotationstarttime : Date = Date()
+        var rotationendtime : Date = Date()
         var rotationid : String = ""
         var procedureName : String = ""
         var hn : String = ""
@@ -153,12 +236,13 @@ extension ProcedureAddViewController{
         var logbookid : String = ""
         var latitude : Double = 0.0
         var longitude : Double = 0.0
-        var procedureid : String = ""
         var deviceid : String = ""
         var message : String = ""
         var verificationid :String = ""
         var note : String = ""
         var verifystatus : Int = 0
+        var institute : String = ""
+        var hospitals = [Hospital]()
     }
 }
 extension ProcedureAddViewController:CLLocationManagerDelegate{
@@ -177,6 +261,7 @@ extension ProcedureAddViewController:CLLocationManagerDelegate{
                 self.viewModel.longitude = userLocation.coordinate.longitude
                 yourLocation.title = "Your Location"
                 self.map.addAnnotation(yourLocation)
+                self.initHospital()
             }
         }
     }

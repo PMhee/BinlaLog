@@ -32,6 +32,11 @@ class APIRotation:API{
             finish(success)
         }, failure: {(error) in})
     }
+    static func listQuest(courseid:String,finish: @escaping (_ response: NSDictionary) -> Void){
+        self.request(urlType: .service, httpMethod: .get, path: "course/id/\(courseid)/quest/list", parameter: [:], success: {(success) in
+            finish(success)
+        }, failure: {(error) in})
+    }
     static func deleteLogbook(logbookid:String,finish: @escaping (_ response: NSDictionary) -> Void){
         self.request(urlType: .service, httpMethod: .delete, path: "logbook/procedure/id/\(logbookid)", parameter: [:], success: {(success) in
             print(success)
@@ -40,12 +45,11 @@ class APIRotation:API{
     }
     static func deletePatient(patientid:String,finish: @escaping (_ response: NSDictionary) -> Void){
         self.request(urlType: .service, httpMethod: .delete, path: "logbook/patientcare/id/\(patientid)", parameter: [:], success: {(success) in
-            print(success)
             finish(success)
         }, failure: {(error) in})
     }
-    static func updatePatientCare(name:String,patientcareid:String,HN:String,symptomid:[String],dx:[String],diagnosisid:[String],diseaseid:[String],location:String,starttime:String,endtime:String,rotationid:String,latitude:Double,longitude:Double,patienttype:Int,verification:String,note:String,finish: @escaping (_ response:NSDictionary) -> Void){
-        let parameter = ["name":name,"HN":HN,"symptomid": symptomid,"dx":dx,"diagnosisid":diagnosisid,"location":[latitude,longitude],"diseaseid":diseaseid,"starttime":starttime,"endtime":endtime,"rotationid":rotationid,"patienttype":patienttype,"verifycode":verification,"note":note] as [String:Any]
+    static func updatePatientCare(name:String,patientcareid:String,HN:String,symptomid:[String],dx:[String],diagnosisid:[String],diseaseid:[String],location:String,starttime:String,endtime:String,rotationid:String,latitude:Double,longitude:Double,patienttype:Int,verification:String,note:String,hospitalid:String,finish: @escaping (_ response:NSDictionary) -> Void){
+        let parameter = ["name":name,"HN":HN,"symptomid": symptomid,"dx":dx,"diagnosisid":diagnosisid,"location":[latitude,longitude],"diseaseid":diseaseid,"starttime":starttime,"endtime":endtime,"rotationid":rotationid,"patienttype":patienttype,"verifycode":verification,"note":note,"hospitalid":hospitalid] as [String:Any]
         if patientcareid == ""{
             self.request(urlType: .service, httpMethod: .post, path: "logbook/patientcare", parameter: parameter, success: {(success) in
                 
@@ -63,8 +67,9 @@ class APIRotation:API{
         
         
     }
-    static func updateLogbook(logbookid:String,rotationid:String,HN:String,procedureid:String,feeling:Int,location:String,patienttype:Int,logtype:Int,donetime:String,deviceid:String,verification:String,latitude:Double,longitude:Double,note:String,finish: @escaping (_ response:NSDictionary) -> Void,fail: @escaping  (_ error: String) -> Void){
-        let parameter = ["rotationid":rotationid,"HN":HN,"procedureid":procedureid,"location":[latitude,longitude],"patienttype":patienttype,"feeling":feeling,"logtype":logtype,"donetime":donetime,"verifycode":verification,"note":note] as [String : Any]
+    static func updateLogbook(logbookid:String,rotationid:String,HN:String,procedureid:[String],feeling:Int,location:String,patienttype:Int,logtype:Int,donetime:String,deviceid:String,verification:String,latitude:Double,longitude:Double,note:String,hospitalid:String,finish: @escaping (_ response:NSDictionary) -> Void,fail: @escaping  (_ error: String) -> Void){
+        
+        let parameter = ["rotationid":rotationid,"HN":HN,"procedureids":procedureid,"location":[latitude,longitude],"patienttype":patienttype,"feeling":feeling,"logtype":logtype,"donetime":donetime,"verifycode":verification,"note":note,"hospitalid":hospitalid] as [String : Any]
         if logbookid == ""{
             self.request(urlType: .service, httpMethod: .post, path: "logbook/procedure", parameter: parameter, success: {(success) in
                 finish(success)
@@ -79,4 +84,5 @@ class APIRotation:API{
             })
         }
     }
+    
 }

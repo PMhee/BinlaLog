@@ -108,7 +108,7 @@ class HistoryPatientViewController: UIViewController,UITableViewDataSource,UITab
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.viewModel.patientcare.count == 0 {
-            return 1
+            return 0
         }else{
             return self.viewModel.patientcare.count
         }

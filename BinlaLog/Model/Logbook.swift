@@ -30,7 +30,7 @@ class Logbook:Object{
     @objc dynamic var mediafile : String = ""
     @objc dynamic var mediafileurl : String = ""
     @objc dynamic var patienttype : Int = 0
-    @objc dynamic var procedureid : String = ""
+    var procedureid = List<ForeignProcedure>()
     @objc dynamic var rotationid : String = ""
     @objc dynamic var score : Double = 0.0
     @objc dynamic var updatetime : Date = Date()
@@ -41,4 +41,5 @@ class Logbook:Object{
     @objc dynamic var verifymessage : String = ""
     @objc dynamic var deletetime : Date?
     @objc dynamic var note : String = ""
+    @objc dynamic var hospitalid : String = ""
 }

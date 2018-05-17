@@ -26,6 +26,52 @@ class BackUser:Back{
             }
         }
     }
+    func changePassword(old:String,new:String,success:@escaping ()->Void,error:@escaping (_ response:String) ->Void){
+        APIUser.changePassword(old: old, new: new, finish: {(finish) in
+            if let type = finish.value(forKey: "type") as? String{
+                if type == "error" {
+                    if let message = finish.value(forKey: "content") as? String{
+                        error(message)
+                    }
+                }else{
+                   success()
+                }
+            }
+        })
+    }
+    func enumHospital(success:@escaping ()->Void){
+        APIUser.getHospital(success: {(json) in
+            if let dict = json.value(forKey: "content") as? NSDictionary{
+                if let data = dict.value(forKey: "data") as? NSArray{
+                    for i in 0..<data.count{
+                        if let content = data[i] as? NSDictionary{
+                            self.loadHospital(content: content)
+                        }
+                    }
+                }
+            }
+            success()
+        })
+    }
+    func loadHospital(content:NSDictionary){
+        try! Realm().write {
+            var hospital = Hospital()
+            if let id = content.value(forKey: "id") as? String{
+                hospital.id = id
+                if let host = self.getHospital(id: id){
+                    hospital = host
+                }
+            }
+            if let name = content.value(forKey: "name") as? String{
+                hospital.name = name
+            }
+            if let location = content.value(forKey: "location") as? NSArray{
+                hospital.latitude = location.firstObject as? Double ?? 0.0
+                hospital.longitude = location.lastObject as? Double ?? 0.0
+            }
+            self.getHospital(id: hospital.id) == nil ? self.post(object: hospital) : ()
+        }
+    }
     func loadDepartment(content:NSDictionary){
         var department = Department()
         try! Realm().write {
@@ -252,7 +298,7 @@ class BackUser:Back{
                     user.currentRotation.append(rotation)
                 }
                 if user.currentSelectRotation == ""{
-                    user.currentSelectRotation = user.currentRotation.first?.rotationid ?? ""
+                    user.currentRotation.count > 0 ? user.currentSelectRotation = user.currentRotation.first?.rotationid ?? "" : ()
                 }
             }
         }
@@ -283,10 +329,10 @@ class BackUser:Back{
     }
     func updateUserInfo(viewModel:ProfileViewController.ViewModel,image:UIImage,finish:@escaping () -> Void){
         if !viewModel.picurl.isEmpty{
-           APIUser.updateUserInfo(phoneno: viewModel.phoneno, nickname: viewModel.nickname, finish: {(success) in
-            BackUser.getInstance().getUserInfo {}
-            finish()
-           })
+            APIUser.updateUserInfo(phoneno: viewModel.phoneno, nickname: viewModel.nickname, finish: {(success) in
+                BackUser.getInstance().getUserInfo {}
+                finish()
+            })
         }else{
             APIUser.uploadProfilePic(image: image, key: viewModel.id, finish: {(success) in
                 Helper.saveLocalImage(image: image, id: viewModel.id,success:{
@@ -321,6 +367,12 @@ class BackUser:Back{
     func getDepartment(id:String) ->Department?{
         return try! Realm().objects(Department.self).filter("id == %@",id).first
     }
+    func getHospital(id:String) ->Hospital?{
+        return try! Realm().objects(Hospital.self).filter("id == %@",id).first
+    }
+    func getHospital(name:String) ->Hospital?{
+        return try! Realm().objects(Hospital.self).filter("name == %@",name).first
+    }
     func post(user:User){
         try! Realm().write {
             try! Realm().add(user)
@@ -329,6 +381,9 @@ class BackUser:Back{
     }
     func list() -> Results<User>{
         return try! Realm().objects(User.self)
+    }
+    func listHospital() -> Results<Hospital>{
+        return try! Realm().objects(Hospital.self)
     }
     func removeAll(){
         try! Realm().write {
