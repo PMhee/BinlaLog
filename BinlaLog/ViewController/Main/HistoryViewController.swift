@@ -18,10 +18,14 @@ class HistoryViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     @IBOutlet weak var vw_line_show_procedure: UIView!
     @IBOutlet weak var vw_line_show_patient: UIView!
     @IBOutlet weak var container_procedure: UIView!
+    
     @IBOutlet weak var container_patient: UIView!
     @IBAction func btn_add_action(_ sender: UIBarButtonItem) {
         self.showAlert(sender:sender)
     }
+    
+    @IBOutlet weak var lb_procedure: UILabel!
+    @IBOutlet weak var btn_procedure: UIButton!
     @IBAction func btn_filter_action(_ sender: UIButton) {
         self.performSegue(withIdentifier: "filter", sender: self)
     }
@@ -71,6 +75,7 @@ class HistoryViewController: UIViewController,UISearchResultsUpdating,UISearchBa
         searchController.dismiss(animated: false, completion: nil)
     }
     func setUI(){
+        self.lb_procedure.text = Constant().getFirstPageTitle()
         self.container_procedure.isHidden = false
         self.container_patient.isHidden = true
         self.vw_line_show_procedure.backgroundColor = Constant().getColorMain()

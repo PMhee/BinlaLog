@@ -15,4 +15,5 @@ class Verification:Object{
     @objc dynamic var createtime : Date = Date()
     @objc dynamic var expiretime : Date = Date()
     @objc dynamic var canceltime : Date?
+    @objc dynamic var limit : Int = 0
 }

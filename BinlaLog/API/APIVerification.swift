@@ -8,15 +8,23 @@
 
 import Foundation
 class APIVerification:API{
-    static func getVerification(finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping () -> Void){
+    static func getVerification(finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping (_ response: NSError?) -> Void){
         self.request(urlType: .service, httpMethod: .get, path: "verification/verifycode", parameter: [:], success: {(success) in
+            finish(success)
+        }, failure: {(error) in
+            fail(error)
+        })
+    }
+    static func editVerification(expire:Int,finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping () -> Void){
+        let parameter = ["expireIn":expire]
+        self.request(urlType: .service, httpMethod: .put, path: "verification/verifycode", parameter: parameter, success: {(success) in
             finish(success)
         }, failure: {(error) in
             fail()
         })
     }
-    static func editVerification(expire:Int,finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping () -> Void){
-        let parameter = ["expireIn":expire]
+    static func updateLimit(limit:Int,finish: @escaping (_ response: NSDictionary) -> Void,fail: @escaping () -> Void){
+        let parameter = ["timesUsable":limit]
         self.request(urlType: .service, httpMethod: .put, path: "verification/verifycode", parameter: parameter, success: {(success) in
             finish(success)
         }, failure: {(error) in

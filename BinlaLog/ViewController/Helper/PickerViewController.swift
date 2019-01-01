@@ -21,7 +21,9 @@ class PickerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btn_confirm_action(_ sender: UIButton) {
+        if self.viewModel.arr.count > self.index{
         NotificationCenter.default.post(name: .pickerChange, object: nil, userInfo: ["data":self.viewModel.arr[self.index]])
+        }
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var picker: UIPickerView!

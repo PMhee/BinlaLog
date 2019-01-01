@@ -27,17 +27,41 @@ class TVerificationViewController: UIViewController {
         self.btn_agian.isHidden = true
         self.newCode()
     }
+    @IBOutlet weak var lb_request_limit: UILabel!
+    @IBAction func btn_limit_request_action(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Limit Request", message: "", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: {(textField) in
+            textField.placeholder = "Limit"
+            textField.keyboardType = .numberPad
+        })
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {(action) in
+            BackVerification.getInstance().updateLimit(limit: Int(alert.textFields?.first?.text ?? "0") ?? 0, finish: {
+                self.initCode()
+            })
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    @IBOutlet weak var btn_limit: UIButton!
     
     @IBOutlet weak var btn_cancel: UIButton!
     var viewModel = ViewModel(){
         didSet{
             self.lb_code.watch(subject: self.viewModel.code)
+            self.lb_request_limit.watch(subject: viewModel.limit != 0 ? "Limit: \(self.viewModel.limit) Requests" : "No Limit Request")
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getCode()
         self.runTimer()
+        self.setUI()
+    }
+    func setUI(){
+        self.btn_limit.layer.cornerRadius = 3
+        self.btn_limit.layer.masksToBounds = true
     }
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
@@ -62,12 +86,14 @@ class TVerificationViewController: UIViewController {
 extension TVerificationViewController{
     struct ViewModel {
         var code : String = ""
+        var limit : Int = 0
     }
     func initCode(){
         //Check is verification axisting
         if let verification = BackVerification.getInstance().getTeacher(personid: BackUser.getInstance().get()!.id, date: Date()){
                 self.seconds = Int(verification.expiretime.timeIntervalSince(Date()))
                 self.viewModel.code = verification.verifycode
+                self.viewModel.limit = verification.limit
         }else{
             self.newCode()
         }
@@ -81,7 +107,8 @@ extension TVerificationViewController{
         BackVerification.getInstance().enumCode(finish: {
             self.initCode()
         },fail:{ (error) in
-            if error == "notfound"{
+            //print(error)
+            if error == "notfound" || error == "internet"{
                 self.newCode()
             }else{
                Helper.addAlert(sender: self, title: "", message: "Internet connection error")

@@ -51,6 +51,7 @@ class ProcedureViewController: UIViewController,UISearchResultsUpdating,UITableV
         }
     }
     func setUI(){
+        self.title = Constant().getFirstPageTitle()
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             searchController.searchResultsUpdater = self

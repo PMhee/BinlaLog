@@ -12,4 +12,5 @@ extension Notification.Name{
     static let pickerChange = Notification.Name("pickerChange")
     static let textChange = Notification.Name("textChange")
     static let isDelete = Notification.Name("isDelete")
+    static let selectTask = Notification.Name("selectTask")
 }

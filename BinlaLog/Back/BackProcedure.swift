@@ -71,62 +71,79 @@ class BackProcedure{
     }
     func loadProcedureGroup(dict:NSDictionary){
         var procedureGroup = ProcedureGroup()
-        if let id = dict.value(forKey: "id") as? String{
-            procedureGroup.id = id
-            if self.getGroup(id: id) != nil{
-                procedureGroup = self.getGroup(id: id)!
+        try! Realm().write{
+            if let id = dict.value(forKey: "id") as? String{
+                procedureGroup.id = id
+                if self.getGroup(id: id) != nil{
+                    procedureGroup = self.getGroup(id: id)!
+                }
             }
-        }
-        if let procgroupdesc = dict.value(forKey: "procgroupdesc") as? String{
-            procedureGroup.procgroupdesc = procgroupdesc
-        }
-        if let progroupname = dict.value(forKey: "procgroupname") as? String{
-            procedureGroup.procgroupname = progroupname
-        }
-        if let picurl = dict.value(forKey: "picurl") as? String{
-            #if MDCULOG
-            if procedureGroup.procgroupname == "Laboratory Investigation"{
+            if let procgroupdesc = dict.value(forKey: "procgroupdesc") as? String{
+                procedureGroup.procgroupdesc = procgroupdesc
+            }
+            if let progroupname = dict.value(forKey: "procgroupname") as? String{
+                procedureGroup.procgroupname = progroupname
+            }
+            if let picurl = dict.value(forKey: "picurl") as? String{
+                #if MDCULOG
+                if procedureGroup.procgroupname == "Laboratory Investigation"{
+                    procedureGroup.picurl = "ic-lab.png"
+                }else{
+                    procedureGroup.picurl = "ic-\(procedureGroup.procgroupname.lowercased()).png"
+                }
+                #else
                 procedureGroup.picurl = "ic-lab.png"
-            }else{
-                procedureGroup.picurl = "ic-\(procedureGroup.procgroupname.lowercased()).png"
+                #endif
             }
-            #else
-            procedureGroup.picurl = "ic-lab.png"
-            #endif
-        }
-        if self.getGroup(id: procedureGroup.id) == nil{
-            self.post(object: procedureGroup)
+            if self.getGroup(id: procedureGroup.id) == nil{
+                self.post(object: procedureGroup)
+            }
         }
     }
     func loadProcedure(content:NSDictionary){
         try! Realm().write {
             var procedure = Procedure()
-            if let id = content.value(forKey: "id") as? String{
+            if let  id = content.value(forKey: "id") as? String{
                 procedure.id = id
                 if self.get(id: id) != nil{
                     procedure = self.get(id: id)!
                 }
             }
-            if let description = content.value(forKey: "description") as? String{
-                procedure.des = description
+            if let assistScore = content.value(forKey: "assistScore") as? Int{
+                procedure.assistScore = assistScore
+            }
+            if let des = content.value(forKey: "description") as? String{
+                procedure.des = des
             }
             if let name = content.value(forKey: "name") as? String{
                 procedure.name = name
             }
-            if let picurl = content.value(forKey: "picurl") as? String{
-                procedure.picfile = picurl
-                API.getPicture(url: picurl, success:{(image) in
-                    Helper.saveLocalImage(image: image, id: procedure.id)
-                })
+            if let performScore = content.value(forKey: "performScore") as? Int{
+                procedure.performScore = performScore
             }
-            if let procgroupid = content.value(forKey: "procgroupid") as? String{
-                procedure.proceduregroup = procgroupid
+            if let picfile = content.value(forKey: "picfile") as? String{
+                procedure.picfile = picfile
             }
             if let proctype = content.value(forKey: "proctype") as? Int{
                 procedure.proctype = proctype
             }
-            if let proceduregroup = content.value(forKey: "proceduregroup") as? NSDictionary{
-                self.loadProcedureGroup(dict: proceduregroup)
+            if let procgroupid = content.value(forKey: "procgroupid") as? String{
+                procedure.proceduregroup = procgroupid
+            }
+            if let searchKey = content.value(forKey: "searchKey") as? String{
+                procedure.searchKey = searchKey
+            }
+            if let observeMinReq = content.value(forKey: "observeMinReq") as? Int{
+                procedure.observeMinReq = observeMinReq
+            }
+            if let observeScore = content.value(forKey: "observeScore") as? Int{
+                procedure.observeScore = observeScore
+            }
+            if let assistMinReq = content.value(forKey: "assistMinReq") as? Int{
+                procedure.assistMinReq = assistMinReq
+            }
+            if let performMinReq = content.value(forKey: "performMinReq") as? Int{
+                procedure.performMinReq = performMinReq
             }
             if self.get(id: procedure.id) == nil{
                 self.post(object: procedure)
@@ -173,7 +190,13 @@ class BackProcedure{
         if let course = BackCourse.getInstance().get(id: courseid){
             for i in 0..<course.procgroupids.count{
                 if let procgroup = self.getGroup(id: course.procgroupids[i].procgroupid){
-                    let res = try! Realm().objects(Procedure.self).filter("name contains[c] %@ AND proceduregroup == %@",key,procgroup.id).sorted(byKeyPath: "name", ascending: true)
+                    var res = [Procedure]()
+                    if procgroup.procgroupname.lowercased().contains(key.lowercased()){
+                        res = Array(try! Realm().objects(Procedure.self).filter("proceduregroup == %@",procgroup.id).sorted(byKeyPath: "name", ascending: true))
+                    }else{
+                        res = Array(try! Realm().objects(Procedure.self).filter("name contains[c] %@ AND proceduregroup == %@",key,procgroup.id).sorted(byKeyPath: "name", ascending: true))
+                    }
+                    
                     for j in 0..<res.count{
                         arr.append(res[j])
                     }
@@ -188,7 +211,14 @@ class BackProcedure{
                 if let array = content.value(forKey: "data") as? NSArray{
                     for i in 0..<array.count{
                         if let content = array[i] as? NSDictionary{
-                            self.loadProcedure(dict: content)
+                            if let arr = content.value(forKey: "procedures") as? NSArray{
+                                for j in 0..<arr.count{
+                                    if let json = arr[j] as? NSDictionary{
+                                        self.loadProcedure(content: json)
+                                    }
+                                }
+                            }
+                            self.loadProcedureGroup(dict: content)
                         }
                     }
                 }
@@ -203,7 +233,14 @@ class BackProcedure{
                     BackCourse.getInstance().loadProcgroup(courseid: courseid, procgroup: array)
                     for i in 0..<array.count{
                         if let content = array[i] as? NSDictionary{
-                            self.loadProcedure(dict: content)
+                            self.loadProcedureGroup(dict: content)
+                            if let arr = content.value(forKey: "procedures") as? NSArray{
+                                for j in 0..<arr.count{
+                                    if let json = arr[j] as? NSDictionary{
+                                        self.loadProcedure(content: json)
+                                    }
+                                }
+                            }
                         }
                     }
                 }

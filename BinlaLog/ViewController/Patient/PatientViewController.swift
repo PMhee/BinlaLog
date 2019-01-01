@@ -12,7 +12,8 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     //GI not need disease
     @IBOutlet weak var const_top_disease: NSLayoutConstraint!
     @IBOutlet weak var vw_disease_icon: UIView!
-    
+    //Const
+    var logbook_deadline = Date()
     //Handle APP
     func handleApp(){
         #if GILOG
@@ -35,11 +36,14 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     // 5  == enddate
     //now keyboard is vv_coursedetail
     var isTeacher = false
+    var isAccept = false
     @IBOutlet weak var tf_passcode: UITextField!
     @IBOutlet weak var segment_type: UISegmentedControl!
     @IBOutlet weak var lb_course: UILabel!
     @IBOutlet weak var lb_deadline: UILabel!
     @IBOutlet weak var tf_hn: NTextField!
+    
+    @IBOutlet weak var tf_hn_year: NTextField!
     @IBOutlet weak var tf_name: NTextField!
     @IBOutlet weak var tf_symptom: NAutoComplete!
     @IBOutlet weak var vw_symptom_tag: TagListView!
@@ -75,6 +79,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
     }
     
     @IBAction func btn_save_action(_ sender: UIBarButtonItem) {
+        print(self.viewModel.name.count)
         if Date() > self.viewModel.deadline {
             Helper.addAlert(sender: self, title: "", message: "The rotation has been end")
         }else if self.viewModel.latitude == 0.0 && self.viewModel.longitude == 0.0{
@@ -89,7 +94,9 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             Helper.addAlert(sender: self, title: "", message: "Cannot add patient that enddate beyond deadline")
         }else if self.viewModel.startdate < self.viewModel.rotationstarttime{
             Helper.addAlert(sender: self, title: "", message: "Cannot add patient that startime earlier that rotation starttime")
-        } else{
+        }else if self.viewModel.name.count < 2{
+            Helper.addAlert(sender: self, title: "", message: "Patient name must be atleast 2 words")
+        }else{
             Helper.showLoading(sender: self)
             BackRotation.getInstance().updatePatientCare(viewModel: self.viewModel, finish: {
                 self.dismiss(animated: false, completion: nil)
@@ -205,11 +212,13 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             self.vw_diagnosis_tag.enableRemoveButton = false
             self.navigationItem.setRightBarButton(nil, animated: false)
         }else{
+            if self.isAccept{
+                self.navigationItem.setRightBarButton(nil, animated: false)
+            }
             self.vw_message.isHidden = true
         }
         self.lb_message.layer.cornerRadius = 16
         self.lb_message.layer.masksToBounds = true
-        self.tf_hn.makeBottomTextfield()
         self.tf_name.makeBottomTextfield()
         self.tf_startdate.makeBottomTextfield()
         self.tf_enddate.makeBottomTextfield()
@@ -279,6 +288,12 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
         }
         self.viewModel.hn = text
     }
+    @IBAction func tf_hn_year_change(_ sender: NTextField) {
+        guard let text = sender.text else{
+            return
+        }
+        self.viewModel.hn_year = text
+    }
     @IBAction func sg_change(_ sender: UISegmentedControl) {
         self.viewModel.type = sender.selectedSegmentIndex
     }
@@ -288,6 +303,7 @@ class PatientViewController: UIViewController,UITextFieldDelegate,TagListViewDel
             self.lb_deadline.watch(subject: (viewModel.deadline?.convertToString())!)
             self.tf_name.watch(subject: viewModel.name)
             self.tf_hn.watch(subject: viewModel.hn)
+            self.tf_hn_year.watch(subject: viewModel.hn_year)
             self.segment_type.watch(subject: viewModel.type)
             self.tf_startdate.watch(subject: viewModel.startdate.convertToStringOnlyDate())
             self.tf_enddate.watch(subject: viewModel.enddate.convertToStringOnlyDate())

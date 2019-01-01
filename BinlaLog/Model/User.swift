@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 class User:Object{
     @objc dynamic var sessionid : String = ""
+    @objc dynamic var passcode : String = ""
     @objc dynamic var role : String = ""
     @objc dynamic var id : String = ""
     @objc dynamic var advisor : String = ""

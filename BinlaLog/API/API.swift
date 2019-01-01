@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireImage
 class API{
     private var header = [String:String]()
+    
     static func request(urlType:URLType,httpMethod:HTTPMethod,path:String,parameter:[String:Any],success: @escaping (_ response: NSDictionary) -> Void,failure: @escaping  (_ error: NSError?) -> Void){
         let code = "\(Constant().getLink())\(path)"
         var sessionid = ""
@@ -25,7 +26,16 @@ class API{
                 //debugPrint(response)
                 if response.result.isSuccess{
                     if let res = response.result.value as? NSDictionary{
-                        success(res)
+                        if let type = res.value(forKey: "type") as? String{
+                            if type == "error" {
+                                failure(NSError(domain: "Validation fail", code: 401, userInfo: nil))
+                            }else{
+                                success(res)
+                            }
+                        }else{
+                            success(res)
+                        }
+                        
                         
                         
                     }else{
@@ -56,7 +66,7 @@ class API{
             }, to: code,
                headers:header,
                encodingCompletion: {(complete) in
-                //print(complete)
+                print(complete)
                 switch complete {
                 case .success(let upload, _, _):
                     upload.responseJSON {

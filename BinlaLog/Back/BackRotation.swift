@@ -138,6 +138,18 @@ class BackRotation{
                     patientcare.verifymessage = verifymessage
                 }
             }
+            if let location = content.value(forKey: "location") as? NSArray{
+                if location.count > 0 {
+                    if let longitude = location[0] as? Double{
+                        patientcare.longitude = longitude
+                    }
+                }
+                if location.count > 1 {
+                    if let latitude = location[1] as? Double{
+                        patientcare.latitude = latitude
+                    }
+                }
+            }
             patientcare.diagnosis.removeAll()
             patientcare.disease.removeAll()
             patientcare.symptom.removeAll()
@@ -190,19 +202,21 @@ class BackRotation{
             }
         }
     }
-    func SelectCurrentRotation(finish: @escaping () -> Void){
+    func SelectCurrentRotation(finish: @escaping () -> Void,error: @escaping () -> Void){
         var rotations = [String]()
         APIRotation.getCurrentRotation(finish: {(success) in
-            if let array = success.value(forKey: "content") as? NSArray{
-                for i in 0..<array.count{
-                    if let content = array[i] as? NSDictionary{
-                        rotations.append(self.loadRotation(dict: content))
-                        BackCourse.getInstance().loadCourse(dict: content)
+                if let array = success.value(forKey: "content") as? NSArray{
+                    for i in 0..<array.count{
+                        if let content = array[i] as? NSDictionary{
+                            rotations.append(self.loadRotation(dict: content))
+                            BackCourse.getInstance().loadCourse(dict: content)
+                        }
                     }
                 }
-            }
-            BackUser.getInstance().selectCurrentRotation(rotationid: rotations)
-            finish()
+                BackUser.getInstance().selectCurrentRotation(rotationid: rotations)
+                finish()
+        },error: {
+            error()
         })
     }
     func getCurrentRotation(finish: @escaping () -> Void){
@@ -218,6 +232,8 @@ class BackRotation{
             }
             BackUser.getInstance().putCurrentRotation(rotationid: rotations)
             finish()
+        }, error: {
+            
         })
     }
     func getRecentRotation(finish: @escaping () -> Void){
@@ -303,8 +319,11 @@ class BackRotation{
             if let donetime = content.value(forKey: "donetime") as? String{
                 logbook.donetime = donetime.convertToDate()
             }
-            if let feeling = content.value(forKey: "feeling") as? Int{
+            if let feeling = content.value(forKey: "performance") as? Int{
                 logbook.feeling = feeling
+            }
+            if let feelingMessage = content.value(forKey:"feelingMsg") as? String{
+                logbook.feelingMessage = feelingMessage
             }
             if let lbuserid = content.value(forKey: "lbuserid") as? String{
                 logbook.lbuserid = lbuserid
@@ -356,6 +375,18 @@ class BackRotation{
             }
             if let hospitalid = content.value(forKey: "hospitalid") as? String{
                 logbook.hospitalid = hospitalid
+            }
+            if let location = content.value(forKey: "location") as? NSArray{
+                if location.count > 0 {
+                    if let longitude = location[0] as? Double{
+                        logbook.longitude = longitude
+                    }
+                }
+                if location.count > 1 {
+                    if let latitude = location[1] as? Double{
+                        logbook.latitude = latitude
+                    }
+                }
             }
             if let validation = content.value(forKey: "validation") as? NSDictionary{
                 if let verifycodeid = validation.value(forKey: "verifycodeid") as? String{
@@ -422,7 +453,7 @@ class BackRotation{
         }
         return list
     }
-    func updateLogbook(viewModel:ProcedureAddViewController.ViewModel,finish: @escaping () -> Void,error: @escaping () -> Void){
+    func updateLogbook(viewModel:ProcedureAddViewController.ViewModel,finish: @escaping (_ :NSDictionary) -> Void,error: @escaping () -> Void){
         var dvid = ""
         if viewModel.deviceid != ""{
             dvid = viewModel.deviceid
@@ -446,11 +477,11 @@ class BackRotation{
                 proc.append(procedure.id)
             }
         }
-        APIRotation.updateLogbook(logbookid: viewModel.logbookid,rotationid: viewModel.rotationid, HN: viewModel.hn, procedureid: proc, feeling: viewModel.feeling, location: "(\(viewModel.latitude),\(viewModel.longitude))", patienttype: viewModel.patientType, logtype: lt, donetime: viewModel.date.convertToServer(),deviceid: dvid,verification: viewModel.verification,latitude: viewModel.latitude,longitude: viewModel.longitude,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", finish: {(success) in
+        APIRotation.updateLogbook(logbookid: viewModel.logbookid,rotationid: viewModel.rotationid, HN: viewModel.hn+viewModel.hn_year, procedureid: proc, feeling: viewModel.feeling, location: "(\(viewModel.latitude),\(viewModel.longitude))", patienttype: viewModel.patientType, logtype: lt, donetime: viewModel.date.convertToServer(),deviceid: dvid,verification: viewModel.verification,latitude: viewModel.latitude,longitude: viewModel.longitude,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", feelingMessage: viewModel.feelingMessage, finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 self.loadLogbook(content: content)
             }
-            finish()
+            finish(success)
         },fail: {(err) in
             error()
         })
@@ -552,8 +583,7 @@ class BackRotation{
             }
         }
 
-        APIRotation.updatePatientCare(name: viewModel.name, patientcareid:viewModel.patientcareid , HN: viewModel.hn, symptomid: symptoms,dx:dx, diagnosisid: diagnosiss, diseaseid: diseases, location: "(\(viewModel.latitude),\(viewModel.longitude))", starttime: viewModel.startdate.convertToServer(), endtime: viewModel.enddate.convertToServer(), rotationid: viewModel.rotationid,latitude: viewModel.latitude,longitude: viewModel.longitude,patienttype: viewModel.type,verification:viewModel.verification,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", finish: {(success) in
-            print(success)
+        APIRotation.updatePatientCare(name: viewModel.name, patientcareid:viewModel.patientcareid , HN: viewModel.hn+viewModel.hn_year, symptomid: symptoms,dx:dx, diagnosisid: diagnosiss, diseaseid: diseases, location: "(\(viewModel.latitude),\(viewModel.longitude))", starttime: viewModel.startdate.convertToServer(), endtime: viewModel.enddate.convertToServer(), rotationid: viewModel.rotationid,latitude: viewModel.latitude,longitude: viewModel.longitude,patienttype: viewModel.type,verification:viewModel.verification,note:viewModel.note,hospitalid: BackUser.getInstance().getHospital(name: viewModel.institute)?.id ?? "", finish: {(success) in
             if let content = success.value(forKey: "content") as? NSDictionary{
                 self.loadPatientCare(content: content)
             }

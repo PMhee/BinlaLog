@@ -4,11 +4,11 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDisplayName</key>
 	<string>GILog</string>
 	<key>CFBundleExecutable</key>
@@ -28,11 +28,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) Camera use</string>
+	<string>$(PRODUCT_NAME) need your allowcation to use phone camera for recording cases </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location will be collected to our database for evaluating your score.We are checking your location for confirming you are at the right place and right time when you wrote the logbook.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) Gallery use</string>
+	<string>$(PRODUCT_NAME) need your allowcation to use phone gallery for recording cases </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

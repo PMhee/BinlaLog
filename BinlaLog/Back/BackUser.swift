@@ -26,17 +26,19 @@ class BackUser:Back{
             }
         }
     }
-    func changePassword(old:String,new:String,success:@escaping ()->Void,error:@escaping (_ response:String) ->Void){
+    func changePassword(old:String,new:String,success:@escaping ()->Void,error:@escaping () ->Void){
         APIUser.changePassword(old: old, new: new, finish: {(finish) in
             if let type = finish.value(forKey: "type") as? String{
                 if type == "error" {
                     if let message = finish.value(forKey: "content") as? String{
-                        error(message)
+                        error()
                     }
                 }else{
-                   success()
+                    success()
                 }
             }
+        }, error: {
+            error()
         })
     }
     func enumHospital(success:@escaping ()->Void){
@@ -314,6 +316,12 @@ class BackUser:Back{
                     user.recentRotation.append(rotation)
                 }
             }
+        }
+    }
+    func putPasscode(viewModel:PasscodeViewController.ViewModel){
+        try! Realm().write {
+            let user = self.get()
+            user?.passcode = viewModel.passcode
         }
     }
     func putFilter(viewModel:FilterViewController.ViewModel){

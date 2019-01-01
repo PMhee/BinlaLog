@@ -19,7 +19,7 @@ extension ProcedureAddViewController{
         }
         self.viewModel.hospitals = Array(BackUser.getInstance().listHospital())
         if self.viewModel.hospitals.count > 0 {
-        self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
+            self.viewModel.institute = self.viewModel.institute.isEmpty && !self.isTeacher ? self.viewModel.hospitals[self.findNearestHospital()].name : self.viewModel.institute
         }
     }
     func findNearestHospital() -> Int{
@@ -58,16 +58,24 @@ extension ProcedureAddViewController{
     }
     func initLogbook(){
         if let  logbook = BackRotation.getInstance().getLogbook(id: self.logbookid){
-            self.viewModel.hn = logbook.HN
+            if logbook.HN.count > 2 {
+                self.viewModel.hn = logbook.HN.substring(to: logbook.HN.count-2)
+                self.viewModel.hn_year = logbook.HN.substring(from: logbook.HN.count-2)
+            }else{
+                self.viewModel.hn = logbook.HN
+            }
             self.viewModel.patientType = logbook.patienttype
             self.viewModel.feeling = logbook.feeling
             self.viewModel.date = logbook.donetime
             self.viewModel.logtype = logbook.logtype
             self.viewModel.logbookid = logbook.id
             self.viewModel.message = logbook.verifymessage
+            self.viewModel.latitude = logbook.latitude
+            self.viewModel.longitude = logbook.longitude
             self.viewModel.note = logbook.note
             self.logbookid = logbook.id
             self.viewModel.deviceid = logbook.deviceid
+            self.viewModel.feelingMessage = logbook.feelingMessage
             if let verification = BackVerification.getInstance().get(id: logbook.verifycodeid){
                 if let teacher = BackUser.getInstance().getPerson(id: verification.lbuserid){
                     Helper.loadLocalImage(id: teacher.id, success: {(image) in
@@ -203,7 +211,7 @@ extension ProcedureAddViewController{
             }
         }else{
             if !key.isEmpty{
-                 Helper.showWarning(sender: self, text: "You cannot add a duplicate procedure")
+                Helper.showWarning(sender: self, text: "You cannot add a duplicate procedure")
             }
         }
         self.tf_procedure.text = ""
@@ -228,6 +236,7 @@ extension ProcedureAddViewController{
         var rotationid : String = ""
         var procedureName : String = ""
         var hn : String = ""
+        var hn_year : String = ""
         var patientType : Int = 0
         var feeling : Int = -1
         var date : Date = Date()
@@ -243,6 +252,9 @@ extension ProcedureAddViewController{
         var verifystatus : Int = 0
         var institute : String = ""
         var hospitals = [Hospital]()
+        var feelingMessage : String = ""
+        var questId : String = ""
+        var taskId : String = ""
     }
 }
 extension ProcedureAddViewController:CLLocationManagerDelegate{
@@ -252,15 +264,23 @@ extension ProcedureAddViewController:CLLocationManagerDelegate{
         if currentLocation == nil {
             // Zoom to user location
             if let userLocation = locations.last {
-                let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
-                self.map.setRegion(viewRegion, animated: false)
                 var yourLocation = MKPointAnnotation()
-                yourLocation.coordinate.latitude = userLocation.coordinate.latitude
-                yourLocation.coordinate.longitude = userLocation.coordinate.longitude
-                self.viewModel.latitude = userLocation.coordinate.latitude
-                self.viewModel.longitude = userLocation.coordinate.longitude
-                yourLocation.title = "Your Location"
-                self.map.addAnnotation(yourLocation)
+                print(self.viewModel.latitude,self.viewModel.longitude)
+                if self.viewModel.latitude != 0.0 && self.viewModel.longitude != 0.0 {
+                    yourLocation.coordinate.latitude = self.viewModel.latitude
+                    yourLocation.coordinate.longitude = self.viewModel.longitude
+                    yourLocation.title = "Location"
+                    self.map.addAnnotation(yourLocation)
+                }else{
+                    yourLocation.coordinate.latitude = userLocation.coordinate.latitude
+                    yourLocation.coordinate.longitude = userLocation.coordinate.longitude
+                    self.viewModel.latitude = userLocation.coordinate.latitude
+                    self.viewModel.longitude = userLocation.coordinate.longitude
+                    yourLocation.title = "Location"
+                    self.map.addAnnotation(yourLocation)
+                }
+                let viewRegion = MKCoordinateRegionMakeWithDistance(yourLocation.coordinate, 2000, 2000)
+                self.map.setRegion(viewRegion, animated: false)
                 self.initHospital()
             }
         }

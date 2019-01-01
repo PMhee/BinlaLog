@@ -118,6 +118,7 @@ class HistoryPatientViewController: UIViewController,UITableViewDataSource,UITab
             if let navigation = segue.destination as? UINavigationController{
                 if let des = navigation.topViewController as? PatientViewController{
                     des.patientcareid = self.viewModel.patientcare[self.index].id
+                    des.isAccept = self.viewModel.patientcare[self.index].verificationstatus == 1 || self.viewModel.patientcare[self.index].verificationstatus == 2
                     des.rotationid = self.viewModel.patientcare[self.index].rotationid
                 }
             }

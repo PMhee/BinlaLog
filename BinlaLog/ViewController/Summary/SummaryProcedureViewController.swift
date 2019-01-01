@@ -44,6 +44,7 @@ class SummaryProcedureViewController: UIViewController {
             if let procedure = self.viewModel.procedure{
                 lb_procedure.watch(subject: procedure.name)
                 if let group = BackProcedure.getInstance().getGroup(id: procedure.proceduregroup){
+                    print(group)
                     lb_procedure_group.watch(subject: group.procgroupname)
                 }
                 switch procedure.proctype{

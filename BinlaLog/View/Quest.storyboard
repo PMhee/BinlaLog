@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NIA-Pb-ApI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NIA-Pb-ApI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Attendance-->
         <scene sceneID="WpN-Ij-gbi">
             <objects>
-                <viewController id="E2T-wC-zYz" customClass="QuestAddViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E2T-wC-zYz" customClass="QuestAddViewController" customModule="Abhailog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VG5-Kn-7d2"/>
                         <viewControllerLayoutGuide type="bottom" id="dkU-tY-x1W"/>
@@ -25,8 +24,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCf-mf-jDf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-BL-XJU" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="4" width="367" height="169.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-BL-XJU" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="4" width="367" height="170.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabQuest" translatesAutoresizingMaskIntoConstraints="NO" id="nbo-eF-q75">
                                                 <rect key="frame" x="16" y="8" width="25" height="25"/>
@@ -49,31 +48,31 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conquer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-ra-QgB">
-                                                <rect key="frame" x="16" y="57" width="343" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="16" y="57" width="343" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyX-IT-Fyp">
-                                                <rect key="frame" x="16" y="111.5" width="36" height="20.5"/>
+                                                <rect key="frame" x="16" y="112.5" width="36" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Dec 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVy-bI-d5O">
-                                                <rect key="frame" x="82" y="111.5" width="96.5" height="20.5"/>
+                                                <rect key="frame" x="82" y="112.5" width="96.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conquer PMhee the king" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r33-gy-bBc">
-                                                <rect key="frame" x="16" y="85.5" width="343" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <rect key="frame" x="16" y="86.5" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAI-1B-kpv">
-                                                <rect key="frame" x="82" y="139.5" width="277" height="21"/>
+                                                <rect key="frame" x="82" y="140.5" width="277" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="2Jx-w8-uVU"/>
                                                 </constraints>
@@ -82,7 +81,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dai-mh-2uM">
-                                                <rect key="frame" x="16" y="139.5" width="42" height="20.5"/>
+                                                <rect key="frame" x="16" y="140.5" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -131,14 +130,14 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjF-D5-dXu" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="177.5" width="367" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjF-D5-dXu" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="178.5" width="367" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lo-oK-9tD">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-passcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-RG-Mrs">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="eCO-O6-dp1"/>
                                                             <constraint firstAttribute="height" constant="25" id="qYx-S4-hZc"/>
@@ -152,7 +151,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXY-1l-ryB">
-                                                        <rect key="frame" x="49" y="14" width="135" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="135" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -171,13 +170,16 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter code here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afq-L6-zQq">
-                                                <rect key="frame" x="16" y="66" width="331" height="50"/>
+                                                <rect key="frame" x="16" y="66" width="330.5" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="8ZD-n9-Am6"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="tf_passcode_change:" destination="E2T-wC-zYz" eventType="editingChanged" id="q7z-l5-s0q"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,6 +194,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="bj5-BL-XJU" firstAttribute="top" secondItem="yCf-mf-jDf" secondAttribute="top" constant="4" id="NvR-gp-2Op"/>
                                     <constraint firstItem="pjF-D5-dXu" firstAttribute="centerX" secondItem="bj5-BL-XJU" secondAttribute="centerX" id="PNB-JD-iAV"/>
@@ -224,6 +227,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lb_task_date" destination="FVy-bI-d5O" id="Mbl-dQ-XUY"/>
+                        <outlet property="lb_task_des" destination="r33-gy-bBc" id="hEO-ez-vzK"/>
+                        <outlet property="lb_task_location" destination="UAI-1B-kpv" id="XXr-TU-zlf"/>
+                        <outlet property="lb_task_title" destination="uUq-ra-QgB" id="1Qw-Gl-Ea2"/>
+                        <outlet property="tf_verification" destination="Afq-L6-zQq" id="1gB-Z9-B7R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnH-bx-ava" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

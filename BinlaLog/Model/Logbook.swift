@@ -42,4 +42,7 @@ class Logbook:Object{
     @objc dynamic var deletetime : Date?
     @objc dynamic var note : String = ""
     @objc dynamic var hospitalid : String = ""
+    @objc dynamic var feelingMessage : String = ""
+    @objc dynamic var latitude : Double = 0
+    @objc dynamic var longitude : Double = 0
 }

@@ -12,7 +12,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     //Handle APP
     func handleApp(){
         #if GILOG
-            self.tf_hn.keyboardType = .numberPad
+        self.tf_hn.keyboardType = .numberPad
         #endif
     }
     //Routing Data
@@ -20,11 +20,13 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     var rotationid : String = ""
     var logbookid : String = ""
     var taskid : String = ""
+    var questid : String = ""
     var procedureids = [String]()
     var isTask = false
     //Varaible
     var isTeacher = false
     var isEnableEditing = true
+    var isAccept = false
     
     //Quest
     @IBOutlet weak var lb_quest_name: UILabel!
@@ -53,6 +55,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     @IBOutlet weak var img_feel_4: UIButton!
     @IBOutlet weak var img_feel_5: UIButton!
     @IBOutlet weak var tf_date: NTextField!
+    @IBOutlet weak var tf_hn_year: NTextField!
     
     @IBOutlet weak var tf_institute: NTextField!
     @IBOutlet weak var tf_passcode: UITextField!
@@ -61,6 +64,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     @IBOutlet weak var img_teacher_profile: UIImageView!
     @IBOutlet weak var lb_teacher_name: UILabel!
     @IBOutlet weak var lb_verification_date: UILabel!
+    @IBOutlet weak var tf_feeling: UITextField!
     
     @IBOutlet weak var cons_course_top: NSLayoutConstraint!
     @IBOutlet weak var cons_bottom: NSLayoutConstraint!
@@ -72,6 +76,10 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     @IBAction func btn_message_action(_ sender: UIButton) {
         self.performSegue(withIdentifier: "feedback", sender: self)
     }
+    @IBAction func tf_feeling_action(_ sender: UITextField) {
+        self.viewModel.feelingMessage = sender.text ?? ""
+    }
+    
     @IBAction func btn_procedure_information(_ sender: UIButton) {
         self.performSegue(withIdentifier: "info", sender: self)
     }
@@ -93,13 +101,34 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
         }else if self.viewModel.date < self.viewModel.rotationstarttime{
             Helper.addAlert(sender: self, title: "", message: "Cannot add logbook that date earlier than rotation starttime")
         }else {
+            let view = Helper.showLoading(sender: self)
             Helper.showLoading(sender: self)
-            BackRotation.getInstance().updateLogbook(viewModel: self.viewModel, finish: {
-                self.dismiss(animated: false, completion: nil)
-                self.dismiss(animated: true, completion: nil)
+            BackRotation.getInstance().updateLogbook(viewModel: self.viewModel, finish: {content in
+                if (content.value(forKey: "type") as? String ?? "") == "error"{
+                    self.dismiss(animated: true, completion: nil)
+                    Helper.addAlert(sender: self, title: (content.value(forKey: "content") as? String) ?? "", message: (content.value(forKey: "message") as? String) ?? "")
+                }else{
+                    if self.viewModel.questId != "" {
+                        if let cont = content.value(forKey: "content") as? NSDictionary{
+                            if let id = cont.value(forKey: "id") as? String{
+                                APIRotation.updateTaskProcedure(logbookid:id,viewModel: self.viewModel, finish: {(success) in
+                                    view.dismiss(animated: false, completion: nil)
+                                    self.dismiss(animated: true, completion: nil)
+                                }, fail: {(error) in
+                                    view.dismiss(animated: false, completion: nil)
+                                    Helper.addAlert(sender: self, title: "FAIL", message: "Need verification")
+                                })
+                            }
+                        }
+                        
+                    }else{
+                        self.dismiss(animated: false, completion: nil)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
             }, error: {
                 self.dismiss(animated: false, completion: nil)
-                Helper.showWarning(sender: self, text: "Internet connection error")
+                Helper.addAlert(sender: self, title: "FAIL", message: "Server error please contact admin")
             })
         }
     }
@@ -117,6 +146,12 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
         
     }
     
+    @IBAction func tf_hn_year_change(_ sender: NTextField) {
+        guard let text = sender.text else {
+            return
+        }
+        self.viewModel.hn_year = text
+    }
     @IBAction func tf_hn_change(_ sender: NTextField) {
         guard let text = sender.text else {
             return
@@ -184,6 +219,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
             self.sg_proctype.watch(subject: self.viewModel.logtype)
             self.sg_patient_type.watch(subject: self.viewModel.patientType)
             self.tf_hn.watch(subject: self.viewModel.hn)
+            self.tf_hn_year.watch(subject: self.viewModel.hn_year)
             self.tf_passcode.watch(subject: self.viewModel.verification)
             self.lb_message.watch(subject: self.viewModel.message)
             self.addTeacherComment()
@@ -192,6 +228,7 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
             }else{
                 self.lb_note_placeholder.isHidden = true
             }
+            self.tf_feeling.watch(subject: self.viewModel.feelingMessage)
             self.tv_note.text = self.viewModel.note
             self.tf_institute.watch(subject: self.viewModel.institute)
             
@@ -249,14 +286,19 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
     }
     func initTask(){
         if let task = BackCourse.getInstance().getTask(id: self.taskid){
+            self.viewModel.taskId = self.taskid
+            self.viewModel.questId = self.questid
             self.lb_quest_name.text = task.name
             self.lb_quest_des.text = task.des
             self.lb_quest_date.text = task.datetime?.convertToStringOnlyDate() ?? ""
             self.lb_quest_place.text = task.place
             self.vw_quest.layoutIfNeeded()
+        }else{
+            self.vw_quest.isHidden = true
         }
     }
     func setUI(){
+        self.title = Constant().getFirstPageTitle()
         if self.isEnableEditing{
             if !self.isTask{
                 self.navigationItem.setLeftBarButton(nil, animated: false)
@@ -288,14 +330,16 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
             self.lb_rotation_deadline.textColor = .lightGray
             self.tv_note.textColor = .lightGray
             self.tf_institute.textColor = .lightGray
-            self.btn_info.isHidden = true
             self.tv_note.isEditable = false
+            self.btn_info.isHidden = true
             self.navigationItem.setRightBarButton(nil, animated: false)
         }else{
             if self.isTask{
                 self.tag_procedure.enableRemoveButton = false
                 self.tf_procedure.isEnabled = false
                 self.tf_procedure.textColor = .lightGray
+            }else if self.isAccept{
+                self.navigationItem.setRightBarButton(nil, animated: false)
             }
             self.vw_message.isHidden = true
         }
@@ -317,6 +361,13 @@ class ProcedureAddViewController: UIViewController,UITextFieldDelegate,TagListVi
         if segue.identifier == "feedback"{
             if let des = segue.destination as? CommentViewController{
                 des.viewModel = self.viewModel
+            }
+        }else if segue.identifier == "info"{
+            if let des = segue.destination as? SummaryDetailViewController{
+                des.rotationid = self.rotationid
+                des.header = "Done"
+                des.dict = BackRotation.getInstance().summaryProcedureDone(rotationid: self.rotationid)
+                des.isEnableEditing = false
             }
         }
     }

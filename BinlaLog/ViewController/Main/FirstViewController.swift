@@ -14,8 +14,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUI()
-        BackNotification.getInstance().cutDown(list: BackNotification.getInstance().listLogbook(), number: 200)
-        BackNotification.getInstance().cutDown(list: BackNotification.getInstance().listPatient(), number: 200)
+//        BackNotification.getInstance().cutDown(list: BackNotification.getInstance().listLogbook(), number: 200)
+//        BackNotification.getInstance().cutDown(list: BackNotification.getInstance().listPatient(), number: 200)
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -26,5 +26,11 @@ class FirstViewController: UIViewController {
         self.img_logo.layer.cornerRadius = 5
         self.img_logo.layer.masksToBounds = true
         self.img_logo.image = UIImage(named:Constant().getLogo())
+    }
+    func doLogout(){
+        Helper.delay(2, closure: {
+            BackUser.getInstance().removeAll()
+            self.performSegue(withIdentifier: "doLogin", sender: self)
+        })
     }
 }

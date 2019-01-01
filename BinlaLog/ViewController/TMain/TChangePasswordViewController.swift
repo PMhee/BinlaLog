@@ -18,8 +18,8 @@ class TChangePasswordViewController: UIViewController {
             if self.tf_new_password.text!.characters.count > 5{
                 BackUser.getInstance().changePassword(old: self.tf_old_password.text!, new: self.tf_new_password.text!, success: {
                     self.navigationController?.popViewController(animated: true)
-                }, error: {(error) in
-                    let alert = UIAlertController(title: error, message: "", preferredStyle: .alert)
+                }, error: {
+                    let alert = UIAlertController(title: "Wrong password", message: "", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in }))
                     self.present(alert, animated: true, completion: nil)
                 })

@@ -43,7 +43,7 @@ extension HistoryViewController{
             action in
             print("Cancel")
         }))
-        actionSheet.addAction(UIAlertAction(title: "Procedure", style: .default, handler: {
+        actionSheet.addAction(UIAlertAction(title: "\(Constant().getFirstPageTitle())", style: .default, handler: {
             action in
             self.isAddProcedure = true
             if let user = self.viewModel.user{

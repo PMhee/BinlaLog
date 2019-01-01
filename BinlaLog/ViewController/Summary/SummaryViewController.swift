@@ -101,7 +101,7 @@ extension SummaryViewController{
     }
     func initProcedure(){
         var procedure = [String:String]()
-        procedure["Procedure type"] = String(BackRotation.getInstance().summaryProcedureDone(rotationid: self.viewModel.rotation!.id).count)
+        procedure["\(Constant().getFirstPageTitle())"] = String(BackRotation.getInstance().summaryProcedureDone(rotationid: self.viewModel.rotation!.id).count)
         self.viewModel.procedure = procedure.sortedByKey
     }
     func initPatient(){

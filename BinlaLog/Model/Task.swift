@@ -21,4 +21,5 @@ class Task:Object{
     var taskLogPatient = List<ForeignPatientcare>()
     @objc dynamic var type : Int = 0
     @objc dynamic var updatetime : Date = Date()
+    @objc dynamic var noLog : Int = 0 
 }

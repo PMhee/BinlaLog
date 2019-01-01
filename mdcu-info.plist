@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.00</string>
+	<string>3.21</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) Camera use</string>
+	<string>$(PRODUCT_NAME) need your allowcation to use phone camera for recording cases </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location will be collected to our database for evaluating your score.We are checking your location for confirming you are at the right place and right time when you wrote the logbook.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) Gallery use</string>
+	<string>$(PRODUCT_NAME) need your allowcation to use phone gallery for recording cases </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

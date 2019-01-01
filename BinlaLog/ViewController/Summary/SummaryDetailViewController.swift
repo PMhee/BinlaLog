@@ -12,8 +12,10 @@ class SummaryDetailViewController: UIViewController {
     //Routing
     var dict = [String:Int]()
     var header : String = ""
-    var index = 0
     var rotationid : String = ""
+    var isEnableEditing : Bool = true
+    //Variable
+    var index = 0
     @IBOutlet weak var tableView: UITableView!
     var viewModel = ViewModel(){
         didSet{
@@ -85,6 +87,7 @@ extension SummaryDetailViewController:UITableViewDelegate,UITableViewDataSource{
                 des.rotationid = self.rotationid
                 if let procedure = BackProcedure.getInstance().get(key: self.viewModel.dict[self.index].0).first{
                     des.procedureid = procedure.id
+                    des.isEnableEditing = self.isEnableEditing
                 }
             }
         }else if segue.identifier == "patient"{

@@ -94,9 +94,35 @@ extension TPatientNotificationViewController:UITableViewDelegate,UITableViewData
             let lb_profile = cell.viewWithTag(2) as! UILabel
             let lb_date = cell.viewWithTag(3) as! UILabel
             let lb_diagnosis = cell.viewWithTag(4) as! UILabel
-            Helper.loadLocalImage(id: self.viewModel.patientUser[indexPath.row].user?.id ?? "", image: img_profile)
+            let lb_verification = cell.viewWithTag(5) as! UILabel
             if let user = self.viewModel.patientUser[indexPath.row].user{
                 lb_profile.text = user.firstname + " " + user.lastname + " " + user.studentid
+                Helper.loadServerImage(link: user.picurl, success: {(image) in
+                    img_profile.image = image
+                })
+            }
+            img_profile.layer.cornerRadius = 20
+            img_profile.layer.borderWidth = 1
+            img_profile.layer.borderColor = UIColor(netHex: 0xeeeeee).cgColor
+            img_profile.layer.masksToBounds = true
+            if let logbook = self.viewModel.patientUser[indexPath.row].patient{
+                switch logbook.verificationstatus{
+                case 0 :
+                    lb_verification.text = "Pending"
+                    lb_verification.textColor = UIColor.lightGray
+                case 1 :
+                    lb_verification.text = "Accepted"
+                    lb_verification.textColor = UIColor(netHex:0x63D79F)
+                case 2 :
+                    lb_verification.text = "Accepted"
+                    lb_verification.textColor = UIColor(netHex:0x63D79F)
+                case -1:
+                    lb_verification.text = "Rejected"
+                    lb_verification.textColor = UIColor(netHex:0xD93829)
+                default:
+                    lb_verification.text = "Pending"
+                    lb_verification.textColor = UIColor.lightGray
+                }
             }
             lb_date.text = Date().recent(from: (self.viewModel.patientUser[indexPath.row].patient?.verifytime)!)
             var diag = [String]()

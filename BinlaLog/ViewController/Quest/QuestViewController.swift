@@ -21,15 +21,31 @@ class QuestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUI()
+        self.addObserver()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-      //  self.initViewModel()
+        self.initViewModel()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.reloadData()
+        self.tableView.reload()
         self.tableView.layoutIfNeeded()
+    }
+    func addObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(onSelectTask), name: .selectTask, object: nil)
+    }
+    @objc func onSelectTask(notification:Notification){
+        if let id = notification.userInfo?["id"] as? String{
+            if let task = BackCourse.getInstance().getTask(id: id){
+                self.selectedTask = task
+                if task.type == 2 {
+                    self.performSegue(withIdentifier: "procedure", sender: self)
+                }else if task.type == 1{
+                    self.performSegue(withIdentifier: "attendance", sender: self)
+                }
+            }
+        }
     }
     func setUI(){
         func setUI(){
@@ -51,12 +67,14 @@ class QuestViewController: UIViewController {
                     des.procedureids = procedures
                     des.isTask = true
                     des.taskid = self.selectedTask.id
+                    des.questid = self.selectedTask.questid
                     des.rotationid = BackUser.getInstance().get()?.currentSelectRotation ?? ""
                 }
             }
         }else if segue.identifier == "attendance"{
             if let top = segue.destination as? UINavigationController{
                 if let des = top.topViewController as? QuestAddViewController{
+                    des.task = self.selectedTask
                     
                 }
             }
@@ -77,25 +95,14 @@ extension QuestViewController{
 extension QuestViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.viewModel.quests.count > 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            let img = cell.viewWithTag(1) as! UIImageView
-            let lb_quest = cell.viewWithTag(2) as! UILabel
-            let lb_description = cell.viewWithTag(3) as! UILabel
-            let lb_date_place = cell.viewWithTag(4) as! UILabel
-            let lb_procedures = cell.viewWithTag(5) as! UILabel
-            let lb_done = cell.viewWithTag(6) as! UILabel
-            lb_description.font = lb_description.font.setItalic()
-            lb_quest.text = self.viewModel.quests[indexPath.row].name
-            lb_description.text = self.viewModel.quests[indexPath.row].des
-            if let task = BackCourse.getInstance().getTask(id: self.viewModel.quests[indexPath.row].task.first?.taskid ?? ""){
-                lb_date_place.text = (task.datetime?.convertToStringOnlyDate() ?? "" ) + (task.place.isEmpty ? "" : " at " + task.place)
-                for i in 0..<task.taskLogProcedure.count{
-                    if let procedure = BackProcedure.getInstance().get(id: task.taskLogProcedure[i].procedureid){
-                        lb_procedures.text = (lb_procedures.text ?? "") + "・ \(procedure.name) \n"
-                    }
-                }
-            }
-            lb_done.text = "\(self.viewModel.quests[indexPath.row].questCount )/\(self.viewModel.quests[indexPath.row].questRequirement)"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "quest", for: indexPath) as! QuestTableViewCell
+            cell.selectionStyle = .none
+            cell.lb_des.font = cell.lb_des.font.setItalic()
+            cell.lb_header.text = self.viewModel.quests[indexPath.row].name
+            cell.lb_des.text = self.viewModel.quests[indexPath.row].des
+            cell.task = Array(self.viewModel.quests[indexPath.row].task)
+            cell.view = self
+            cell.setDeletegate()
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "notfound", for: indexPath)
@@ -115,18 +122,5 @@ extension QuestViewController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        if self.viewModel.quests.count > 0 {
-            if let task = BackCourse.getInstance().getTask(id: self.viewModel.quests[indexPath.row].task.first?.taskid ?? ""){
-                self.selectedTask = task
-                if task.type == 2 {
-                    self.performSegue(withIdentifier: "procedure", sender: self)
-                }else if task.type == 1{
-                    self.performSegue(withIdentifier: "attendance", sender: self)
-                }
-            }
-        }
     }
 }

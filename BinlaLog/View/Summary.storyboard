@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uuq-r8-C3f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uuq-r8-C3f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueExtras.ttc">
-            <string>HelveticaNeue-CondensedBlack</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Summary-->
         <scene sceneID="ofl-Ap-Jjs">
@@ -118,7 +113,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" text="80" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-qo-D1P">
-                                                                    <rect key="frame" x="318" y="8.5" width="25" height="24"/>
+                                                                    <rect key="frame" x="318.5" y="8.5" width="24.5" height="24"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -271,7 +266,7 @@
         <!--Summary Detail View Controller-->
         <scene sceneID="72j-Nc-z0a">
             <objects>
-                <viewController id="je9-We-V3W" customClass="SummaryDetailViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SummaryDetailViewController" id="je9-We-V3W" customClass="SummaryDetailViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mv2-UH-8Dp"/>
                         <viewControllerLayoutGuide type="bottom" id="WEK-i5-9ld"/>
@@ -686,11 +681,11 @@
                                                         <rect key="frame" x="0.0" y="28" width="359" height="60"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MX2-KS-Z9f" id="qNt-Bx-tt4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="59.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKd-y6-Tk6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="56"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="55.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O46-YZ-hOX">
                                                                             <rect key="frame" x="293.5" y="31" width="49.5" height="16"/>
@@ -711,7 +706,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hours ago as performer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERR-JK-rox">
-                                                                    <rect key="frame" x="36" y="30" width="154.5" height="18"/>
+                                                                    <rect key="frame" x="36" y="30.5" width="154.5" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1117,6 +1112,6 @@
         <image name="pic-rocket.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Eb5-2x-qsA"/>
+        <segue reference="9gU-Pt-Edb"/>
     </inferredMetricsTieBreakers>
 </document>

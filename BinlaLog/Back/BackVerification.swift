@@ -30,6 +30,9 @@ class BackVerification:Back{
             if let canceltime = content.value(forKey: "canceltime") as? String{
                 verification.canceltime = canceltime.convertToDate()
             }
+            if let timesUsable = content.value(forKey: "timesUsable") as? Int{
+                verification.limit = timesUsable
+            }
             if let lbuserid = content.value(forKey: "lbuserid") as? String{
                 verification.lbuserid = lbuserid
             }
@@ -57,7 +60,7 @@ class BackVerification:Back{
                     }
                 }
             }
-        }, fail: {
+        }, fail: {(error) in
             fail("internet")
         })
     }
@@ -79,6 +82,14 @@ class BackVerification:Back{
         }, fail: {
             
         })
+    }
+    func updateLimit(limit:Int,finish:@escaping () ->Void){
+        APIVerification.updateLimit(limit: limit, finish: {(success) in
+            if let content = success.value(forKey: "content") as? NSDictionary{
+                self.loadCode(content: content)
+            }
+            finish()
+        }, fail: {})
     }
     func cancelVerification(finish:@escaping () ->Void){
         APIVerification.cancelVerification(finish: {(success) in

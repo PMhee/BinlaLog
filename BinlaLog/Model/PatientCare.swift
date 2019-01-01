@@ -31,4 +31,6 @@ class PatientCare:Object{
     @objc dynamic var verifytime : Date?
     @objc dynamic var note : String = ""
     @objc dynamic var hospitalid : String = ""
+    @objc dynamic var latitude : Double = 0
+    @objc dynamic var longitude : Double = 0
 }

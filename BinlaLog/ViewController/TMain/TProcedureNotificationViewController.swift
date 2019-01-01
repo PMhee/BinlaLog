@@ -108,16 +108,43 @@ extension TProcedureNotificationViewController:UITableViewDelegate,UITableViewDa
             let lb_profile = cell.viewWithTag(2) as! UILabel
             let lb_date = cell.viewWithTag(3) as! UILabel
             let lb_procedure = cell.viewWithTag(4) as! UILabel
-            Helper.loadLocalImage(id: self.viewModel.logbookProcedure[indexPath.row].logbook?.lbuserid ?? "", image: img_profile)
+            let lb_verification = cell.viewWithTag(5) as! UILabel
             if let user = BackUser.getInstance().getPerson(id: self.viewModel.logbookProcedure[indexPath.row].logbook?.lbuserid ?? ""){
                 lb_profile.text = user.firstname + " " + user.lastname + " " + user.studentid
+                Helper.loadServerImage(link: user.picurl, success: {(image) in
+                    img_profile.image = image
+                })
             }
+            img_profile.layer.cornerRadius = 20
+            img_profile.layer.borderWidth = 1
+            img_profile.layer.borderColor = UIColor(netHex: 0xeeeeee).cgColor
+            img_profile.layer.masksToBounds = true
             lb_date.text = Date().recent(from: (self.viewModel.logbookProcedure[indexPath.row].logbook?.verifytime)!)
             if let procedure = self.viewModel.logbookProcedure[indexPath.row].procedure{
                 lb_procedure.text = procedure.name
             }
+            if let logbook = self.viewModel.logbookProcedure[indexPath.row].logbook{
+                switch logbook.verificationstatus{
+                case 0 :
+                    lb_verification.text = "Pending"
+                    lb_verification.textColor = UIColor.lightGray
+                case 1 :
+                    lb_verification.text = "Accepted"
+                    lb_verification.textColor = UIColor(netHex:0x63D79F)
+                case 2 :
+                    lb_verification.text = "Accepted"
+                    lb_verification.textColor = UIColor(netHex:0x63D79F)
+                case -1:
+                    lb_verification.text = "Rejected"
+                    lb_verification.textColor = UIColor(netHex:0xD93829)
+                default:
+                    lb_verification.text = "Pending"
+                    lb_verification.textColor = UIColor.lightGray
+                }
+            }
             img_profile.layer.cornerRadius = 2
             img_profile.layer.masksToBounds = true
+            
             return cell
         }
     }

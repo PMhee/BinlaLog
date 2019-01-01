@@ -52,9 +52,9 @@ class ProcedureTableViewCell: UITableViewCell,UITableViewDelegate,UITableViewDat
             cell.lb_observe.text = "0"
             for i in 0..<progress.count{
                 switch Array(progress.keys)[i]{
-                case 1:cell.lb_assist.text = "\(Array(progress.values)[i])"
-                case 2:cell.lb_perform.text = "\(Array(progress.values)[i])"
-                case 0:cell.lb_observe.text = "\(Array(progress.values)[i])"
+                case 1:cell.lb_assist.text = "\(Array(progress.values)[i])" + ((self.procedures[indexPath.row].assistMinReq == 0) ? "" : "/\(self.procedures[indexPath.row].assistMinReq)")
+                case 2:cell.lb_perform.text = "\(Array(progress.values)[i])" + ((self.procedures[indexPath.row].performMinReq == 0) ? "" : "/\(self.procedures[indexPath.row].performMinReq)")
+                case 0:cell.lb_observe.text = "\(Array(progress.values)[i])" + ((self.procedures[indexPath.row].observeMinReq == 0) ? "" : "/\(self.procedures[indexPath.row].observeMinReq)")
                 default:
                     cell.lb_assist.text = "0"
                     cell.lb_perform.text = "0"

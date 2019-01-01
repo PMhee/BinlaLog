@@ -11,7 +11,9 @@ import UIKit
 import MapKit
 extension PatientViewController{
     struct ViewModel {
+        var logbookDeadline : Date = Date()
         var hn : String!
+        var hn_year : String!
         var name : String!
         var course : String!
         var deadline : Date!
@@ -273,15 +275,19 @@ extension PatientViewController:CLLocationManagerDelegate{
         if currentLocation == nil {
             // Zoom to user location
             if let userLocation = locations.last {
-                let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
-                self.map.setRegion(viewRegion, animated: false)
                 var yourLocation = MKPointAnnotation()
-        
-                yourLocation.coordinate.latitude = userLocation.coordinate.latitude
-                yourLocation.coordinate.longitude = userLocation.coordinate.longitude
-                self.viewModel.latitude = userLocation.coordinate.latitude
-                self.viewModel.longitude = userLocation.coordinate.longitude
-                yourLocation.title = "Your Location"
+                if self.viewModel.latitude != 0.0 && self.viewModel.longitude != 0.0 {
+                    yourLocation.coordinate.latitude = self.viewModel.latitude
+                    yourLocation.coordinate.longitude = self.viewModel.longitude
+                }else{
+                    yourLocation.coordinate.latitude = userLocation.coordinate.latitude
+                    yourLocation.coordinate.longitude = userLocation.coordinate.longitude
+                    self.viewModel.latitude = userLocation.coordinate.latitude
+                    self.viewModel.longitude = userLocation.coordinate.longitude
+                }
+                let viewRegion = MKCoordinateRegionMakeWithDistance(yourLocation.coordinate, 2000, 2000)
+                self.map.setRegion(viewRegion, animated: false)
+                yourLocation.title = "Location"
                 self.map.addAnnotation(yourLocation)
                 self.initHospital()
             }
@@ -292,7 +298,13 @@ extension PatientViewController.ViewModel{
     init(passcode:String="",type:Int=0,patientcare:PatientCare = PatientCare(),rotationid:String = "") {
         self.passcode = passcode
         self.type = patientcare.patienttype
-        self.hn = patientcare.HN
+        if patientcare.HN.count > 2{
+        self.hn = patientcare.HN.substring(to: patientcare.HN.count-2)
+        self.hn_year = patientcare.HN.substring(from: patientcare.HN.count-2)
+        }else{
+            self.hn = patientcare.HN
+            self.hn_year = ""
+        }
         self.name = patientcare.name
         self.course = ""
         self.deadline = Date()
@@ -309,6 +321,8 @@ extension PatientViewController.ViewModel{
             self.verification = verification.verifycode
             self.verificationid = verification.id
         }
+        self.latitude = patientcare.latitude
+        self.longitude = patientcare.longitude
         self.lbuserid = patientcare.lbuserid
         self.verifydate = patientcare.verifytime
         self.message = patientcare.verifymessage
@@ -328,7 +342,7 @@ extension PatientViewController.ViewModel{
                 if patientcare.endtime == nil{
                     #if GILOG
                     #else
-                    self.enddate = rotation.endtime
+                    self.enddate = Date()
                     #endif
                 }else{
                     self.enddate = patientcare.endtime!

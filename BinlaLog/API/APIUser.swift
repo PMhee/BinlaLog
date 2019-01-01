@@ -24,11 +24,12 @@ class APIUser:API{
             fail("")
         })
     }
-    static func changePassword(old:String,new:String,finish: @escaping (_ response: NSDictionary) -> Void){
+    static func changePassword(old:String,new:String,finish: @escaping (_ response: NSDictionary) -> Void,error: @escaping () -> Void){
         let parameter = ["oldpasswd":old,"newpasswd":new]
         self.request(urlType: .service, httpMethod: .put, path: "changePW", parameter: parameter, success: {(success) in
             finish(success)
-        }, failure: {(error) in
+        }, failure: {(e) in
+            error()
         })
     }
     static func getUserInfo(finish: @escaping (_ response: NSDictionary) -> Void){
@@ -48,6 +49,7 @@ class APIUser:API{
     static func uploadProfilePic(image:UIImage,key:String,finish: @escaping (_ response: NSDictionary) -> Void){
         let parameter = ["key":key]
         self.upload(image:image,urlType: .service, httpMethod: .post, path: "userInfo/image/profile", parameter: parameter, success: {(success) in
+            
             finish(success)
         }, failure: {
         })

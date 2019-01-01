@@ -104,8 +104,8 @@ class BackCourse{
                     quest = self.getQuest(id: id)!
                 }
             }
-            if let courseid = content.value(forKey: "courseid") as? String{
-               quest.courseid = courseid
+            if let courseid = content.value(forKey: "courseId") as? String{
+                quest.courseid = courseid
             }
             if let des = content.value(forKey: "description") as? String{
                 quest.des = des
@@ -123,7 +123,6 @@ class BackCourse{
             if let tasks = content.value(forKey: "tasks") as? NSArray{
                 for i in 0..<tasks.count{
                     if let task = tasks[i] as? NSDictionary{
-                        self.loadTask(content: task)
                         if let id = task.value(forKey: "id") as? String{
                             let foreign = ForeignTask()
                             foreign.taskid = id
@@ -136,45 +135,55 @@ class BackCourse{
                 try! Realm().add(quest)
             }
         }
+        if let tasks = content.value(forKey: "tasks") as? NSArray{
+            for i in 0..<tasks.count{
+                if let task = tasks[i] as? NSDictionary{
+                    self.loadTask(content: task)
+                }
+            }
+        }
     }
     func loadTask(content:NSDictionary){
         var task = Task()
-        if let id = content.value(forKey: "id") as? String{
-            task.id = id
-            if self.getTask(id: id) != nil {
-                task = self.getTask(id: id)!
+        try! Realm().write {
+            if let id = content.value(forKey: "id") as? String{
+                task.id = id
+                if self.getTask(id: id) != nil {
+                    task = self.getTask(id: id)!
+                }
             }
-        }
-        if let datetime = content.value(forKey: "datetime") as? String{
-            task.datetime = datetime.convertToDate()
-        }
-        if let des = content.value(forKey: "description") as? String{
-            task.des = des
-        }
-        if let isNeedVerify = content.value(forKey: "isNeedVerify") as? Bool{
-            task.isNeedVerify = isNeedVerify
-        }
-        if let name = content.value(forKey: "name") as? String{
-            task.name = name
-        }
-        if let place = content.value(forKey: "place") as? String{
-            task.place = place
-        }
-        if let questId = content.value(forKey: "questId") as? String{
-            task.questid = questId
-        }
-        if let taskNo = content.value(forKey: "taskNo") as? Int{
-            task.taskNo = taskNo
-        }
-        if let type = content.value(forKey: "type") as? Int{
-            task.type = type
-        }
-        if let updatetime = content.value(forKey: "updatetime") as? String{
-            task.updatetime = updatetime.convertToDate()
-        }
-        task.taskLogProcedure.removeAll()
-        if let taskLogProcedure = content.value(forKey: "taskLogProcedure") as? NSDictionary{
-            if let procedureIds = taskLogProcedure.value(forKey: "procedureIds") as? NSArray{
+            if let datetime = content.value(forKey: "datetime") as? String{
+                task.datetime = datetime.convertToDate()
+            }
+            if let des = content.value(forKey: "description") as? String{
+                task.des = des
+            }
+            if let isNeedVerify = content.value(forKey: "isNeedVerify") as? Bool{
+                task.isNeedVerify = isNeedVerify
+            }
+            if let name = content.value(forKey: "name") as? String{
+                task.name = name
+            }
+            if let noLog = content.value(forKey: "noLog") as? Int{
+                task.noLog = noLog
+            }
+            if let place = content.value(forKey: "place") as? String{
+                task.place = place
+            }
+            if let questId = content.value(forKey: "questId") as? String{
+                task.questid = questId
+            }
+            if let taskNo = content.value(forKey: "taskNo") as? Int{
+                task.taskNo = taskNo
+            }
+            if let type = content.value(forKey: "type") as? Int{
+                task.type = type
+            }
+            if let updatetime = content.value(forKey: "updatetime") as? String{
+                task.updatetime = updatetime.convertToDate()
+            }
+            task.taskLogProcedure.removeAll()
+            if let procedureIds = content.value(forKey: "procedureIds") as? NSArray{
                 for i in 0..<procedureIds.count{
                     if let id = procedureIds[i] as? String{
                         let foreign = ForeignProcedure()
@@ -183,9 +192,16 @@ class BackCourse{
                     }
                 }
             }
+            if self.getTask(id: task.id) == nil {
+                try! Realm().add(task)
+            }
         }
-        if self.getTask(id: task.id) == nil {
-            try! Realm().add(task)
+        if let procedures = content.value(forKey: "procedures") as? NSArray{
+            for i in 0..<procedures.count{
+                if let pro = procedures[i] as? NSDictionary{
+                    BackProcedure.getInstance().loadProcedure(content: pro)
+                }
+            }
         }
     }
     func get(id:String) -> Course?{

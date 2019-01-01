@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nlv-pP-1BY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nlv-pP-1BY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Procedure-->
         <scene sceneID="1W4-CS-AbI">
             <objects>
-                <viewController id="6H0-Aq-7p3" customClass="ProcedureViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6H0-Aq-7p3" customClass="ProcedureViewController" customModule="Abhailog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1tI-af-9uy"/>
                         <viewControllerLayoutGuide type="bottom" id="nc8-zC-H8g"/>
@@ -26,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="286" id="yMG-e3-XCn" customClass="ProcedureTableViewCell" customModule="BinlaLog" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="286" id="yMG-e3-XCn" customClass="ProcedureTableViewCell" customModule="Abhailog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="286"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yMG-e3-XCn" id="Kt8-YC-aaM">
@@ -46,7 +45,7 @@
                                                         <constraint firstAttribute="height" constant="238.5" id="r2i-RO-sZS"/>
                                                     </constraints>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="Pui-HF-aUk" customClass="ProcedureInfoTableViewCell" customModule="BinlaLog" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="Pui-HF-aUk" customClass="ProcedureInfoTableViewCell" customModule="Abhailog" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pui-HF-aUk" id="Td7-WW-ozY">
@@ -74,33 +73,33 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-ze-hEX">
-                                                                        <rect key="frame" x="43" y="82.5" width="9" height="17"/>
+                                                                        <rect key="frame" x="43" y="82" width="9" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-assist.png" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-0D-14c">
-                                                                        <rect key="frame" x="60" y="81" width="20" height="20"/>
+                                                                        <rect key="frame" x="60" y="80.5" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="JEH-b7-tdT"/>
                                                                             <constraint firstAttribute="height" constant="20" id="opZ-38-NF2"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0j-DF-bdf">
-                                                                        <rect key="frame" x="88" y="83" width="9" height="17"/>
+                                                                        <rect key="frame" x="88" y="82" width="9" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-perform.png" translatesAutoresizingMaskIntoConstraints="NO" id="p6z-Gj-M3l">
-                                                                        <rect key="frame" x="105" y="82.5" width="20" height="18"/>
+                                                                        <rect key="frame" x="105" y="81.5" width="20" height="18"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="vCT-PW-iGf"/>
                                                                             <constraint firstAttribute="height" constant="18" id="z1l-Qy-h0O"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A7-0R-RVB">
-                                                                        <rect key="frame" x="133" y="83.5" width="9" height="17"/>
+                                                                        <rect key="frame" x="133" y="82" width="9" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -192,14 +191,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic-rocket.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdt-aB-nPj">
-                                                    <rect key="frame" x="112" y="80" width="150" height="150"/>
+                                                    <rect key="frame" x="112.5" y="80" width="150" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="YOs-gK-Cgg"/>
                                                         <constraint firstAttribute="width" constant="150" id="eKp-WD-ntt"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgH-oj-1OJ">
-                                                    <rect key="frame" x="136" y="250" width="102.5" height="18"/>
+                                                    <rect key="frame" x="136.5" y="250" width="102.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -222,12 +221,12 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="zl2-NF-vhH">
-                                <rect key="frame" x="177" y="80.5" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="80.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nc8-zC-H8g" firstAttribute="top" secondItem="q5n-tk-lFc" secondAttribute="bottom" id="3g1-ct-dH7" customClass="KeyboardwoTab" customModule="BinlaLog" customModuleProvider="target"/>
+                            <constraint firstItem="nc8-zC-H8g" firstAttribute="top" secondItem="q5n-tk-lFc" secondAttribute="bottom" id="3g1-ct-dH7" customClass="KeyboardwoTab" customModule="Abhailog" customModuleProvider="target"/>
                             <constraint firstItem="q5n-tk-lFc" firstAttribute="width" secondItem="Wvv-H9-out" secondAttribute="width" id="6W2-YT-pdy"/>
                             <constraint firstItem="q5n-tk-lFc" firstAttribute="centerX" secondItem="Wvv-H9-out" secondAttribute="centerX" id="WUn-l1-kQc"/>
                             <constraint firstItem="zl2-NF-vhH" firstAttribute="centerY" secondItem="Wvv-H9-out" secondAttribute="centerY" multiplier="0.3" id="cF9-hj-gdg"/>
@@ -255,7 +254,7 @@
         <!--Delegate-->
         <scene sceneID="Oug-uc-RM8">
             <objects>
-                <viewController id="dbm-1P-gdb" customClass="ProcedureAddViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dbm-1P-gdb" customClass="ProcedureAddViewController" customModule="Abhailog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P8H-Og-5vS"/>
                         <viewControllerLayoutGuide type="bottom" id="K2Y-zP-2U7"/>
@@ -264,17 +263,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9r-a6-ds9" customClass="ScrollView" customModule="BinlaLog" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9r-a6-ds9" customClass="ScrollView" customModule="Abhailog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-Nv-9we" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-Nv-9we" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
                                         <rect key="frame" x="4" y="8" width="367" height="102"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbm-KE-NK7">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="vXb-fx-f0i">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="XVX-9o-dm2"/>
                                                             <constraint firstAttribute="height" constant="25" id="rIf-He-vBw"/>
@@ -288,7 +287,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJU-rZ-oMB">
-                                                        <rect key="frame" x="49" y="14" width="63" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="63" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -325,7 +324,7 @@
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfr-Nm-9yW" customClass="NLabel" customModule="BinlaLog" customModuleProvider="target">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfr-Nm-9yW" customClass="NLabel" customModule="Abhailog" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="102" width="0.0" height="0.0"/>
                                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -367,7 +366,7 @@
                                             <constraint firstItem="f29-eX-lKW" firstAttribute="leading" secondItem="gl4-Nv-9we" secondAttribute="leading" constant="16" id="ych-wo-QNH"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-uJ-Pll" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-uJ-Pll" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="367" height="169.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabQuest" translatesAutoresizingMaskIntoConstraints="NO" id="x1s-64-ECS">
@@ -473,7 +472,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2y-Pk-Pvg" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2y-Pk-Pvg" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="367" height="130"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-draft.png" translatesAutoresizingMaskIntoConstraints="NO" id="eES-Gx-YaM">
@@ -550,14 +549,14 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCk-Lf-ej2" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCk-Lf-ej2" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
                                         <rect key="frame" x="4" y="138" width="367" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9k-Vz-MSN">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabPatient" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-IY-Txp">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="ioi-MI-kLv"/>
                                                             <constraint firstAttribute="height" constant="25" id="k7S-Fw-5LH"/>
@@ -571,7 +570,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzS-9F-RbO">
-                                                        <rect key="frame" x="49" y="14" width="104.5" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="104.5" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -589,14 +588,15 @@
                                                     <constraint firstItem="XoU-Yr-hYy" firstAttribute="centerX" secondItem="U9k-Vz-MSN" secondAttribute="centerX" id="wpa-zV-yWW"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-bt-zME" customClass="NTextField" customModule="BinlaLog" customModuleProvider="target">
-                                                <rect key="frame" x="48.5" y="61.5" width="310.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-bt-zME" customClass="NTextField" customModule="Abhailog" customModuleProvider="target">
+                                                <rect key="frame" x="48.5" y="56.5" width="150" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="9fp-TJ-tvs"/>
+                                                    <constraint firstAttribute="height" constant="40" id="9fp-TJ-tvs"/>
+                                                    <constraint firstAttribute="width" constant="150" id="eUY-KZ-cRh"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="left">
                                                         <real key="value" value="0.0"/>
@@ -612,28 +612,51 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-hZ-QLy">
+                                                <rect key="frame" x="198.5" y="66" width="16" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTT-bD-3qJ" customClass="NTextField" customModule="Abhailog" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="56.5" width="50" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="TKy-rD-mh2"/>
+                                                    <constraint firstAttribute="height" constant="40" id="YSy-sF-jpd"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="tf_hn_year_change:" destination="dbm-1P-gdb" eventType="editingChanged" id="fJI-Dg-li3"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="U9k-Vz-MSN" firstAttribute="centerX" secondItem="GCk-Lf-ej2" secondAttribute="centerX" id="1Tn-Ow-Ij8"/>
+                                            <constraint firstItem="lTT-bD-3qJ" firstAttribute="centerY" secondItem="OOr-bt-zME" secondAttribute="centerY" id="Ag2-hv-zKN"/>
                                             <constraint firstItem="U9k-Vz-MSN" firstAttribute="width" secondItem="GCk-Lf-ej2" secondAttribute="width" id="BFU-AF-o0b"/>
                                             <constraint firstItem="OOr-bt-zME" firstAttribute="leading" secondItem="eSd-RV-3vz" secondAttribute="trailing" constant="8" id="M2a-Ly-tj0"/>
-                                            <constraint firstAttribute="trailing" secondItem="OOr-bt-zME" secondAttribute="trailing" constant="8" id="Q6I-oR-qx2"/>
+                                            <constraint firstItem="lTT-bD-3qJ" firstAttribute="leading" secondItem="OOr-bt-zME" secondAttribute="trailing" constant="16" id="Q7i-06-jU7"/>
                                             <constraint firstItem="U9k-Vz-MSN" firstAttribute="top" secondItem="GCk-Lf-ej2" secondAttribute="top" id="Vvm-Mh-ta7"/>
                                             <constraint firstItem="OOr-bt-zME" firstAttribute="centerY" secondItem="eSd-RV-3vz" secondAttribute="centerY" id="gco-Fi-2zz"/>
+                                            <constraint firstItem="lTT-bD-3qJ" firstAttribute="leading" secondItem="gvF-hZ-QLy" secondAttribute="trailing" id="kTj-ob-y6W"/>
                                             <constraint firstAttribute="height" constant="100" id="kWD-7z-2Ne"/>
+                                            <constraint firstItem="gvF-hZ-QLy" firstAttribute="centerY" secondItem="OOr-bt-zME" secondAttribute="centerY" id="nG7-uI-wsN"/>
                                             <constraint firstItem="eSd-RV-3vz" firstAttribute="leading" secondItem="GCk-Lf-ej2" secondAttribute="leading" constant="16" id="ppD-Ml-Dkx"/>
+                                            <constraint firstItem="gvF-hZ-QLy" firstAttribute="leading" secondItem="OOr-bt-zME" secondAttribute="trailing" id="rgd-8f-Vyx"/>
                                             <constraint firstItem="eSd-RV-3vz" firstAttribute="top" secondItem="U9k-Vz-MSN" secondAttribute="bottom" constant="16" id="sr5-PQ-C8d"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiA-LG-4LY" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="242" width="367" height="450"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiA-LG-4LY" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="242" width="367" height="505"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-bW-J7b">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabProcedure" translatesAutoresizingMaskIntoConstraints="NO" id="6UE-OP-h8d">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Mhp-s0-4K1"/>
                                                             <constraint firstAttribute="width" constant="25" id="zY2-kT-qHY"/>
@@ -647,13 +670,13 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procedure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLP-CH-hyp">
-                                                        <rect key="frame" x="49" y="14" width="81.5" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="81.5" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-dA-xyY">
-                                                        <rect key="frame" x="337" y="13.5" width="22" height="22"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-dA-xyY">
+                                                        <rect key="frame" x="337" y="14" width="22" height="22"/>
                                                         <connections>
                                                             <action selector="btn_procedure_information:" destination="dbm-1P-gdb" eventType="touchUpInside" id="qQw-rj-hur"/>
                                                         </connections>
@@ -689,7 +712,7 @@
                                                     <action selector="sg_proctype_change:" destination="dbm-1P-gdb" eventType="valueChanged" id="Z4w-At-b3u"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-Vd-hhf" customClass="TagListView" customModule="BinlaLog" customModuleProvider="target">
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-Vd-hhf" customClass="TagListView" customModule="Abhailog" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="228" width="335" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="mZv-nr-nAk"/>
@@ -735,7 +758,7 @@
                                                     <action selector="sg_patient_type_change:" destination="dbm-1P-gdb" eventType="valueChanged" id="u4k-oV-ZRE"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Procedure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTd-we-7wO" customClass="NAutoComplete" customModule="BinlaLog" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Procedure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTd-we-7wO" customClass="NAutoComplete" customModule="Abhailog" customModuleProvider="target">
                                                 <rect key="frame" x="66" y="174" width="285" height="50"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -776,28 +799,28 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQm-yR-Iqf">
                                                 <rect key="frame" x="0.0" y="236" width="367" height="60"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-cP-ufy">
-                                                        <rect key="frame" x="16" y="8" width="140" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please rate your performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-cP-ufy">
+                                                        <rect key="frame" x="16" y="8" width="191" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgt-VQ-WZF">
-                                                        <rect key="frame" x="42.5" y="40" width="40" height="40"/>
+                                                        <rect key="frame" x="43.5" y="40" width="40" height="40"/>
                                                         <state key="normal" title="Button" image="button:Cgt-VQ-WZF:image"/>
                                                         <connections>
                                                             <action selector="img_feel_1_action:" destination="dbm-1P-gdb" eventType="touchUpInside" id="HeL-tJ-LtO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-Cx-0s7">
-                                                        <rect key="frame" x="102.5" y="40" width="40" height="40"/>
+                                                        <rect key="frame" x="103.5" y="40" width="40" height="40"/>
                                                         <state key="normal" title="Button" image="button:Tas-Cx-0s7:image"/>
                                                         <connections>
                                                             <action selector="img_feel_2_action:" destination="dbm-1P-gdb" eventType="touchUpInside" id="rJO-yX-VTW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1P-dq-PCx">
-                                                        <rect key="frame" x="163" y="40" width="40" height="40"/>
+                                                        <rect key="frame" x="163.5" y="40" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="Bro-oI-Zdb"/>
                                                             <constraint firstAttribute="height" constant="40" id="e87-5M-xzN"/>
@@ -808,14 +831,14 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-9w-T4Z">
-                                                        <rect key="frame" x="223" y="40.5" width="40" height="40"/>
+                                                        <rect key="frame" x="223.5" y="40" width="40" height="40"/>
                                                         <state key="normal" title="Button" image="button:aeS-9w-T4Z:image"/>
                                                         <connections>
                                                             <action selector="img_feel_4_action:" destination="dbm-1P-gdb" eventType="touchUpInside" id="g9M-JI-XxI"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-d8-P5o">
-                                                        <rect key="frame" x="283" y="40.5" width="40" height="40"/>
+                                                        <rect key="frame" x="283.5" y="40" width="40" height="40"/>
                                                         <state key="normal" title="Button" image="button:m5b-d8-P5o:image"/>
                                                         <connections>
                                                             <action selector="img_feel_5_action:" destination="dbm-1P-gdb" eventType="touchUpInside" id="emP-bo-uPV"/>
@@ -847,8 +870,20 @@
                                                     <constraint firstItem="Cgt-VQ-WZF" firstAttribute="width" secondItem="Tas-Cx-0s7" secondAttribute="width" id="zB8-Ba-ie7"/>
                                                 </constraints>
                                             </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you feeling?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-yH-hxK">
+                                                <rect key="frame" x="16" y="336" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TZV-kG-R5S"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="tf_feeling_action:" destination="dbm-1P-gdb" eventType="editingChanged" id="y8U-0G-CoM"/>
+                                                </connections>
+                                            </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-gs-2aK">
-                                                <rect key="frame" x="16.5" y="341" width="334" height="94"/>
+                                                <rect key="frame" x="16" y="396" width="335" height="94"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="94" id="gH8-ld-mAh"/>
@@ -861,7 +896,7 @@
                                                 </connections>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a note here ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-CQ-RRR">
-                                                <rect key="frame" x="21.5" y="349" width="142" height="19.5"/>
+                                                <rect key="frame" x="21" y="404" width="142" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -877,11 +912,14 @@
                                             <constraint firstItem="Zez-bW-J7b" firstAttribute="top" secondItem="iiA-LG-4LY" secondAttribute="top" id="BB1-gp-VIj"/>
                                             <constraint firstItem="pEz-E5-ihA" firstAttribute="leading" secondItem="iiA-LG-4LY" secondAttribute="leading" constant="16" id="EEP-mR-cqv"/>
                                             <constraint firstAttribute="bottom" secondItem="hUT-gs-2aK" secondAttribute="bottom" constant="15" id="JAl-DH-ije"/>
-                                            <constraint firstItem="hUT-gs-2aK" firstAttribute="top" secondItem="gQm-yR-Iqf" secondAttribute="bottom" constant="45" id="JZa-A7-Crv"/>
+                                            <constraint firstItem="hUT-gs-2aK" firstAttribute="top" secondItem="gQm-yR-Iqf" secondAttribute="bottom" constant="100" id="JZa-A7-Crv"/>
                                             <constraint firstItem="J2c-Vd-hhf" firstAttribute="leading" secondItem="pEz-E5-ihA" secondAttribute="leading" id="Lqv-8N-9V6"/>
+                                            <constraint firstItem="M9G-yH-hxK" firstAttribute="leading" secondItem="pEz-E5-ihA" secondAttribute="leading" id="Nmb-Mg-WMZ"/>
                                             <constraint firstItem="KbV-5f-QFe" firstAttribute="top" secondItem="Zez-bW-J7b" secondAttribute="bottom" constant="16" id="Rrt-dX-Vbe"/>
                                             <constraint firstItem="Zez-bW-J7b" firstAttribute="centerX" secondItem="iiA-LG-4LY" secondAttribute="centerX" id="Uq7-ya-qAz"/>
+                                            <constraint firstItem="M9G-yH-hxK" firstAttribute="top" secondItem="gQm-yR-Iqf" secondAttribute="bottom" constant="40" id="aKi-hz-BfR"/>
                                             <constraint firstItem="hUT-gs-2aK" firstAttribute="centerX" secondItem="gQm-yR-Iqf" secondAttribute="centerX" id="cHc-ck-lCo"/>
+                                            <constraint firstItem="M9G-yH-hxK" firstAttribute="trailing" secondItem="PTd-we-7wO" secondAttribute="trailing" id="d1J-LU-5r6"/>
                                             <constraint firstItem="KbV-5f-QFe" firstAttribute="leading" secondItem="Zez-bW-J7b" secondAttribute="leading" constant="16" id="gef-b0-hJW"/>
                                             <constraint firstItem="Isa-5K-nIf" firstAttribute="leading" secondItem="KbV-5f-QFe" secondAttribute="leading" id="hu5-VJ-IdH"/>
                                             <constraint firstItem="pEz-E5-ihA" firstAttribute="top" secondItem="Isa-5K-nIf" secondAttribute="bottom" constant="25" id="huD-dL-FHS"/>
@@ -895,14 +933,14 @@
                                             <constraint firstAttribute="trailing" secondItem="PTd-we-7wO" secondAttribute="trailing" constant="16" id="zo5-OJ-GXX"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWA-uN-z7y" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="696" width="367" height="110"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWA-uN-z7y" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="751" width="367" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4C-8V-3Rc">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-calendar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jvt-72-B6q">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="9G1-5m-Ays"/>
                                                             <constraint firstAttribute="width" constant="25" id="wXj-YI-fz8"/>
@@ -916,7 +954,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSi-VV-nnb">
-                                                        <rect key="frame" x="49" y="14" width="37" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="37" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -940,7 +978,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQC-SY-bZH" customClass="NTextField" customModule="BinlaLog" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQC-SY-bZH" customClass="NTextField" customModule="Abhailog" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="56.5" width="291" height="40"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -972,14 +1010,14 @@
                                             <constraint firstItem="aQC-SY-bZH" firstAttribute="centerY" secondItem="5W5-Ym-ZlP" secondAttribute="centerY" id="s5y-zO-aeo"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-qd-v02" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="810" width="367" height="250"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-qd-v02" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="865" width="367" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-H6-0hW">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-location.png" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-Ap-AOU">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="52r-03-A2j"/>
                                                             <constraint firstAttribute="width" constant="25" id="h50-MS-F16"/>
@@ -993,7 +1031,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlU-Yr-WyN">
-                                                        <rect key="frame" x="49" y="14" width="67.5" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="67.5" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1011,7 +1049,7 @@
                                                     <constraint firstItem="G3z-lU-ERv" firstAttribute="centerX" secondItem="Zve-H6-0hW" secondAttribute="centerX" id="xY0-wO-Sro"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPU-m9-nrD" customClass="NTextField" customModule="BinlaLog" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPU-m9-nrD" customClass="NTextField" customModule="Abhailog" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="66" width="335" height="50"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1056,14 +1094,14 @@
                                             <constraint firstItem="j6D-d4-gYG" firstAttribute="centerY" secondItem="tPU-m9-nrD" secondAttribute="centerY" id="zVO-ON-bfh"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBD-S0-vQZ" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="1064" width="367" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBD-S0-vQZ" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="1119" width="367" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih3-9D-fI5">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-passcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-Kb-fl4">
-                                                        <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                                        <rect key="frame" x="16" y="12.5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="3Dp-w3-dwF"/>
                                                             <constraint firstAttribute="width" constant="25" id="p7r-ql-WdD"/>
@@ -1077,7 +1115,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-rL-LNy">
-                                                        <rect key="frame" x="49" y="14" width="135" height="21"/>
+                                                        <rect key="frame" x="49" y="14.5" width="135" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1096,7 +1134,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter code here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEc-xA-s35">
-                                                <rect key="frame" x="16" y="66" width="331" height="50"/>
+                                                <rect key="frame" x="16" y="66" width="330.5" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="J78-Uh-7va"/>
                                                 </constraints>
@@ -1297,7 +1335,7 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOD-zM-R2R" customClass="NViewCard" customModule="BinlaLog" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOD-zM-R2R" customClass="NViewCard" customModule="Abhailog" customModuleProvider="target">
                                 <rect key="frame" x="291" y="1072" width="60" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVk-BW-8i9">
@@ -1380,7 +1418,9 @@
                         <outlet property="sg_proctype" destination="KbV-5f-QFe" id="5Vx-2H-OcS"/>
                         <outlet property="tag_procedure" destination="J2c-Vd-hhf" id="MSO-6k-4d2"/>
                         <outlet property="tf_date" destination="aQC-SY-bZH" id="KSc-Ud-tcg"/>
+                        <outlet property="tf_feeling" destination="M9G-yH-hxK" id="964-Ba-VP4"/>
                         <outlet property="tf_hn" destination="OOr-bt-zME" id="Boa-tw-xIf"/>
+                        <outlet property="tf_hn_year" destination="lTT-bD-3qJ" id="1h0-fs-sae"/>
                         <outlet property="tf_institute" destination="tPU-m9-nrD" id="VB5-PS-gRk"/>
                         <outlet property="tf_passcode" destination="oEc-xA-s35" id="B8a-5O-T8l"/>
                         <outlet property="tf_procedure" destination="PTd-we-7wO" id="dFw-Xp-Zvv"/>
@@ -1396,10 +1436,10 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-85"/>
         </scene>
-        <!--SummaryProcedureViewController-->
+        <!--SummaryDetailViewController-->
         <scene sceneID="eZi-eJ-zdo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Summary" referencedIdentifier="SummaryProcedureViewController" id="j17-5q-IiV" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Summary" referencedIdentifier="SummaryDetailViewController" id="j17-5q-IiV" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ry-gf-yMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3085" y="81"/>
@@ -1407,7 +1447,7 @@
         <!--Comment-->
         <scene sceneID="Sf0-T1-8L4">
             <objects>
-                <viewController storyboardIdentifier="CommentViewController" id="Qvb-to-iFZ" customClass="CommentViewController" customModule="BinlaLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" id="Qvb-to-iFZ" customClass="CommentViewController" customModule="Abhailog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Df4-5b-OSg"/>
                         <viewControllerLayoutGuide type="bottom" id="kqA-0g-tR6"/>
